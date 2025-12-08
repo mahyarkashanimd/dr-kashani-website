@@ -1,0 +1,678 @@
+/* =========================================
+   1. RESET & VARIABLES
+   ========================================= */
+:root {
+    --primary: #0f172a;      /* Deep Navy */
+    --secondary: #1e293b;    /* Slate */
+    --accent: #c0a062;       /* Muted Gold for buttons/highlights */
+    --light-bg: #f8fafc;     /* Very light grey/white */
+    --text-dark: #334155;
+    --text-light: #ffffff;
+    --padding: 20px;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: var(--font-body); 
+    line-height: 1.6; 
+    color: var(--text-dark); 
+    background-color: #fff; 
+}
+
+a { text-decoration: none; transition: 0.3s; }
+ul { list-style: none; }
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--primary); }
+p { margin-bottom: 15px; }
+
+/* =========================================
+   2. GLOBAL LAYOUT
+   ========================================= */
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 var(--padding); 
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+header { 
+    background: #fff; 
+    border-bottom: 1px solid #e2e8f0; 
+    padding: 1.2rem 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* REVERTED LOGO TO TEXT-ONLY STYLE */
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--primary); 
+    letter-spacing: -0.5px; 
+}
+
+.sub-logo { 
+    color: var(--accent); 
+    font-weight: 400; 
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 25px; 
+    align-items: center; 
+}
+
+.nav-links a { 
+    color: var(--secondary); 
+    font-weight: 700; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.nav-links a:hover { color: var(--accent); }
+.nav-links .active { color: var(--accent); }
+
+.btn-appointment { 
+    background: var(--primary); 
+    color: white !important; 
+    padding: 12px 25px; 
+    border-radius: 2px; 
+}
+
+.btn-appointment:hover { 
+    background: var(--accent); 
+    color: white !important; 
+}
+
+/* =========================================
+   4. HERO SECTIONS (Home & Internal)
+   ========================================= */
+/* Home Page Hero */
+.hero { 
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover; 
+    position: relative; 
+    height: 85vh; 
+    display: flex; 
+    align-items: center; 
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.7); 
+}
+
+.hero-content { 
+    position: relative; 
+    z-index: 1; 
+    color: white; 
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 25px; 
+    color: white; 
+    line-height: 1.3; 
+}
+
+.hero p { 
+    font-size: 1.3rem; 
+    margin-bottom: 40px; 
+    font-weight: 300; 
+    opacity: 0.9; 
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.cta-button { 
+    padding: 15px 35px; 
+    text-transform: uppercase; 
+    font-size: 0.9rem; 
+    letter-spacing: 1px; 
+    font-weight: 700; 
+}
+
+.cta-button.primary { 
+    background: var(--accent); 
+    color: white; 
+}
+.cta-button.primary:hover { background: #d4b475; }
+
+.cta-button.secondary { 
+    border: 2px solid white; 
+    color: white; 
+}
+.cta-button.secondary:hover { 
+    background: white; 
+    color: var(--primary); 
+}
+
+/* Internal Page Hero (About, Services, etc.) */
+.page-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 60px; 
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   5. INTRO BIO (Split Layout)
+   ========================================= */
+.intro-bio { 
+    padding: 100px 0; 
+    background: #fff; 
+}
+
+.split-layout { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 60px; 
+}
+
+.bio-text { flex: 1; }
+
+.bio-text h2 { font-size: 2.5rem; margin-bottom: 5px; }
+.bio-text h3 { 
+    font-family: var(--font-body); 
+    text-transform: uppercase; 
+    color: var(--accent); 
+    font-size: 0.9rem; 
+    letter-spacing: 2px; 
+    margin-bottom: 25px; 
+}
+
+.text-link { 
+    color: var(--primary); 
+    border-bottom: 1px solid var(--accent); 
+    margin-top: 25px; 
+    display: inline-block; 
+    font-weight: 700; 
+}
+
+.bio-image { 
+    flex: 1; 
+    text-align: center; 
+}
+
+.bio-image img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+    box-shadow: 20px 20px 0px var(--light-bg); 
+}
+
+/* =========================================
+   6. SERVICES (Home & Page)
+   ========================================= */
+.services-preview { 
+    padding: 100px 0; 
+    background: var(--light-bg); 
+}
+
+.section-header { 
+    text-align: center; 
+    margin-bottom: 60px; 
+}
+
+.section-header h2 { font-size: 2.5rem; }
+
+/* 2x2 Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card { 
+    background: white; 
+    padding: 40px 30px; 
+    /* Gold Outline on Boxes */
+    border: 2px solid var(--accent); 
+    transition: 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    /* Darker accent on hover for effect */
+    border-color: #d4b475; 
+}
+
+.card h3 { 
+    margin-bottom: 15px; 
+    font-size: 1.5rem; 
+    color: var(--primary);
+}
+
+/* Detailed Services List (Services Page) */
+.service-category {
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.service-category:last-child { border-bottom: none; }
+.service-category h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); }
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background: var(--light-bg);
+    padding: 25px;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+}
+.service-item h3 { font-size: 1.2rem; margin-bottom: 10px; }
+
+/* =========================================
+   7. LOCATIONS SECTION
+   ========================================= */
+.locations-section { 
+    padding: 100px 0; 
+    background: var(--primary); 
+    color: white; 
+}
+
+.locations-section h2 { 
+    color: white; 
+    text-align: center; 
+    margin-bottom: 60px; 
+    font-size: 2.5rem; 
+}
+
+.locations-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+}
+
+.location-card { 
+    text-align: center; 
+    background: rgba(255,255,255,0.05); 
+    padding: 40px; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    width: 350px; 
+}
+
+.location-card h3 { color: white; margin-bottom: 5px; }
+
+.loc-name { 
+    color: var(--accent); 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+    letter-spacing: 1px; 
+    margin-bottom: 20px; 
+}
+
+/* Clickable Address Link */
+.address-link {
+    color: white;
+    opacity: 0.9;
+    display: block; 
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.address-link:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+.phone-link { 
+    display: block; 
+    margin-top: 20px; 
+    font-size: 1.2rem; 
+    color: white; 
+    font-weight: 700; 
+}
+.phone-link:hover { color: var(--accent); }
+
+/* =========================================
+   8. FOOTER
+   ========================================= */
+footer { 
+    background: var(--secondary); 
+    color: #94a3b8; 
+    padding: 60px 0 20px; 
+}
+
+.footer-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #334155; 
+    padding-bottom: 40px; 
+    margin-bottom: 20px; 
+}
+
+.footer-brand h4 { color: white; margin-bottom: 5px; }
+
+.footer-links a { 
+    margin-left: 20px; 
+    color: #94a3b8; 
+    font-size: 0.9rem; 
+}
+.footer-links a:hover { color: white; }
+
+.copyright { text-align: center; font-size: 0.8rem; }
+
+/* =========================================
+   9. CONTACT PAGE
+   ========================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+}
+.contact-form button:hover { background: var(--accent); }
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   10. PUBLICATIONS LIST (About Page)
+   ========================================= */
+.pub-list {
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.pub-list li {
+    margin-bottom: 20px; 
+    line-height: 1.5;
+}
+
+.pub-list strong {
+    color: var(--primary); 
+}
+
+/* =========================================
+   11. REVIEWS SECTION (Difference Page)
+   ========================================= */
+.reviews-section {
+    background: #f8fafc;
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* =========================================
+   12. "THE DIFFERENCE" PAGE
+   ========================================= */
+.benefit-list {
+    list-style: none;
+    margin-top: 30px;
+}
+.benefit-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+.benefit-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+.quote-box {
+    background: var(--light-bg);
+    padding: 40px;
+    text-align: center;
+    border-left: 4px solid var(--accent);
+    margin-top: 50px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+/* =========================================
+   13. MEDIA & PRESS SECTION (About Page)
+   ========================================= */
+.media-section {
+    padding: 80px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Featured Press (Article & Podcast) */
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.press-card {
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+    position: relative;
+    padding-left: 80px; /* Space for icon */
+}
+
+.press-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: var(--accent);
+}
+
+.press-icon {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.press-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.press-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.press-link {
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.play-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.video-card h4 {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.watch-btn {
+    background: var(--light-bg);
+    color: var(--secondary);
+    padding: 8px 15px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.video-card:hover .watch-btn {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================================
+   15. EDUCATION ROW LAYOUT (About Page)
+   ========================================= */
+.education-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.education-col {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Gold separator bar (except for the last item) */
+.education-col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px; /* Position in the gap */
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background-color: var(--accent);
+}
+
+/* Mobile: Stack them and remove bars */
+@media (max-width: 768px) {
+    .education-row { flex-direction: column; gap: 40px; }
+    .education-col:not(:last-child)::after { display: none; }
+    .education-col { border-bottom: 1px solid #e2e8f0; padding-bottom: 30px; }
+    .education-col:last-child { border-bottom: none; }
+}
+
+/* =========================================
+   16. RESPONSIVE DESIGN (Mobile) - END
+   ========================================= */
+@media (max-width: 768px) {
+    /* Hide Desktop Menu */
+    .nav-links { display: none; } 
+    
+    /* Hero Adjustments */
+    .hero { height: auto; padding: 100px 0; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero-buttons { flex-direction: column; gap: 15px; }
+    
+    /* Layout Stacking */
+    .split-layout { flex-direction: column-reverse; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    
+    /* Grid Adjustments */
+    .services-grid { grid-template-columns: 1fr; }
+    
+    /* Footer Adjustments */
+    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links a { margin: 0 10px; }
+}
