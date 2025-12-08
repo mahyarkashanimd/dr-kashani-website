@@ -19,14 +19,20 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation -->
     <header>
         <div class="container nav-container">
-            <!-- REVERTED TO TEXT ONLY LOGO -->
             <div class="logo">Men's Health <span class="sub-logo">Long Island</span></div>
+            
+            <!-- Mobile Menu Icon -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -49,7 +55,8 @@
 
     <!-- Main Content -->
     <section class="container">
-        <!-- Category 1: ED -->
+        
+        <!-- Category 1: ED (Reordered: Doppler First) -->
         <div class="service-category" id="ed">
             <h2>Erectile Dysfunction (ED)</h2>
             <p>We offer the full spectrum of ED treatments, moving from conservative management to advanced surgical restoration. Dr. Kashani is a specialist in restoring function when other treatments have failed.</p>
@@ -73,7 +80,7 @@
             </div>
         </div>
 
-        <!-- Category 2: Men's Sexual Health -->
+        <!-- Category 2: Men's Sexual Health (Added Vasectomy, Updated Infertility) -->
         <div class="service-category" id="sexual-health">
             <h2>Men's Sexual Health & Fertility</h2>
             <p>Addressing structural and functional concerns that impact intimacy and confidence.</p>
@@ -97,7 +104,7 @@
             </div>
         </div>
 
-        <!-- Category 3: Low T -->
+        <!-- Category 3: Low T (Updated Description) -->
         <div class="service-category" id="low-t">
             <h2>Testosterone Replacement Therapy (TRT)</h2>
             <p>Safe, monitored hormone optimization for men suffering from low testosterone.</p>
@@ -108,6 +115,7 @@
                 </div>
                 <div class="service-item">
                     <h3>Customized TRT</h3>
+                    <!-- UPDATED TEXT BELOW -->
                     <p>Injection, gel, or oral therapies tailored to maintain physiologic levels and improve energy, libido, and mood.</p>
                 </div>
                 <div class="service-item">
@@ -117,7 +125,7 @@
             </div>
         </div>
 
-        <!-- Category 4: General Urology -->
+        <!-- Category 4: General Urology (Updated List) -->
         <div class="service-category" id="general-urology">
             <h2>General Urology</h2>
             <p>Expert management of common and complex urinary tract conditions.</p>
@@ -157,6 +165,7 @@
             <h2>Our Locations</h2>
             <div class="locations-grid">
                 
+                <!-- Location 1: Rockville Centre -->
                 <div class="location-card">
                     <h3>Rockville Centre</h3>
                     <p class="loc-name">Mount Sinai Doctors</p>
@@ -166,6 +175,7 @@
                     <a href="tel:5163902850" class="phone-link">(516) 390-2850</a>
                 </div>
 
+                <!-- Location 2: Carle Place -->
                 <div class="location-card">
                     <h3>Carle Place</h3>
                     <p class="loc-name">Mount Sinai Doctors</p>
@@ -198,5 +208,7 @@
         </div>
     </footer>
 
+    <!-- Mobile Menu Script -->
+    <script src="js/main.js"></script>
 </body>
 </html>
