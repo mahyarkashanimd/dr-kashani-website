@@ -59,7 +59,6 @@
                     <h3 style="color: var(--primary);">Rockville Centre</h3>
                     <p style="margin-bottom: 5px; font-weight: bold; color: var(--accent);">Mount Sinai Doctors</p>
                     
-                    <!-- Written Address Link -->
                     <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7000674,-73.6991327,12.17z/data=!3m1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu" target="_blank" style="display: block; margin-bottom: 10px; color: var(--text-dark); text-decoration: underline;">
                         2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570
                     </a>
@@ -67,7 +66,6 @@
                     <p><strong>Phone:</strong> (516) 390-2850</p>
                     
                     <div class="map-container" style="margin-top: 15px;">
-                        <!-- Embedded Google Map for Rockville Centre -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.653457223405!2d-73.6424564!3d40.6375087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27b0c8d17b5f9%3A0x8e8b8b8b8b8b8b8b!2s2%20Lincoln%20Ave%20%23102%2C%20Rockville%20Centre%2C%20NY%2011570!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
@@ -77,7 +75,6 @@
                     <h3 style="color: var(--primary);">Carle Place</h3>
                     <p style="margin-bottom: 5px; font-weight: bold; color: var(--accent);">Mount Sinai Doctors</p>
                     
-                    <!-- Written Address Link -->
                     <a href="https://www.google.com/maps?sca_esv=c72161be23125edc&output=search&q=mahyar+kashani&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX17etG1w5v2C3lSOdVq_SatDHYWrrszGifWA7HOLyF6yeUqAFEhLMfzuWsSrRN0VNkBqj356LpiK5ZqyO4LPVitO3E8ILIoZfTNy10y6A6im2Y8dew&entry=mc&ved=1t:200715&ictx=111" target="_blank" style="display: block; margin-bottom: 10px; color: var(--text-dark); text-decoration: underline;">
                         393 Old Country Road<br>Carle Place, NY 11514
                     </a>
@@ -85,7 +82,6 @@
                     <p><strong>Phone:</strong> (516) 877-0977</p>
                     
                     <div class="map-container" style="margin-top: 15px;">
-                        <!-- Embedded Google Map for Carle Place -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.234567890123!2d-73.6123456!3d40.7456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2876543210987%3A0x1234567890abcdef!2s393%20Old%20Country%20Rd%2C%20Carle%20Place%2C%20NY%2011514!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
@@ -96,10 +92,10 @@
                 <h2 style="margin-bottom: 20px;">Request an Appointment</h2>
                 <p style="margin-bottom: 20px;">Please fill out the form below. Our office will contact you to confirm your appointment time.</p>
                 
-                <!-- Netlify Form Handling -->
-                <form class="contact-form" name="appointment" method="POST" data-netlify="true">
+                <!-- Updated Form Tag with Action -->
+                <form class="contact-form" name="appointment" method="POST" action="/success.html" data-netlify="true">
                     
-                    <!-- CRITICAL: Hidden Input for Netlify -->
+                    <!-- Hidden Input for Netlify -->
                     <input type="hidden" name="form-name" value="appointment" />
                     
                     <label for="name">Full Name</label>
