@@ -19,6 +19,7 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome (Required for the 3-line icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom Style for this page list -->
@@ -60,12 +61,10 @@
     <!-- Navigation -->
     <header>
         <div class="container nav-container">
-            <div class="logo">Men's Health <span class="sub-logo">Long Island</span></div>
+            <a href="index.html" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
             
-            <!-- Mobile Menu Icon -->
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <!-- ADDED THIS MISSING PART -->
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
 
             <nav>
                 <ul class="nav-links">
@@ -127,6 +126,36 @@
             <!-- Elfsight Google Reviews Code -->
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-28dbe04a-50de-4026-88a5-b0f0efbb17bd" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <!-- Locations Section (Clickable) -->
+    <section id="locations" class="locations-section">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <div class="locations-grid">
+                
+                <!-- Location 1 -->
+                <div class="location-card">
+                    <h3>Rockville Centre</h3>
+                    <p class="loc-name">Mount Sinai Doctors</p>
+                    <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7000674,-73.6991327,12.17z/data=!3m1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu" target="_blank" class="address-link">
+                        2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570
+                    </a>
+                    <a href="tel:5163902850" class="phone-link">(516) 390-2850</a>
+                </div>
+
+                <!-- Location 2 -->
+                <div class="location-card">
+                    <h3>Carle Place</h3>
+                    <p class="loc-name">Mount Sinai Doctors</p>
+                    <a href="https://www.google.com/maps?sca_esv=c72161be23125edc&output=search&q=mahyar+kashani&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX17etG1w5v2C3lSOdVq_SatDHYWrrszGifWA7HOLyF6yeUqAFEhLMfzuWsSrRN0VNkBqj356LpiK5ZqyO4LPVitO3E8ILIoZfTNy10y6A6im2Y8dew&entry=mc&ved=1t:200715&ictx=111" target="_blank" class="address-link">
+                        393 Old Country Road<br>Carle Place, NY 11514
+                    </a>
+                    <a href="tel:5168770977" class="phone-link">(516) 877-0977</a>
+                </div>
+
+            </div>
         </div>
     </section>
 

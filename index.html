@@ -28,17 +28,55 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Hamburger Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JSON-LD Schema for Physicians -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Mahyar Kashani - Mount Sinai Doctors Rockville Centre",
+        "image": "https://www.menshealthlongisland.com/images/dr-mahyar-kashani-urologist.jpg",
+        "url": "https://www.menshealthlongisland.com",
+        "telephone": "+1-516-390-2850",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2 Lincoln Avenue, Suite 102",
+          "addressLocality": "Rockville Centre",
+          "addressRegion": "NY",
+          "postalCode": "11570",
+          "addressCountry": "US"
+        },
+        "medicalSpecialty": ["Urology", "Sexual Health"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Mahyar Kashani - Mount Sinai Doctors Carle Place",
+        "image": "https://www.menshealthlongisland.com/images/dr-mahyar-kashani-urologist.jpg",
+        "url": "https://www.menshealthlongisland.com",
+        "telephone": "+1-516-877-0977",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "393 Old Country Road",
+          "addressLocality": "Carle Place",
+          "addressRegion": "NY",
+          "postalCode": "11514",
+          "addressCountry": "US"
+        },
+        "medicalSpecialty": ["Urology", "Sexual Health"]
+      }
+    ]
+    </script>
 </head>
 <body>
 
     <!-- Navigation -->
     <header>
         <div class="container nav-container">
-            <div class="logo">Men's Health <span class="sub-logo">Long Island</span></div>
+            <!-- CLICKABLE HOME LINK -->
+            <a href="index.html" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
             
-            <!-- Mobile Menu Icon -->
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -59,6 +97,10 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
+            
+            <!-- LOGO: 450px wide, Clean 30px gap -->
+            <img src="images/LI-white-edited1.png" alt="Men's Health Long Island Logo" class="hero-logo-center">
+
             <h1>Long Island’s Premier <br>Men’s Health & <br>Sexual Medicine Practice</h1>
             <p style="max-width: 100%;">Expert, discreet, and results-driven care to restore confidence and performance.</p>
             <div class="hero-buttons">
@@ -87,7 +129,8 @@
     <section class="services-preview">
         <div class="container">
             <div class="section-header">
-                <h2>Clinical Excellence</h2>
+                <!-- UPDATED TEXT -->
+                <h2>Our Expertise</h2>
                 <p>Advanced therapies for complex urological conditions.</p>
             </div>
             
@@ -161,5 +204,6 @@
 
     <!-- Mobile Menu Script -->
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </body>
 </html>
