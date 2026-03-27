@@ -493,4 +493,89 @@ body {
         min-height: auto;
         margin-bottom: 15px !important;
     }
+}/* =========================================
+   ENHANCED REVIEWS LAYOUT (SAFE)
+   ========================================= */
+.reviews-enhanced {
+    padding: 100px 0;
+    background: #fff;
+    text-align: center;
+}
+
+/* Trust Bar / Stars */
+.trust-bar {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.rating-box {
+    background: var(--light-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stars {
+    color: #f59e0b; /* Gold/Orange Stars */
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.rating-text {
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* Featured Review Cards */
+.featured-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.review-card p {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--primary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.patient-name {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+/* Mobile Fix for Reviews */
+@media (max-width: 768px) {
+    .rating-box {
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .featured-reviews {
+        grid-template-columns: 1fr;
+    }
 }
