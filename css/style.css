@@ -309,4 +309,287 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
         gap: 15px;
         padding-top: 20px;
     }
+}/* Ensure this is still at the bottom of style.css */
+.dropdown .drop-header {
+    padding: 12px 20px 5px 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 1.2px;
+}
+
+.dropdown li:not(:first-child).drop-header {
+    border-top: 1px solid #f1f5f9;
+    margin-top: 8px;
+    padding-top: 15px;
+}/* =========================================
+   MOBILE NAVIGATION LEFT-ALIGNMENT (SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Align the main nav links to the left */
+    .nav-links a {
+        text-align: left !important;
+        padding-left: 30px !important; /* Adds professional padding from the edge */
+    }
+
+    /* 2. Align the Service Category Headers to the left */
+    .dropdown .drop-header {
+        text-align: left !important;
+        padding-left: 30px !important;
+        padding-top: 20px !important;
+    }
+
+    /* 3. Align the specific Service links to the left */
+    .dropdown a {
+        text-align: left !important;
+        padding-left: 45px !important; /* Indents services under the category header */
+        font-size: 1rem !important;
+    }
+
+    /* 4. Ensure the dropdown container doesn't force centering */
+    .dropdown {
+        text-align: left !important;
+    }
+}/* =========================================
+   MOBILE HERO & NAME LINE-FIX (SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Fix: Hero Content Spacing (Moves logo/title up) */
+    .hero {
+        padding: 40px 0 !important; /* Reduces the massive 140px gap at the top */
+        min-height: 70vh !important; /* Tightens the overall height for phones */
+        justify-content: center;
+    }
+
+    .hero-logo-center {
+        max-width: 250px !important; /* Keeps logo elegant and centered */
+        margin-bottom: 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem !important; /* Scales title to fit better */
+        margin-bottom: 15px !important;
+    }
+
+    /* 2. Fix: "Mahyar Kashani, MD" on one line */
+    .page-hero h1, .bio-text h2 {
+        font-size: 1.75rem !important; /* Slightly smaller to prevent wrapping */
+        white-space: nowrap; /* Forces the name onto a single line */
+        letter-spacing: -0.5px; /* Tighter spacing to help it fit */
+    }
+
+    /* 3. Adjust the bio text spacing slightly */
+    .bio-text h3 {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Extra tight fix for very small phones (like iPhone SE) */
+@media (max-width: 380px) {
+    .page-hero h1, .bio-text h2 {
+        font-size: 1.55rem !important;
+    }
+}/* =========================================
+   MOBILE USABILITY & SCROLL FIXES (SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Fix: Bunched Up Gold Button */
+    .cta-button.large {
+        width: 95% !important;        /* Fill the screen width */
+        min-width: unset !important;   /* Remove restricted width */
+        padding: 18px 10px !important; /* Adjust padding for better fit */
+        font-size: 1rem !important;    /* Slightly smaller font to keep it on one line */
+        white-space: nowrap !important; /* Forces text to stay on one line */
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 2. Fix: Dropdown Menu Cut-off */
+    /* This makes the menu itself scrollable so you can reach the bottom links */
+    .nav-links {
+        max-height: calc(100vh - 80px); /* Limit height to the screen size minus header */
+        overflow-y: auto !important;     /* Enable vertical scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iPhone */
+        display: none; /* Keep hidden until active */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when hamburger is clicked */
+    }
+
+    /* Ensure the sub-menu items (dropdown) don't get hidden */
+    .dropdown {
+        display: block !important; /* Keep dropdowns expanded on mobile for easy access */
+        position: static !important; /* Put them in line with the rest of the list */
+        box-shadow: none !important;
+        border: none !important;
+        padding-left: 20px !important;
+    }
+}/* =========================================
+   MOBILE MENU CENTERING (REFINED)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Center the main navigation container */
+    .nav-links {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 2. Center all links (Home, Meet, Services, etc.) */
+    .nav-links a {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 3. Center the Dropdown Categories (Gold headers) */
+    .dropdown .drop-header {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 4. Center the specific Service links under the headers */
+    .dropdown a {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        font-weight: 400 !important;
+    }
+}/* =========================================
+   MOBILE MENU CENTERING (COLOR-SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Center the main menu items */
+    .nav-links, .nav-links li {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* 2. Center the "Services" parent and main links */
+    .nav-links a {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 3. Center the Gold Dropdown Headers (ED, Sexual Health, etc.) */
+    .dropdown .drop-header {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 4. Center the specific Service links (ED Overview, Low T, etc.) */
+    .dropdown a {
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        display: block !important;
+    }
+
+    /* 5. Clear any leftover indentations */
+    .dropdown li {
+        text-align: center !important;
+        padding-left: 0 !important;
+    }
+}/* =========================================
+   MOBILE ACCORDION TOGGLE (SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Hide the services dropdown by default on mobile */
+    .nav-links .dropdown {
+        display: none !important;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* 2. This class will be added by JavaScript when you tap "Services" */
+    .nav-links .dropdown.active-dropdown {
+        display: block !important;
+        visibility: visible;
+        opacity: 1;
+        position: static !important;
+        width: 100% !important;
+    }
+    
+    /* 3. Add a small indicator that "Services" is clickable */
+    .nav-links > li > a[href="services.html"]::after {
+        content: ' ▼';
+        font-size: 0.7rem;
+        vertical-align: middle;
+    }
+}/* =========================================
+   CONTACT PAGE MOBILE OPTIMIZATION
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Stack the columns (Map on top, Form below) */
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
+    /* 2. Make inputs easier to use on touch screens */
+    .contact-form input, 
+    .contact-form select, 
+    .contact-form textarea {
+        font-size: 16px !important; /* Prevents iOS from zooming in on focus */
+        padding: 15px !important;
+        border: 2px solid #e2e8f0 !important; /* Makes borders clearer */
+    }
+
+    /* 3. Ensure the Submit button is full width and tall */
+    .contact-form button {
+        padding: 20px !important;
+        font-size: 1.1rem !important;
+    }
+
+    /* 4. Make sure maps fill the screen width */
+    .map-container iframe {
+        height: 250px !important;
+        border-radius: 8px !important;
+    }
+}/* =========================================
+   CONTACT PAGE REORDER & FIX (SAFE)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Flips the layout so Form is TOP, Maps are BOTTOM */
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column-reverse !important; 
+        gap: 50px !important;
+    }
+
+    /* 2. Style adjustment for the form title on mobile */
+    .form-column h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+}/* --- Safe Override: Mobile Centering for Director Title --- */
+@media (max-width: 768px) {
+    .director-title {
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto 20px auto !important;
+    }
+    
+    /* This also ensures the main Name heading is centered */
+    .intro-bio h2 {
+        text-align: center !important;
+    }
 }
