@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Handle "Services" Dropdown Toggle on Mobile
-    const servicesLink = document.querySelector('.nav-links > li > a[href="services.html"]');
+const servicesLink = document.querySelector('.nav-links > li > a[href="/services"], .nav-links > li > a[href="services.html"]');
     
     if (servicesLink) {
         servicesLink.addEventListener('click', function(e) {
