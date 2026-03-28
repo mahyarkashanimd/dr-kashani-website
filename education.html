@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patient education articles from Dr. Mahyar Kashani, Long Island urologist and men's health specialist. Learn about ED, Low Testosterone, Peyronie's Disease, and more.">
+    <title>Patient Education | Men's Health Long Island | Dr. Mahyar Kashani</title>
+
+    <link rel="icon" type="image/png" href="images/favicon3.png">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XSPQXKJSQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XSPQXKJSQ');
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .edu-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--accent);
+            padding: 35px 30px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .edu-card-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .edu-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .edu-card p {
+            color: #64748b;
+            font-size: 1rem;
+            flex-grow: 1;
+            margin-bottom: 25px;
+        }
+
+        .edu-read-link {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .edu-read-link:hover {
+            color: var(--accent);
+        }
+
+        .edu-intro {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .edu-intro p {
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Meet Dr. Kashani</a></li>
+                    <li>
+                        <a href="services.html">Services</a>
+                        <ul class="dropdown">
+                            <li class="drop-header">Erectile Dysfunction</li>
+                            <li><a href="ed.html">ED Overview & Treatments</a></li>
+                            <li><a href="penile-implant.html">Penile Implants (IPP)</a></li>
+                            <li class="drop-header">Sexual Health & Low T</li>
+                            <li><a href="low-testosterone.html">Low Testosterone (TRT)</a></li>
+                            <li><a href="peyronies.html">Peyronie's Disease</a></li>
+                            <li><a href="premature-ejaculation.html">Premature Ejaculation</a></li>
+                            <li><a href="vasectomy.html">Vasectomy</a></li>
+                            <li><a href="vasectomy-reversal.html">Vasectomy Reversal</a></li>
+                            <li class="drop-header">General Urology</li>
+                            <li><a href="circumcision.html">Circumcision</a></li>
+                            <li><a href="bph.html">Enlarged Prostate (BPH)</a></li>
+                            <li><a href="hydrocele.html">Hydrocele</a></li>
+                            <li><a href="kidney-stones.html">Kidney Stones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="btn-appointment">Book Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Patient Education</h1>
+            <p>Insights, guidance, and expertise from Dr. Mahyar Kashani</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section style="padding: 80px 0 120px;">
+        <div class="container">
+            <div class="edu-intro">
+                <p>We believe an informed patient is an empowered patient. These articles are written to help men on Long Island better understand their health — clearly, honestly, and without judgment.</p>
+            </div>
+
+            <div class="edu-grid">
+
+                <!-- Article 1 — Welcome/Intro -->
+                <div class="edu-card">
+                    <span class="edu-card-tag">March 28, 2026</span>
+                    <h3>Introducing Men's Health Long Island</h3>
+                    <p>Who we are, what we treat, and why Dr. Kashani built a practice specifically dedicated to helping men reclaim their confidence and quality of life.</p>
+                    <a href="article-welcome.html" class="edu-read-link">Read Article →</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ready-to-act gold-theme">
+        <div class="container">
+            <h2>Have a question for Dr. Kashani?</h2>
+            <p>Book a consultation and get answers specific to your situation.</p>
+            <a href="contact.html" class="cta-button navy-btn large">Schedule Your Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>Men's Health Long Island</h4>
+                    <p>Mahyar Kashani, MD</p>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Meet Dr. Kashani</a>
+                    <a href="services.html">Services</a>
+                    <a href="education.html">Patient Education</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
