@@ -125,20 +125,34 @@
                 <!-- Netlify Form Handling -->
               <form class="contact-form" name="appointment" method="POST" action="/success.html" data-netlify="true">
     <input type="hidden" name="form-name" value="appointment" />
-    
+
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" required placeholder="John Doe">
-    
+
     <label for="phone">Phone Number</label>
-    <!-- Improved pattern: Accepts (516) 555-0123, 516-555-0123, or 5165550123 -->
-    <input type="tel" id="phone" name="phone" 
-           required 
+    <input type="tel" id="phone" name="phone" required
            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
-           title="Please enter a valid 10-digit phone number" 
+           title="Please enter a valid 10-digit phone number"
            placeholder="(516) 555-0123">
-    
+
     <label for="email">Email Address</label>
     <input type="email" id="email" name="email" required placeholder="john@example.com">
+
+    <label for="patient-type">Are you a new or returning patient?</label>
+    <select id="patient-type" name="patient-type">
+        <option value="New Patient">New Patient</option>
+        <option value="Returning Patient">Returning Patient</option>
+    </select>
+
+    <label for="insurance">Insurance Provider</label>
+    <input type="text" id="insurance" name="insurance" placeholder="e.g. Aetna, UnitedHealthcare, Medicare">
+
+    <label for="contact-preference">Preferred Contact Method</label>
+    <select id="contact-preference" name="contact-preference">
+        <option value="Phone Call">Phone Call</option>
+        <option value="Text Message">Text Message</option>
+        <option value="Email">Email</option>
+    </select>
 
     <label for="location">Preferred Office Location</label>
     <select id="location" name="location">
@@ -146,7 +160,7 @@
         <option value="Carle Place">Carle Place</option>
         <option value="First Available">No Preference / First Available</option>
     </select>
-    
+
     <label for="reason">Reason for Visit</label>
     <select id="reason" name="reason">
         <option value="General Consultation">General Consultation</option>
@@ -166,10 +180,26 @@
         <option value="Hematuria">Hematuria (Blood in Urine)</option>
         <option value="Other">Other</option>
     </select>
-    
+
+    <label for="referral">How did you hear about us?</label>
+    <select id="referral" name="referral">
+        <option value="">-- Select One --</option>
+        <option value="Google Search">Google Search</option>
+        <option value="Google Maps">Google Maps</option>
+        <option value="Instagram">Instagram</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Facebook">Facebook</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Doctor Referral">Doctor Referral</option>
+        <option value="Friend or Family">Friend or Family</option>
+        <option value="Healthgrades">Healthgrades</option>
+        <option value="Zocdoc">Zocdoc</option>
+        <option value="Other">Other</option>
+    </select>
+
     <label for="message">Message (Optional)</label>
     <textarea id="message" name="message" rows="5" placeholder="Please do not include sensitive medical details here."></textarea>
-    
+
     <button type="submit">Send Request</button>
 </form>
             </div>
