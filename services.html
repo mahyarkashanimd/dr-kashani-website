@@ -20,6 +20,169 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* ── Services Page Styles ── */
+
+        .services-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--padding) 80px;
+        }
+
+        /* Section block */
+        .svc-section {
+            margin-bottom: 70px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .svc-section:last-child {
+            border-bottom: none;
+        }
+
+        .svc-section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .svc-section-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .svc-section-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        .svc-section-header-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .svc-section-header-text p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Cards grid */
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .svc-card {
+            background: var(--light-bg);
+            border-left: 4px solid var(--accent);
+            padding: 30px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.svc-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .svc-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .svc-card p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .svc-card .card-link-hint {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: auto;
+            padding-top: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Color themes — icon backgrounds using site palette */
+        .icon-ed  { background: #dbeafe; }
+        .icon-ed  svg { stroke: #1d4ed8; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+        .icon-sh  { background: #ede9fe; }
+        .icon-sh  svg { stroke: #6d28d9; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+        .icon-trt { background: #d1fae5; }
+        .icon-trt svg { stroke: #047857; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+        .icon-gen { background: #fef3c7; }
+        .icon-gen svg { stroke: #b45309; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* Mobile: single column, card fills screen width */
+        @media (max-width: 768px) {
+            .services-wrap {
+                padding: 0 var(--padding) 60px;
+            }
+
+            .svc-section-header {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .svc-section-header-text h2 {
+                font-size: 1.7rem;
+            }
+
+            .svc-section-header-text p {
+                font-size: 1.1rem;
+            }
+
+            .svc-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .svc-card {
+                padding: 28px 24px;
+            }
+
+            .svc-card h3 {
+                font-size: 1.35rem;
+            }
+
+            .svc-card p {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -37,27 +200,31 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Meet Dr. Kashani</a></li>
         <li>
-            <a href="services.html" class="active">Services</a>
+            <a href="services.html">Services</a>
             <ul class="dropdown">
-                <!-- Group 1: Erectile Dysfunction -->
                 <li class="drop-header">Erectile Dysfunction</li>
                 <li><a href="ed.html">ED Overview & Treatments</a></li>
                 <li><a href="penile-implant.html">Penile Implants (IPP)</a></li>
-                
-                <!-- Group 2: Sexual Health & Low T -->
                 <li class="drop-header">Sexual Health & Low T</li>
                 <li><a href="low-testosterone.html">Low Testosterone (TRT)</a></li>
                 <li><a href="peyronies.html">Peyronie's Disease</a></li>
                 <li><a href="premature-ejaculation.html">Premature Ejaculation</a></li>
                 <li><a href="vasectomy.html">Vasectomy</a></li>
                 <li><a href="vasectomy-reversal.html">Vasectomy Reversal</a></li>
-                
-                <!-- Group 3: General Urology -->
                 <li class="drop-header">General Urology</li>
                 <li><a href="circumcision.html">Circumcision</a></li>
                 <li><a href="bph.html">Enlarged Prostate (BPH)</a></li>
                 <li><a href="hydrocele.html">Hydrocele</a></li>
                 <li><a href="kidney-stones.html">Kidney Stones</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="education.html">Patient Education</a>
+            <ul class="dropdown">
+                <li class="drop-header">Men's Health Insights</li>
+                <li><a href="quiz.html">Self Assessment Quiz</a></li>
+                <li><a href="education.html">Men's Health Articles</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
             </ul>
         </li>
         <li><a href="contact.html" class="btn-appointment">Book Appointment</a></li>
@@ -75,110 +242,165 @@
     </section>
 
     <!-- Main Content -->
-    <section class="container">
-        
-        <!-- Category 1: ED (Reordered: Doppler First) -->
-  <div class="service-category" id="ed" style="cursor:pointer;" onclick="window.location='ed.html'">
-            <h2>Erectile Dysfunction (ED)</h2>
-            <p>We offer the full spectrum of ED treatments, moving from conservative management to advanced surgical restoration. Dr. Kashani is a specialist in restoring function when other treatments have failed.</p>
-            <div class="service-list">
-                <div class="service-item">
+    <div class="services-wrap">
+
+        <!-- ── Erectile Dysfunction ── -->
+        <div class="svc-section ed">
+            <div class="svc-section-header">
+                <div class="svc-section-icon icon-ed">
+                    <svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a8 8 0 0 1 16 0c0 5.5-8 12-8 12z"/></svg>
+                </div>
+                <div class="svc-section-header-text">
+                    <h2>Erectile Dysfunction (ED)</h2>
+                    <p>We offer the full spectrum of ED treatments, moving from conservative management to advanced surgical restoration. Dr. Kashani specializes in restoring function when other treatments have failed.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <a href="ed.html" class="svc-card ed">
                     <h3>Penile Doppler Ultrasound</h3>
                     <p>Diagnostic testing to evaluate blood flow and determine the root cause of ED.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="ed.html" class="svc-card ed">
                     <h3>Oral Therapies</h3>
                     <p>Optimization of PDE5 inhibitors (Viagra, Cialis) and customized dosing protocols.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="ed.html" class="svc-card ed">
                     <h3>Penile Injection Therapy</h3>
                     <p>Custom-compounded intracavernosal injections (ICI) for reliable, robust erections.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="penile-implant.html" class="svc-card ed">
                     <h3>Penile Implants (IPP)</h3>
                     <p>The gold standard for permanent ED resolution. Dr. Kashani specializes in the Inflatable Penile Prosthesis.</p>
-                </div>
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
             </div>
         </div>
 
-        <!-- Category 2: Men's Sexual Health (Added Vasectomy, Updated Infertility) -->
-        <div class="service-category" id="sexual-health">
-            <h2>Men's Sexual Health & Fertility</h2>
-            <p>Addressing structural and functional concerns that impact intimacy and confidence.</p>
-            <div class="service-list">
-                <div class="service-item">
+        <!-- ── Sexual Health & Fertility ── -->
+        <div class="svc-section sh">
+            <div class="svc-section-header">
+                <div class="svc-section-icon icon-sh">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div class="svc-section-header-text">
+                    <h2>Men's Sexual Health &amp; Fertility</h2>
+                    <p>Addressing structural and functional concerns that impact intimacy, confidence, and family planning.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <a href="peyronies.html" class="svc-card sh">
                     <h3>Peyronie's Disease</h3>
                     <p>Treatment for penile curvature and plaque, including Xiaflex injections and surgical straightening.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="premature-ejaculation.html" class="svc-card sh">
                     <h3>Premature Ejaculation</h3>
                     <p>Behavioral and medical therapies to improve control and sexual longevity.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <div class="svc-card sh">
                     <h3>Male Infertility</h3>
                     <p>Evaluation and treatment of male factor infertility to help couples conceive.</p>
                 </div>
-                <div class="service-item">
+                <a href="vasectomy.html" class="svc-card sh">
                     <h3>Vasectomy</h3>
                     <p>Minimally invasive, safe, and effective permanent contraception for men.</p>
-                </div>
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="vasectomy-reversal.html" class="svc-card sh">
+                    <h3>Vasectomy Reversal</h3>
+                    <p>Microsurgical reconnection for men seeking to restore their fertility.</p>
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
             </div>
         </div>
 
-        <!-- Category 3: Low T (Updated Description) -->
-        <div class="service-category" id="low-t">
-            <h2>Testosterone Replacement Therapy (TRT)</h2>
-            <p>Safe, monitored hormone optimization for men suffering from low testosterone.</p>
-            <div class="service-list">
-                <div class="service-item">
+        <!-- ── TRT ── -->
+        <div class="svc-section trt">
+            <div class="svc-section-header">
+                <div class="svc-section-icon icon-trt">
+                    <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <div class="svc-section-header-text">
+                    <h2>Testosterone Replacement Therapy (TRT)</h2>
+                    <p>Safe, monitored hormone optimization for men suffering from low testosterone.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <a href="low-testosterone.html" class="svc-card trt">
                     <h3>Hormone Evaluation</h3>
                     <p>Comprehensive blood panels to accurately diagnose low testosterone and exclude other causes.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="low-testosterone.html" class="svc-card trt">
                     <h3>Customized TRT</h3>
-                    <!-- UPDATED TEXT BELOW -->
                     <p>Injection, gel, or oral therapies tailored to maintain physiologic levels and improve energy, libido, and mood.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="low-testosterone.html" class="svc-card trt">
                     <h3>Low Libido Management</h3>
                     <p>Addressing the hormonal and psychological factors contributing to low sex drive.</p>
-                </div>
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
             </div>
         </div>
 
-        <!-- Category 4: General Urology (Updated List) -->
-        <div class="service-category" id="general-urology">
-            <h2>General Urology</h2>
-            <p>Expert management of common and complex urinary tract conditions.</p>
-            <div class="service-list">
-                <div class="service-item">
+        <!-- ── General Urology ── -->
+        <div class="svc-section gen">
+            <div class="svc-section-header">
+                <div class="svc-section-icon icon-gen">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6M3 15h6"/></svg>
+                </div>
+                <div class="svc-section-header-text">
+                    <h2>General Urology</h2>
+                    <p>Expert management of common and complex urinary tract conditions.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <a href="kidney-stones.html" class="svc-card gen">
                     <h3>Kidney Stones</h3>
                     <p>Medical management and minimally invasive surgical removal (Laser Lithotripsy) of stones.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="bph.html" class="svc-card gen">
                     <h3>Enlarged Prostate (BPH)</h3>
                     <p>Treatments for urinary frequency and difficulty, including medication and minimally invasive procedures.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="hydrocele.html" class="svc-card gen">
                     <h3>Hydroceles</h3>
                     <p>Surgical repair of fluid accumulation around the testicle to relieve discomfort and swelling.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Circumcisions & Phimosis</h3>
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <a href="circumcision.html" class="svc-card gen">
+                    <h3>Circumcisions &amp; Phimosis</h3>
                     <p>Surgical management for tight foreskin (phimosis) or cosmetic circumcision.</p>
-                </div>
-                <div class="service-item">
+                    <span class="card-link-hint">Learn more →</span>
+                </a>
+                <div class="svc-card gen">
                     <h3>Elevated PSA</h3>
                     <p>Thorough evaluation and screening for prostate health and prostate cancer risk.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Hematuria</h3>
+                <div class="svc-card gen">
+                    <h3>Hematuria (Blood in Urine)</h3>
                     <p>Comprehensive workup (cystoscopy and imaging) to evaluate the cause of blood in the urine.</p>
                 </div>
             </div>
         </div>
 
+    <section class="ready-to-act gold-theme">
+        <div class="container">
+            <h2>Have questions for Dr. Kashani?</h2>
+            <div class="cta-wrapper">
+                <a href="contact.html" class="cta-button navy-btn large">Schedule Your Consultation</a>
+            </div>
+        </div>
     </section>
+
+    </div><!-- /services-wrap -->
 
     <!-- Locations Section -->
     <section id="locations" class="locations-section">
@@ -226,10 +448,10 @@
             </div>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                    <a href="about.html">Meet Dr. Kashani</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="about.html">Meet Dr. Kashani</a>
+                <a href="services.html">Services</a>
+                <a href="education.html">Patient Education</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
         <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>

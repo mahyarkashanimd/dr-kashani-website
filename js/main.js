@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
+
     // 1. Handle Hamburger Menu Toggle
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
@@ -9,19 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Handle "Services" Dropdown Toggle on Mobile
-const servicesLink = document.querySelector('.nav-links > li > a[href="/services"], .nav-links > li > a[href="services.html"]');
-    
-    if (servicesLink) {
-        servicesLink.addEventListener('click', function(e) {
-            // Only run this logic on mobile screens
-            if (window.innerWidth <= 768) {
-                e.preventDefault(); // Stop the page from navigating immediately
-                const dropdown = this.nextElementSibling;
-                if (dropdown) {
+    // 2. Handle ALL dropdowns on mobile (Services, Patient Education, any future ones)
+    document.querySelectorAll('.nav-links > li > a').forEach(function(link) {
+        const dropdown = link.nextElementSibling;
+        if (dropdown && dropdown.classList.contains('dropdown')) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
                     dropdown.classList.toggle('active-dropdown');
                 }
-            }
-        });
-    }
+            });
+        }
+    });
 });

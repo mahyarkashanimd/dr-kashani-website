@@ -525,11 +525,13 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
     }
     
     /* 3. Add a small indicator that "Services" is clickable */
-    .nav-links > li > a[href="services.html"]::after {
-        content: ' ▼';
-        font-size: 0.7rem;
-        vertical-align: middle;
-    }
+    /* Arrow on ANY nav item that has a dropdown */
+.nav-links > li > a + .dropdown ~ * ,
+.nav-links > li:has(.dropdown) > a::after {
+    content: ' ▼';
+    font-size: 0.7rem;
+    vertical-align: middle;
+}
 }/* =========================================
    CONTACT PAGE MOBILE OPTIMIZATION
    ========================================= */

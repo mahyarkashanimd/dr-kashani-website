@@ -170,7 +170,10 @@
         .article-highlight-box ul li::before {
     content: none;
 }
-
+.article-highlight-box ul li strong {
+    color: var(--accent);
+    font-weight: 700;
+}
         .article-doctor-bio {
             display: flex;
             align-items: center;
@@ -252,32 +255,41 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Meet Dr. Kashani</a></li>
-                    <li>
-                        <a href="services.html">Services</a>
-                        <ul class="dropdown">
-                            <li class="drop-header">Erectile Dysfunction</li>
-                            <li><a href="ed.html">ED Overview & Treatments</a></li>
-                            <li><a href="penile-implant.html">Penile Implants (IPP)</a></li>
-                            <li class="drop-header">Sexual Health & Low T</li>
-                            <li><a href="low-testosterone.html">Low Testosterone (TRT)</a></li>
-                            <li><a href="peyronies.html">Peyronie's Disease</a></li>
-                            <li><a href="premature-ejaculation.html">Premature Ejaculation</a></li>
-                            <li><a href="vasectomy.html">Vasectomy</a></li>
-                            <li><a href="vasectomy-reversal.html">Vasectomy Reversal</a></li>
-                            <li class="drop-header">General Urology</li>
-                            <li><a href="circumcision.html">Circumcision</a></li>
-                            <li><a href="bph.html">Enlarged Prostate (BPH)</a></li>
-                            <li><a href="hydrocele.html">Hydrocele</a></li>
-                            <li><a href="kidney-stones.html">Kidney Stones</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html" class="btn-appointment">Book Appointment</a></li>
-                </ul>
-            </nav>
+  <nav>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Meet Dr. Kashani</a></li>
+        <li>
+            <a href="services.html">Services</a>
+            <ul class="dropdown">
+                <li class="drop-header">Erectile Dysfunction</li>
+                <li><a href="ed.html">ED Overview & Treatments</a></li>
+                <li><a href="penile-implant.html">Penile Implants (IPP)</a></li>
+                <li class="drop-header">Sexual Health & Low T</li>
+                <li><a href="low-testosterone.html">Low Testosterone (TRT)</a></li>
+                <li><a href="peyronies.html">Peyronie's Disease</a></li>
+                <li><a href="premature-ejaculation.html">Premature Ejaculation</a></li>
+                <li><a href="vasectomy.html">Vasectomy</a></li>
+                <li><a href="vasectomy-reversal.html">Vasectomy Reversal</a></li>
+                <li class="drop-header">General Urology</li>
+                <li><a href="circumcision.html">Circumcision</a></li>
+                <li><a href="bph.html">Enlarged Prostate (BPH)</a></li>
+                <li><a href="hydrocele.html">Hydrocele</a></li>
+                <li><a href="kidney-stones.html">Kidney Stones</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="education.html">Patient Education</a>
+            <ul class="dropdown">
+                <li class="drop-header">Men's Health Insights</li>
+                <li><a href="quiz.html">Self Assessment Quiz</a></li>
+                <li><a href="education.html">Men's Health Articles</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html" class="btn-appointment">Book Appointment</a></li>
+    </ul>
+</nav>
         </div>
     </header>
 
@@ -315,16 +327,17 @@
         <p>Men's Health Long Island is a specialty practice. That means we don't try to be everything to everyone — we focus specifically on the conditions that affect men's sexual health, hormonal health, and urological wellbeing. These are areas where expertise matters enormously, and where the right specialist makes all the difference.</p>
 
         <div class="article-highlight-box">
-            <h3>Our Areas of Expertise</h3>
-            <ul>
-                <li><strong>Erectile Dysfunction (ED)</strong> — including advanced treatments like penile injections, penile Doppler ultrasound, and penile implants for men who haven't responded to oral medications</li>
-                <li><strong>Low Testosterone (Low T / TRT)</strong> — comprehensive hormonal evaluation and testosterone replacement therapy tailored to your specific levels and symptoms</li>
-                <li><strong>Peyronie's Disease</strong> — scar tissue causing painful curvature, treated with both non-surgical and surgical options</li>
-                <li><strong>Premature Ejaculation</strong> — a far more common condition than most men realize, with effective treatment options</li>
-                <li><strong>Vasectomy & Vasectomy Reversal</strong> — performed with precision and minimal downtime</li>
-                <li><strong>General Urology</strong> — kidney stones, enlarged prostate (BPH), hydrocele, circumcision, and elevated PSA evaluation</li>
-            </ul>
-        </div>
+    <h3>Our Areas of Expertise</h3>
+    <ul>
+        <li><strong><a href="ed.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Erectile Dysfunction (ED)</a></strong> — including advanced treatments like penile injections, penile Doppler ultrasound, and penile implants for men who haven't responded to oral medications</li>
+        <li><strong><a href="penile-implant.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Penile Implants (IPP)</a></strong> — a permanent, spontaneous solution for men with ED who want to reclaim full sexual function</li>
+        <li><strong><a href="low-testosterone.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Low Testosterone (Low T / TRT)</a></strong> — comprehensive hormonal evaluation and testosterone replacement therapy tailored to your specific levels and symptoms</li>
+        <li><strong><a href="peyronies.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Peyronie's Disease</a></strong> — scar tissue causing painful curvature, treated with both non-surgical and surgical options</li>
+        <li><strong><a href="premature-ejaculation.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Premature Ejaculation</a></strong> — a far more common condition than most men realize, with effective treatment options</li>
+        <li><strong><a href="vasectomy.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Vasectomy</a></strong> & <strong><a href="vasectomy-reversal.html" style="color:var(--accent);border-bottom:1px solid var(--accent);">Vasectomy Reversal</a></strong> — performed with precision and minimal downtime</li>
+        <li><strong><a href="services.html#general-urology" style="color:var(--accent);border-bottom:1px solid var(--accent);">General Urology</a></strong> — kidney stones, enlarged prostate (BPH), hydrocele, circumcision, and elevated PSA evaluation</li>
+    </ul>
+</div>
 
         <h2>You Don't Have to Just "Live With It"</h2>
 
@@ -388,13 +401,12 @@
                         <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
+ <div class="footer-links">
                     <a href="index.html">Home</a>
                     <a href="about.html">Meet Dr. Kashani</a>
                     <a href="services.html">Services</a>
                     <a href="education.html">Patient Education</a>
                     <a href="contact.html">Contact</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
                 </div>
             </div>
             <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
