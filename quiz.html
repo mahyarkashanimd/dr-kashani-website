@@ -169,9 +169,6 @@
 <section class="quiz-page">
     <div class="container">
         <div class="quiz-wrapper">
-            <div class="quiz-disclaimer">
-                <strong>Medical Disclaimer:</strong> This self-assessment is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Results are not a substitute for evaluation by a licensed physician. Always consult a qualified healthcare provider regarding any medical concerns.
-            </div>
             <div id="quiz-container"></div>
         </div>
     </div>
@@ -476,9 +473,14 @@ function renderChecklist() {
         </button>`
     ).join('');
 
-    return `<div class="quiz-card">
+    // This puts the disclaimer back, but ONLY on this first screen
+    return `
+    <div class="quiz-disclaimer" style="margin-bottom: 20px;">
+        <strong>Medical Disclaimer:</strong> This self-assessment is for informational purposes only and does not constitute medical advice, diagnosis, or treatment.
+    </div>
+    <div class="quiz-card">
         <h2>Men's Health Self-Assessment</h2>
-        <p class="quiz-intro-sub">Select the areas that apply to you. We'll ask you targeted questions for each area you choose — only what's relevant to your concerns.</p>
+        <p class="quiz-intro-sub">Select the areas that apply to you. We'll ask you targeted questions for each area you choose.</p>
         <div class="checklist-grid">${items}</div>
         <div class="quiz-nav">
             <span></span>
@@ -685,13 +687,14 @@ function attachEvents() {
 
 // ─── NAVIGATION ───────────────────────────────────────────────────────────────
 function startQuiz() {
-    // Preserve checklist order
     state.topicQueue = checklistItems.map(i => i.key).filter(k => state.selectedTopics.includes(k));
     state.currentTopicIndex = 0;
     state.currentQuestionIndex = 0;
     state.step = 'questions';
     render();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // This tells the browser: "Scroll until the quiz box is visible at the top"
+    document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function hasCurrentAnswer() {
@@ -718,6 +721,7 @@ function nextQ() {
         state.step = 'results';
     }
     render();
+    // ENSURE THIS LINE IS HERE:
     document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -731,6 +735,7 @@ function prevQ() {
         state.step = 'checklist';
     }
     render();
+    // ENSURE THIS LINE IS HERE:
     document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
