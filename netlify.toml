@@ -1,0 +1,10 @@
+[build.processing]
+  skip_node_scripts = false
+[build.processing]
+  pretty_urls = true
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 301
+  force = true
