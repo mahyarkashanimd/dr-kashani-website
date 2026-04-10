@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Core Pages -->
-  <url><loc>https://www.menshealthlongisland.com/index</loc><priority>1.0</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/</loc><priority>1.0</priority></url>
   <url><loc>https://www.menshealthlongisland.com/about</loc><priority>0.8</priority></url>
   <url><loc>https://www.menshealthlongisland.com/services</loc><priority>0.8</priority></url>
   <url><loc>https://www.menshealthlongisland.com/contact</loc><priority>0.9</priority></url>
@@ -29,15 +29,12 @@
   <url><loc>https://www.menshealthlongisland.com/education</loc><priority>0.6</priority></url>
   <url><loc>https://www.menshealthlongisland.com/quiz</loc><priority>0.5</priority></url>
 
-  <!-- Articles (currently in file list but missing from sitemap) -->
+  <!-- Articles -->
   <url><loc>https://www.menshealthlongisland.com/article-oral-PDE5i-ihibitors-ed</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-penile-injection-trimix</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-welcome</loc><priority>0.4</priority></url>
 
   <!-- Legal -->
   <url><loc>https://www.menshealthlongisland.com/privacy-policy</loc><priority>0.3</priority></url>
-
-  <!-- Utility -->
-  <url><loc>https://www.menshealthlongisland.com/success</loc><priority>0.2</priority></url>
 
 </urlset>
