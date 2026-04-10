@@ -40,7 +40,16 @@ p { margin-bottom: 20px; }
 /* =========================================
    3. HEADER & NAVIGATION
    ========================================= */
-header { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 1.2rem 0; position: sticky; top: 0; z-index: 1000; }
+header { 
+    background: rgba(255, 255, 255, 0.8); /* Changed to transparent white */
+    backdrop-filter: blur(10px);           /* The blur effect */
+    -webkit-backdrop-filter: blur(10px);    /* Needed for Safari support */
+    border-bottom: 1px solid #e2e8f0; 
+    padding: 1.2rem 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; }
 .sub-logo { color: var(--accent); font-weight: 400; }
