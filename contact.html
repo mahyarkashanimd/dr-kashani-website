@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,7 +73,13 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about">Meet Dr. Kashani</a></li>
+                    <li>
+                        <a href="/about">Meet Dr. Kashani</a>
+                        <ul class="dropdown">
+                            <li><a href="/about">Biography</a></li>
+                            <li><a href="/research">Research &amp; Publications</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="/services">Services</a>
                         <ul class="dropdown">
@@ -112,11 +118,18 @@
     <!-- Page Header -->
     <section class="page-hero">
         <div class="container">
-            <!-- UPDATED HEADING -->
             <h1>Contact Us</h1>
             <p>Schedule your consultation in Rockville Centre or Carle Place.</p>
         </div>
     </section>
+
+    <!-- Spanish Language Pill -->
+    <div style="text-align: center; padding: 20px 16px;">
+        <a href="/contacto" style="display: inline-flex; align-items: center; gap: 10px; background: var(--light-bg); border: 1px solid var(--accent); padding: 12px 24px; text-decoration: none; font-size: 0.9rem; font-weight: 700; color: var(--primary);">
+            <span style="color: var(--accent); font-size: 1.1rem;">&#127881;</span>
+            <span><strong style="color: var(--accent);">Se Habla Espa&ntilde;ol</strong> &mdash; Formulario en Espa&ntilde;ol &rarr;</span>
+        </a>
+    </div>
 
     <!-- Contact Grid -->
     <section class="container">

@@ -37,4 +37,14 @@
   <!-- Legal -->
   <url><loc>https://www.menshealthlongisland.com/privacy-policy</loc><priority>0.3</priority></url>
 
+  <!-- Why Choose Us -->
+  <url><loc>https://www.menshealthlongisland.com/Difference</loc><priority>0.6</priority></url>
+
+  <!-- Research & Academic -->
+  <url><loc>https://www.menshealthlongisland.com/research</loc><priority>0.7</priority></url>
+
+  <!-- Spanish Language Pages -->
+  <url><loc>https://www.menshealthlongisland.com/urologo-nassau</loc><priority>0.8</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/contacto</loc><priority>0.8</priority></url>
+
 </urlset>

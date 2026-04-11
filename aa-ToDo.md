@@ -12,9 +12,9 @@ Five Server -- to jun JAVA within terminal
 - [x] Connect GitHub to Netlify for automatic deploys.
 - [x] Setup Google Search Console (GSC).
 - [x] Submit `sitemap.xml` to GSC (Status: SUCCESS).
-- [ ] Create `netlify.toml` for Clean URLs (No more ).
-- [ ] Update Nav & Footer links to remove `` and fix Home link to `/`.
-- [ ] Verify links work on the live site.
+- [x] Create `netlify.toml` for Clean URLs (No more ).
+- [x] Update Nav & Footer links to remove `` and fix Home link to `/`.
+- [x] Verify links work on the live site.
 
 ## 🚀 Phase 2: Search Authority (On-Page SEO)
 *Goal: Tell Google you are a "Urologist" in specific LI towns.*
