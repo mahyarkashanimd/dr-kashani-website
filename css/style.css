@@ -15,13 +15,31 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* --- REPLACE YOUR OLD BODY BLOCK WITH THIS --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    /* This next line is the secret to stopping ghost scrolls */
+    position: relative;
+    height: -webkit-fill-available;
+}
+
 body { 
     font-family: var(--font-body); 
     line-height: 1.7; 
     color: var(--text-dark); 
     background-color: #fff; 
+    font-size: 1.15rem;
+    overflow-y: auto;
     overflow-x: hidden;
-    font-size: 1.15rem; 
+}
+
+/* Ensure these never break the screen width */
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
 }
 
 a { text-decoration: none; transition: 0.3s; }
@@ -228,7 +246,11 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
    ========================================= */
 @media (max-width: 768px) {
     /* Fixed Hero Overflow */
-    .hero { min-height: 100vh; padding: 140px 0 60px; }
+   .hero { 
+    min-height: 1px !important; 
+    height: auto !important; 
+    padding: 80px 0 40px !important; 
+}
     .hero-logo-center { max-width: 280px; }
     .hero h1 { font-size: 2.2rem; }
     .hero p { font-size: 1.2rem; }
@@ -239,7 +261,13 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
     .authority-bar .dot { display: none; }
 
     .split-layout { flex-direction: column-reverse; gap: 40px; }
-    .bio-image img, .difference-home .bio-image img { box-shadow: 15px 15px 0 var(--accent) !important; width: 90%; }
+.bio-image img, .difference-home .bio-image img { 
+        box-shadow: 10px 10px 0 var(--accent) !important; 
+        /* Giving the shadow room to exist without breaking the screen width */
+        width: calc(100% - 20px) !important; 
+        margin: 0 auto 20px auto !important;
+        display: block;
+    }
     .bio-text h2, .section-header h2, .ready-to-act.gold-theme h2 { font-size: 2.2rem; text-align: center; }
 
     .service-col { min-width: 100%; }
