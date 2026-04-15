@@ -157,6 +157,16 @@
                 <h2 style="margin-bottom: 20px;">Solicitar una Cita</h2>
                 <p style="margin-bottom: 20px;">Complete el formulario a continuaci&oacute;n. Nuestro consultorio se comunicar&aacute; con usted para confirmar la hora de su cita.</p>
 
+                <!-- Mount Sinai Online Booking Option -->
+                <div style="background: var(--light-bg); border: 1px solid var(--accent); border-left: 4px solid var(--accent); padding: 20px 22px; margin-bottom: 30px;">
+                    <p style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px;">Citas en L&iacute;nea Disponibles</p>
+                    <p style="font-size: 1rem; color: var(--primary); font-weight: 600; margin-bottom: 6px;">Reserve a trav&eacute;s de Mount Sinai</p>
+                    <p style="font-size: 0.92rem; color: #475569; margin-bottom: 14px;">Tambi&eacute;n puede reservar directamente a trav&eacute;s del perfil del Dr. Kashani en Mount Sinai para disponibilidad en tiempo real.</p>
+                    <a href="https://profiles.mountsinai.org/mahyar-kashani" target="_blank" rel="noopener" style="display: inline-block; background: var(--primary); color: #fff; font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 11px 22px; text-decoration: none;">Reservar en Mount Sinai &rarr;</a>
+                </div>
+
+                <p style="font-size: 0.88rem; color: #94a3b8; text-align: center; margin-bottom: 20px;">&mdash; o complete el formulario a continuaci&oacute;n &mdash;</p>
+
                 <form class="contact-form" name="appointment-es" method="POST" action="/success-es.html" data-netlify="true">
                     <input type="hidden" name="form-name" value="appointment-es" />
                     <!-- Tag every submission so staff knows immediately -->
@@ -180,13 +190,9 @@
                         <option value="Returning Patient">Paciente Existente</option>
                     </select>
 
-                    <label for="seguro">Seguro M&eacute;dico (Aseguradora)</label>
-                    <input type="text" id="seguro" name="insurance" placeholder="ej. Aetna, UnitedHealthcare, Medicare, Medicaid">
-
                     <label for="preferencia-contacto">M&eacute;todo de Contacto Preferido</label>
                     <select id="preferencia-contacto" name="contact-preference">
                         <option value="Phone Call">Llamada Telef&oacute;nica</option>
-                        <option value="Text Message">Mensaje de Texto</option>
                         <option value="Email">Correo Electr&oacute;nico</option>
                     </select>
 
@@ -195,26 +201,6 @@
                         <option value="Rockville Centre">Rockville Centre</option>
                         <option value="Carle Place">Carle Place</option>
                         <option value="First Available">Sin preferencia / Primera Disponibilidad</option>
-                    </select>
-
-                    <label for="motivo">Motivo de la Visita</label>
-                    <select id="motivo" name="reason">
-                        <option value="General Consultation">Consulta General</option>
-                        <option value="Erectile Dysfunction">Disfunci&oacute;n Er&eacute;ctil</option>
-                        <option value="Penile Implant">Implante Peniano</option>
-                        <option value="Low Testosterone">Testosterona Baja</option>
-                        <option value="Peyronie's Disease">Enfermedad de Peyronie</option>
-                        <option value="Vasectomy">Vasectom&iacute;a</option>
-                        <option value="Vasectomy Reversal">Reversi&oacute;n de Vasectom&iacute;a</option>
-                        <option value="Male Infertility">Infertilidad Masculina</option>
-                        <option value="Premature Ejaculation">Eyaculaci&oacute;n Precoz</option>
-                        <option value="Kidney Stones">C&aacute;lculos Renales</option>
-                        <option value="Enlarged Prostate">Pr&oacute;stata Agrandada (BPH)</option>
-                        <option value="Hydrocele">Hidrocele</option>
-                        <option value="Circumcision">Circuncisi&oacute;n</option>
-                        <option value="Elevated PSA">PSA Elevado</option>
-                        <option value="Hematuria (Blood in Urine)">Sangre en Orina (Hematuria)</option>
-                        <option value="Other">Otro</option>
                     </select>
 
                     <label for="referido">&iquest;C&oacute;mo nos conoci&oacute;?</label>
@@ -270,7 +256,9 @@
             <p style="font-size: 0.85rem; opacity: 0.6; max-width: 950px; margin: 40px auto 20px auto; line-height: 1.8; text-align: center; clear: both; width: 100%; display: block; padding: 0 20px;">
     El Dr. Mahyar Kashani, Director de Salud Sexual Masculina, ofrece atenci&oacute;n urol&oacute;gica experta en Nassau County y Long Island. Con consultorios en <strong>Rockville Centre</strong> y <strong>Carle Place</strong>, atiende pacientes de Freeport, Hempstead, Elmont, Roosevelt, Valley Stream, Oceanside y comunidades cercanas.
 </p>
-            <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
+            
+        <p style="font-size: 0.8rem; opacity: 0.55; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.75; text-align: center; width: 100%; display: block; padding: 0 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
+        <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
         </div>
     </footer>
 

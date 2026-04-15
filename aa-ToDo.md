@@ -4,6 +4,8 @@ Stich -- to help with design
 https://nodejs.org/en/download -- LTS version -- to run JAVA -- restricted on hospital computers
 Five Server -- to jun JAVA within terminal
 
+***Picture --> need to update my headshot w/out Mt Sinai
+
 # 🩺 Men's Health Long Island - Growth Roadmap
 
 ## 🛑 Phase 1: Technical Foundation (CURRENT)
@@ -19,10 +21,10 @@ Five Server -- to jun JAVA within terminal
 ## 🚀 Phase 2: Search Authority (On-Page SEO)
 *Goal: Tell Google you are a "Urologist" in specific LI towns.*
 
-- [ ] Update Home Page `<title>` and `<h1>` (Priority: Rockville Centre/Carle Place).
+- [x] Update Home Page `<title>` and `<h1>` (Priority: Rockville Centre/Carle Place).
 - [ ] Optimize Service Pages (ED, Low T, IPP) with specialty keywords.
-- [ ] Add "Medical Specialty: Urology" Schema markup to `index`.
-- [ ] Audit "Education" articles for human-first language (E-E-A-T).
+- [x] Add "Medical Specialty: Urology" Schema markup to `index`.
+- [x] Audit "Education" articles for human-first language (E-E-A-T).
 
 ## 📍 Phase 3: Local Presence (Google Business Profile)
 *Goal: Win the "Map Pack" so local patients call you directly.*
