@@ -223,10 +223,32 @@
             border-bottom: 1px solid #e2e8f0;
             padding: 18px 0;
         }
+        .faq-item:first-child {
+            border-top: 1px solid #e2e8f0;
+        }
         .faq-item h3 {
             font-size: 1.15rem;
             margin-bottom: 10px;
             color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            background: #c0a062;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .faq-item p {
+            font-size: 1rem;
+            color: #475569;
+            padding-left: 34px;
         }
         @media (max-width: 768px) {
             .article-title { font-size: 2rem; }
@@ -383,7 +405,7 @@
             <img src="/images/dr-mahyar-kashani-urologist.jpg" alt="Dr. Mahyar Kashani">
             <div>
                 <h4>Dr. Mahyar Kashani, MD</h4>
-                <p>Fellowship-trained urologist and Director of Male Sexual Health at Mount Sinai South Nassau. Specializing in low testosterone, TRT, erectile dysfunction, Peyronie's Disease, and advanced men's health care.</p>
+                <p>Fellowship-trained urologist and Director of Male Sexual Health at Men's Health Long Island. Specializing in low testosterone, TRT, erectile dysfunction, Peyronie's Disease, and advanced men's health care.</p>
             </div>
         </div>
 

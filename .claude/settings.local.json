@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lh /c/Users/M804143.MSNYUHEALTH/Downloads/dr-kashani-website/article-*.html)"
+    ]
+  }
+}
