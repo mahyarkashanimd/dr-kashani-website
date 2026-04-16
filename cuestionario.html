@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Realice la autoevaluaci&oacute;n gratuita de salud masculina del Dr. Kashani. Descubra si debe ver a un ur&oacute;logo por DE, Testosterona Baja, Enfermedad de Peyronie o s&iacute;ntomas urinarios en Long Island.">
+    <meta name="author" content="Dr. Mahyar Kashani">
+    <link rel="canonical" href="https://www.menshealthlongisland.com/cuestionario">
+    <title>Autoevaluaci&oacute;n de Salud Masculina | Dr. Mahyar Kashani | Long Island</title>
+    <!-- Social Media Tags -->
+    <meta property="og:title" content="Cuestionario de Autoevaluaci&oacute;n de Salud Masculina | Dr. Mahyar Kashani | Long Island">
+    <meta property="og:description" content="Realice la autoevaluaci&oacute;n gratuita de salud masculina del Dr. Kashani. Descubra si debe consultar a un ur&oacute;logo por DE, Testosterona Baja, Enfermedad de Peyronie o s&iacute;ntomas urinarios.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.menshealthlongisland.com/cuestionario">
+    <meta property="og:image" content="https://www.menshealthlongisland.com/images/dr-mahyar-kashani-urologist.jpg">
+    <link rel="icon" type="image/png" href="/images/favicon3.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XSPQXKJSQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XSPQXKJSQ');
+    </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .quiz-page { padding: 60px 0 100px; background: var(--light-bg); }
+        .quiz-wrapper { max-width: 740px; margin: 0 auto; }
+        .quiz-disclaimer { background:#fff; border-left:4px solid var(--accent); padding:14px 20px; margin-bottom:30px; font-size:0.88rem; color:#64748b; border-radius:0 4px 4px 0; }
+        .quiz-disclaimer strong { color:var(--primary); }
+
+        /* Tarjeta */
+        .quiz-card { background:#fff; border:1px solid #e2e8f0; border-top:4px solid var(--accent); padding:45px 50px; }
+        .quiz-card h2 { font-size:1.8rem; margin-bottom:12px; }
+        .quiz-intro-sub { color:#64748b; font-size:1.05rem; margin-bottom:35px; }
+
+        /* Lista de verificaci&oacute;n */
+        .checklist-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:30px; }
+        .check-item { display:flex; align-items:center; gap:14px; padding:18px 20px; border:1.5px solid #e2e8f0; cursor:pointer; transition:0.2s; border-radius:2px; background:#fff; text-align:left; font-family:var(--font-body); font-size:1rem; color:var(--text-dark); width:100%; }
+        .check-item:hover { border-color:var(--accent); background:#fdf9f3; }
+        .check-item.checked { border-color:var(--accent); background:#fdf9f3; }
+        .check-box { width:22px; height:22px; border:2px solid #cbd5e1; border-radius:3px; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:0.2s; font-size:14px; color:white; font-weight:700; }
+        .check-item.checked .check-box { background:var(--accent); border-color:var(--accent); }
+        .check-item.checked .check-box::after { content:'✓'; }
+
+        /* Progreso */
+        .quiz-progress-wrap { margin-bottom:30px; }
+        .quiz-progress-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+        .quiz-section-tag { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); }
+        .quiz-step-count { font-size:0.8rem; color:#94a3b8; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+        .quiz-progress-bar-outer { background:#e2e8f0; height:5px; border-radius:3px; overflow:hidden; }
+        .quiz-progress-bar-inner { height:100%; background:var(--accent); border-radius:3px; transition:width 0.4s ease; }
+
+        /* Pregunta */
+        .quiz-question-text { font-family:var(--font-heading); font-size:1.5rem; color:var(--primary); line-height:1.35; margin-bottom:30px; }
+
+        /* Opciones est&aacute;ndar */
+        .quiz-options { display:flex; flex-direction:column; gap:10px; }
+        .quiz-option { display:flex; align-items:center; gap:15px; padding:16px 20px; border:1.5px solid #e2e8f0; cursor:pointer; transition:0.2s; background:#fff; text-align:left; font-family:var(--font-body); font-size:0.98rem; color:var(--text-dark); border-radius:2px; width:100%; }
+        .quiz-option:hover { border-color:var(--accent); background:#fdf9f3; }
+        .quiz-option.selected { border-color:var(--accent); background:#fdf9f3; font-weight:700; color:var(--primary); }
+        .option-dot { width:18px; height:18px; border-radius:50%; border:2px solid #cbd5e1; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:0.2s; }
+        .quiz-option.selected .option-dot { border-color:var(--accent); background:var(--accent); }
+        .quiz-option.selected .option-dot::after { content:''; width:7px; height:7px; border-radius:50%; background:white; display:block; }
+
+        /* Opciones S&iacute;/No (ADAM) */
+        .adam-options { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        .adam-option { display:flex; align-items:center; justify-content:center; gap:10px; padding:18px 20px; border:1.5px solid #e2e8f0; cursor:pointer; transition:0.2s; background:#fff; font-family:var(--font-body); font-size:1rem; font-weight:700; color:var(--text-dark); border-radius:2px; width:100%; text-align:center; }
+        .adam-option:hover { border-color:var(--accent); background:#fdf9f3; }
+        .adam-option.selected-yes { border-color:#16a34a; background:#f0fdf4; color:#166534; }
+        .adam-option.selected-no { border-color:#94a3b8; background:#f8fafc; color:#475569; }
+
+        /* Navegaci&oacute;n del cuestionario */
+        .quiz-nav { display:flex; justify-content:space-between; align-items:center; margin-top:30px; }
+        .btn-quiz-next { background:var(--primary); color:white; border:none; padding:14px 36px; font-weight:700; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; cursor:pointer; border-radius:2px; transition:0.3s; }
+        .btn-quiz-next:hover { background:var(--accent); }
+        .btn-quiz-next:disabled { background:#cbd5e1; cursor:not-allowed; }
+        .btn-quiz-back { background:transparent; border:none; color:#94a3b8; font-size:0.88rem; font-weight:700; cursor:pointer; padding:10px 0; text-transform:uppercase; letter-spacing:1px; }
+        .btn-quiz-back:hover { color:var(--primary); }
+
+        /* Resultados */
+        .results-hero { padding:45px 50px; text-align:center; margin-bottom:20px; }
+        .results-hero.green-hero { background:#166534; }
+        .results-hero.yellow-hero { background:#92400e; }
+        .results-hero.red-hero { background:#7f1d1d; }
+        .results-hero h2 { color:white; font-size:2rem; margin-bottom:10px; }
+        .results-hero p { color:rgba(255,255,255,0.85); font-size:1.05rem; margin-bottom:0; }
+
+        .results-sections { display:flex; flex-direction:column; gap:16px; margin-bottom:30px; }
+        .result-block { background:#fff; border:1px solid #e2e8f0; border-left:6px solid #e2e8f0; padding:25px 28px; }
+        .result-block.green { border-left-color:#16a34a; }
+        .result-block.yellow { border-left-color:#d97706; }
+        .result-block.red { border-left-color:#dc2626; }
+
+        .result-block-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; flex-wrap:wrap; gap:10px; }
+        .result-block h3 { font-size:1.15rem; margin:0; }
+        .score-badge { padding:6px 16px; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; border-radius:2px; }
+        .badge-green { background:#dcfce7; color:#166534; }
+        .badge-yellow { background:#fef3c7; color:#92400e; }
+        .badge-red { background:#fee2e2; color:#991b1b; }
+
+        .result-block p { font-size:0.95rem; color:#475569; margin-bottom:10px; }
+        .result-block p:last-child { margin-bottom:0; }
+        .result-score-line { font-size:0.85rem; color:#94a3b8; font-style:italic; margin-bottom:8px; }
+
+        .score-bar-wrap { margin:10px 0 14px; }
+        .score-bar-track { height:8px; background:#e2e8f0; border-radius:4px; overflow:hidden; }
+        .score-bar-fill { height:100%; border-radius:4px; transition:width 0.6s ease; }
+        .fill-green { background:#16a34a; }
+        .fill-yellow { background:#d97706; }
+        .fill-red { background:#dc2626; }
+
+        .result-service-link { font-size:0.85rem; font-weight:700; color:var(--accent); border-bottom:1px solid var(--accent); display:inline-block; margin-top:4px; }
+        .result-service-link:hover { color:var(--primary); border-color:var(--primary); }
+
+        .results-cta { background:var(--accent); padding:45px 40px; text-align:center; }
+        .results-cta h3 { color:var(--primary); font-size:1.9rem; margin-bottom:12px; }
+        .results-cta p { color:var(--primary); font-weight:700; font-size:1.05rem; margin-bottom:28px; }
+
+        @media (max-width:768px) {
+            .quiz-card { padding:28px 22px; }
+            .checklist-grid { grid-template-columns:1fr; }
+            .adam-options { grid-template-columns:1fr 1fr; }
+            .quiz-question-text { font-size:1.25rem; }
+            .results-hero { padding:30px 22px; }
+            .result-block { padding:20px; }
+            .results-cta { padding:35px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/inicio">Inicio</a></li>
+                <li>
+                    <a href="/sobre-el-doctor">Dr. Kashani</a>
+                    <ul class="dropdown">
+                        <li><a href="/sobre-el-doctor">Biograf&iacute;a</a></li>
+                        <li><a href="/investigacion">Investigaci&oacute;n y Publicaciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/servicios">Servicios</a>
+                    <ul class="dropdown">
+                        <li class="drop-header">Disfunci&oacute;n Er&eacute;ctil</li>
+                        <li><a href="/disfuncion-erectil">DE &mdash; Visi&oacute;n General</a></li>
+                        <li><a href="/implante-peneano">Implantes Peneanos (IPP)</a></li>
+                        <li class="drop-header">Salud Sexual y Testosterona</li>
+                        <li><a href="/testosterona-baja">Testosterona Baja (TRT)</a></li>
+                        <li><a href="/enfermedad-peyronie">Enfermedad de Peyronie</a></li>
+                        <li><a href="/eyaculacion-precoz">Eyaculaci&oacute;n Precoz</a></li>
+                        <li><a href="/vasectomia">Vasectom&iacute;a</a></li>
+                        <li><a href="/reversal-vasectomia">Reversi&oacute;n de Vasectom&iacute;a</a></li>
+                        <li class="drop-header">Urolog&iacute;a General</li>
+                        <li><a href="/circuncision">Circuncisi&oacute;n</a></li>
+                        <li><a href="/prostata-agrandada">Pr&oacute;stata Agrandada (HBP)</a></li>
+                        <li><a href="/vejiga-hiperactiva">Vejiga Hiperactiva (VH)</a></li>
+                        <li><a href="/hidrocele-es">Hidrocele</a></li>
+                        <li><a href="/calculos-renales">C&aacute;lculos Renales</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/educacion">Educaci&oacute;n</a>
+                    <ul class="dropdown">
+                        <li class="drop-header">Salud Masculina</li>
+                        <li><a href="/cuestionario">Cuestionario de Autoevaluaci&oacute;n</a></li>
+                        <li><a href="/educacion">Art&iacute;culos de Salud Masculina</a></li>
+                        <li><a href="/politica-privacidad">Pol&iacute;tica de Privacidad</a></li>
+                    </ul>
+                </li>
+                <li><a href="/quiz" style="font-size:0.85rem;color:var(--accent);font-weight:700;border:1px solid var(--accent);padding:4px 10px;border-radius:3px;white-space:nowrap;">&#127482;&#127480; English</a></li>
+                <li><a href="/contacto" class="btn-appointment">Reservar Cita</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="quiz-page">
+    <div class="container">
+        <div class="quiz-wrapper">
+            <div id="quiz-container"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>Men's Health Long Island</h4>
+                <p>Mahyar Kashani, MD</p>
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="/inicio">Inicio</a>
+                <a href="/sobre-el-doctor">Dr. Kashani</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/educacion">Educaci&oacute;n</a>
+                <a href="/contacto">Contacto</a>
+            </div>
+        </div>
+        <p style="font-size: 0.85rem; opacity: 0.6; max-width: 950px; margin: 40px auto 20px auto; line-height: 1.8; text-align: center; clear: both; width: 100%; display: block; padding: 0 20px;">
+    El Dr. Mahyar Kashani, Director de Salud Sexual Masculina, brinda atenci&oacute;n urol&oacute;gica experta en todo Long Island y el Condado de Nassau. Con consultorios en <strong>Rockville Centre</strong> y <strong>Carle Place</strong>, atiende a pacientes de Westbury, Garden City y Mineola, pasando por las comunidades de la costa sur de Oceanside, Lynbrook y Valley Stream, hasta el corredor de Great Neck y Roslyn.
+</p>
+        <p style="font-size: 0.8rem; opacity: 0.55; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.75; text-align: center; width: 100%; display: block; padding: 0 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">Este es un sitio web profesional personal. Las opiniones aqu&iacute; expresadas son propias y no representan las del Sistema de Salud Mount Sinai. Este sitio es con fines educativos y no brinda consejos m&eacute;dicos ni recopila datos de pacientes.</p>
+        <p class="copyright">&copy; 2026 Mahyar Kashani, MD. Todos los Derechos Reservados.</p>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+// ─── DEFINICI&Oacute;N DE SECCIONES ─────────────────────────────────────────────────
+
+const sections = {
+
+    ed: {
+        label: "Funci\u00f3n Er\u00e9ctil (Puntuaci\u00f3n SHIM)",
+        tag: "Funci\u00f3n Er\u00e9ctil",
+        page: "/disfuncion-erectil",
+        type: "standard",
+        maxScore: 25,
+        questions: [
+            {
+                text: "\u00bfC\u00f3mo califica su confianza en poder lograr y mantener una erecci\u00f3n?",
+                options: ["Muy alta","Alta","Moderada","Baja","Muy baja o ninguna"],
+                scores: [5,4,3,2,1]
+            },
+            {
+                text: "Cuando tuvo erecciones con estimulaci\u00f3n sexual, \u00bfcon qu\u00e9 frecuencia fueron lo suficientemente firmes para la penetraci\u00f3n?",
+                options: ["Casi siempre / siempre","M\u00e1s de la mitad de las veces","Aproximadamente la mitad de las veces","Menos de la mitad de las veces","Casi nunca / nunca"],
+                scores: [5,4,3,2,1]
+            },
+            {
+                text: "Durante las relaciones sexuales, \u00bfcon qu\u00e9 frecuencia pudo mantener la erecci\u00f3n despu\u00e9s de la penetraci\u00f3n?",
+                options: ["Casi siempre / siempre","M\u00e1s de la mitad de las veces","Aproximadamente la mitad de las veces","Menos de la mitad de las veces","Casi nunca / nunca / No lo intent\u00f3"],
+                scores: [5,4,3,2,1]
+            },
+            {
+                text: "Durante las relaciones sexuales, \u00bfqu\u00e9 tan dif\u00edcil fue mantener la erecci\u00f3n hasta el final?",
+                options: ["No fue dif\u00edcil","Ligeramente dif\u00edcil","Moderadamente dif\u00edcil","Muy dif\u00edcil","Extremadamente dif\u00edcil o imposible"],
+                scores: [5,4,3,2,1]
+            },
+            {
+                text: "Cuando intent\u00f3 tener relaciones sexuales, \u00bfcon qu\u00e9 frecuencia fue satisfactorio para usted?",
+                options: ["Casi siempre / siempre","M\u00e1s de la mitad de las veces","Aproximadamente la mitad de las veces","Menos de la mitad de las veces","Casi nunca / nunca / No lo intent\u00f3"],
+                scores: [5,4,3,2,1]
+            }
+        ],
+        interpret: function(score) {
+            if (score >= 22) return {
+                level: "Sin DE", color: "green", badge: "badge-green", bar: "fill-green",
+                pct: Math.round(score/25*100),
+                text: "Sus respuestas sugieren una funci\u00f3n er\u00e9ctil normal.",
+                rec: "Una consulta con el Dr. Kashani puede identificar factores contribuyentes e intervenciones simples para mantener una funci\u00f3n er\u00e9ctil saludable."
+            };
+            if (score >= 17) return {
+                level: "DE Leve", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: Math.round(score/25*100),
+                text: "Su puntuaci\u00f3n sugiere disfunci\u00f3n er\u00e9ctil leve. Muchos hombres en este nivel se benefician de una conversaci\u00f3n temprana con un especialista.",
+                rec: "Una consulta con el Dr. Kashani puede identificar factores contribuyentes e intervenciones simples."
+            };
+            if (score >= 12) return {
+                level: "DE Leve\u2013Moderada", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: Math.round(score/25*100),
+                text: "Su puntuaci\u00f3n sugiere disfunci\u00f3n er\u00e9ctil de leve a moderada. Esto es muy com\u00fan y muy tratable.",
+                rec: "Se recomienda una evaluaci\u00f3n con el Dr. Kashani para encontrar el enfoque adecuado para usted."
+            };
+            if (score >= 8) return {
+                level: "DE Moderada", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: Math.round(score/25*100),
+                text: "Su puntuaci\u00f3n sugiere disfunci\u00f3n er\u00e9ctil moderada. Esto es muy com\u00fan y muy tratable.",
+                rec: "Se recomienda una evaluaci\u00f3n con el Dr. Kashani para encontrar el enfoque adecuado para usted."
+            };
+            return {
+                level: "DE Grave", color: "red", badge: "badge-red", bar: "fill-red",
+                pct: Math.round(score/25*100),
+                text: "Su puntuaci\u00f3n sugiere disfunci\u00f3n er\u00e9ctil grave. Recomendamos una evaluaci\u00f3n por un especialista en salud masculina como el Dr. Kashani.",
+                rec: "El Dr. Kashani se especializa en todo el espectro de atenci\u00f3n para la DE, incluidas opciones avanzadas para hombres que no han respondido a los tratamientos est\u00e1ndar."
+            };
+        }
+    },
+
+    lowt: {
+        label: "Detecci\u00f3n de Deficiencia de Andr\u00f3genos (ADAM)",
+        tag: "Testosterona y Salud Hormonal",
+        page: "/testosterona-baja",
+        type: "adam",
+        questions: [
+            { text: "\u00bfHa notado una disminuci\u00f3n en la libido (deseo sexual)?", key: true },
+            { text: "\u00bfTiene falta de energ\u00eda?", key: false },
+            { text: "\u00bfHa notado una disminuci\u00f3n en su fuerza y/o resistencia?", key: false },
+            { text: "\u00bfHa perdido estatura?", key: false },
+            { text: "\u00bfHa notado una disminuci\u00f3n en el disfrute de la vida?", key: false },
+            { text: "\u00bfSe siente triste y/o malhumorado?", key: false },
+            { text: "\u00bfSus erecciones son menos firmes?", key: true },
+            { text: "\u00bfHa notado un deterioro reciente en su capacidad para practicar deportes?", key: false },
+            { text: "\u00bfSe queda dormido despu\u00e9s de cenar?", key: false },
+            { text: "\u00bfHa habido un deterioro reciente en su rendimiento laboral?", key: false }
+        ],
+        interpret: function(answers) {
+            const q1yes = answers[0] === true;
+            const q7yes = answers[6] === true;
+            const otherYes = [1,2,3,4,5,7,8,9].filter(i => answers[i] === true).length;
+            const positive = q1yes || q7yes || otherYes >= 3;
+
+            if (positive) return {
+                level: "Resultado Positivo", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: 65,
+                text: "Sus respuestas son consistentes con una detecci\u00f3n positiva de deficiencia de andr\u00f3genos. Esto no confirma testosterona baja, pero sugiere que sus niveles hormonales merecen ser evaluados.",
+                rec: "Se recomienda una consulta con el Dr. Kashani. La testosterona baja se confirma f\u00e1cilmente con an\u00e1lisis de sangre, y el tratamiento puede marcar una diferencia significativa en c\u00f3mo se siente."
+            };
+            return {
+                level: "Resultado Negativo", color: "green", badge: "badge-green", bar: "fill-green",
+                pct: 20,
+                text: "Sus respuestas no cumplen los criterios para una detecci\u00f3n positiva de deficiencia de andr\u00f3genos en este momento.",
+                rec: "Dicho esto, los s\u00edntomas pueden ser sutiles y los niveles hormonales solo se pueden confirmar con an\u00e1lisis de sangre. El Dr. Kashani est\u00e1 disponible para una evaluaci\u00f3n m\u00e1s completa con historial, examen f\u00edsico y panel hormonal."
+            };
+        }
+    },
+
+    peyronies: {
+        label: "Detecci\u00f3n de Enfermedad de Peyronie",
+        tag: "Curvatura Peneana y Dolor",
+        page: "/enfermedad-peyronie",
+        type: "standard",
+        maxScore: 20,
+        questions: [
+            {
+                text: "\u00bfHa notado alguna curvatura, doblez o cambio en la forma de su pene durante una erecci\u00f3n?",
+                options: ["No \u2014 sin cambios","Leve \u2014 ligera curva o hundimiento","Curva moderada \u2014 notable","Curva significativa \u2014 afecta el posicionamiento o la penetraci\u00f3n"],
+                scores: [0,1,3,5]
+            },
+            {
+                text: "\u00bfExperimenta dolor durante las erecciones o la actividad sexual relacionado con alguna curvatura o cambio?",
+                options: ["Sin dolor","Dolor leve ocasional","Dolor moderado \u2014 afecta la actividad sexual","Dolor intenso \u2014 impide la actividad sexual"],
+                scores: [0,1,3,5]
+            },
+            {
+                text: "\u00bfHa palpado un n\u00f3dulo duro, una cresta o una \u00e1rea firme debajo de la piel de su pene?",
+                options: ["No","Posiblemente \u2014 no estoy seguro","S\u00ed \u2014 una zona firme notable","S\u00ed \u2014 una placa dura definida"],
+                scores: [0,1,3,5]
+            },
+            {
+                text: "\u00bfAlguna curvatura o cambio de forma ha dificultado o imposibilitado las relaciones sexuales?",
+                options: ["Sin impacto","Ligeramente m\u00e1s dif\u00edcil \u2014 ajustes menores necesarios","Moderadamente dif\u00edcil \u2014 limita significativamente la actividad","Incapaz de intentar relaciones sexuales"],
+                scores: [0,1,3,5]
+            },
+            {
+                text: "\u00bfEsto le ha causado estr\u00e9s, ansiedad o ha afectado su confianza o relaci\u00f3n?",
+                options: ["En absoluto","Levemente \u2014 preocupaci\u00f3n ocasional","Moderadamente \u2014 efecto notable en la confianza o relaci\u00f3n","Significativamente \u2014 gran impacto en el bienestar o relaci\u00f3n"],
+                scores: [0,1,3,5]
+            }
+        ],
+        interpret: function(score) {
+            if (score <= 1) return {
+                level: "Sin Hallazgos Significativos", color: "green", badge: "badge-green", bar: "fill-green",
+                pct: Math.round(score/20*100),
+                text: "Sus respuestas no sugieren caracter\u00edsticas significativas de Enfermedad de Peyronie en este momento.",
+                rec: "Si los s\u00edntomas se desarrollan o cambian, el Dr. Kashani est\u00e1 disponible para una evaluaci\u00f3n."
+            };
+            if (score <= 10) return {
+                level: "Vale la Pena Evaluar", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: Math.round(score/20*100),
+                text: "Sus respuestas sugieren algunas caracter\u00edsticas que podr\u00edan ser compatibles con la Enfermedad de Peyronie. Se recomienda una evaluaci\u00f3n con el Dr. Kashani.",
+                rec: "La evaluaci\u00f3n de la Enfermedad de Peyronie requiere un examen f\u00edsico, prueba de inyecci\u00f3n y ecograf\u00eda peneana. El Dr. Kashani ofrece opciones de tratamiento quir\u00fargico y no quir\u00fargico."
+            };
+            return {
+                level: "Se Recomienda Evaluaci\u00f3n", color: "red", badge: "badge-red", bar: "fill-red",
+                pct: Math.round(score/20*100),
+                text: "Sus respuestas son compatibles con una Enfermedad de Peyronie significativa.",
+                rec: "Recomendamos programar una evaluaci\u00f3n con el Dr. Kashani para analizar sus opciones. El Dr. Kashani se especializa en esta condici\u00f3n y tiene disponibles opciones de tratamiento quir\u00fargico y no quir\u00fargico."
+            };
+        }
+    },
+
+    urinary: {
+        label: "S\u00edntomas Urinarios (Puntuaci\u00f3n AUA)",
+        tag: "Salud Urinaria",
+        page: "/prostata-agrandada",
+        type: "standard",
+        maxScore: 35,
+        questions: [
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcon qu\u00e9 frecuencia sinti\u00f3 que su vejiga no se vaci\u00f3 completamente despu\u00e9s de orinar?",
+                options: ["Nunca","Menos de 1 de cada 5 veces","Menos de la mitad de las veces","Aproximadamente la mitad de las veces","M\u00e1s de la mitad de las veces","Casi siempre"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcon qu\u00e9 frecuencia tuvo que orinar de nuevo menos de 2 horas despu\u00e9s de terminar?",
+                options: ["Nunca","Menos de 1 de cada 5 veces","Menos de la mitad de las veces","Aproximadamente la mitad de las veces","M\u00e1s de la mitad de las veces","Casi siempre"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcon qu\u00e9 frecuencia le result\u00f3 dif\u00edcil posponer la orina cuando sinti\u00f3 la necesidad urgente?",
+                options: ["Nunca","Menos de 1 de cada 5 veces","Menos de la mitad de las veces","Aproximadamente la mitad de las veces","M\u00e1s de la mitad de las veces","Casi siempre"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcon qu\u00e9 frecuencia tuvo un chorro urinario d\u00e9bil?",
+                options: ["Nunca","Menos de 1 de cada 5 veces","Menos de la mitad de las veces","Aproximadamente la mitad de las veces","M\u00e1s de la mitad de las veces","Casi siempre"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcon qu\u00e9 frecuencia tuvo que esforzarse o pujar para iniciar la orina?",
+                options: ["Nunca","Menos de 1 de cada 5 veces","Menos de la mitad de las veces","Aproximadamente la mitad de las veces","M\u00e1s de la mitad de las veces","Casi siempre"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Durante el \u00faltimo mes, \u00bfcu\u00e1ntas veces por noche se despert\u00f3 t\u00edpicamente para orinar?",
+                options: ["Ninguna","1 vez","2 veces","3 veces","4 veces","5 o m\u00e1s veces"],
+                scores: [0,1,2,3,4,5]
+            },
+            {
+                text: "Si tuviera que vivir el resto de su vida con su condici\u00f3n urinaria tal como est\u00e1 ahora, \u00bfc\u00f3mo se sentir\u00eda al respecto?",
+                options: ["Encantado","Satisfecho","Mayormente satisfecho","Mixto \u2014 igual de satisfecho e insatisfecho","Mayormente insatisfecho","Infeliz","Terrible"],
+                scores: [0,0,1,2,3,4,5]
+            }
+        ],
+        interpret: function(score) {
+            if (score <= 7) return {
+                level: "S\u00edntomas Leves", color: "green", badge: "badge-green", bar: "fill-green",
+                pct: Math.round(score/35*100),
+                text: "Sus s\u00edntomas urinarios parecen leves en este momento. Sin embargo, se recomienda una evaluaci\u00f3n basal con el Dr. Kashani para valorar sus s\u00edntomas, establecer un punto de partida y analizar opciones que puedan ayudar.",
+                rec: "El Dr. Kashani puede realizar una evaluaci\u00f3n urol\u00f3gica completa en cualquiera de las ubicaciones de Long Island."
+            };
+            if (score <= 19) return {
+                level: "S\u00edntomas Moderados", color: "yellow", badge: "badge-yellow", bar: "fill-yellow",
+                pct: Math.round(score/35*100),
+                text: "Sus respuestas sugieren s\u00edntomas urinarios moderados. Estos pueden estar relacionados con la pr\u00f3stata, la vejiga u otras causas urol\u00f3gicas.",
+                rec: "Se recomienda una evaluaci\u00f3n por un ur\u00f3logo. Hay opciones de tratamiento efectivas disponibles que pueden mejorar significativamente su calidad de vida."
+            };
+            return {
+                level: "S\u00edntomas Significativos", color: "red", badge: "badge-red", bar: "fill-red",
+                pct: Math.round(score/35*100),
+                text: "Su puntuaci\u00f3n de s\u00edntomas urinarios indica s\u00edntomas significativos del tracto urinario inferior que afectan su calidad de vida.",
+                rec: "Recomendamos una evaluaci\u00f3n con un especialista en salud masculina como el Dr. Kashani para analizar sus s\u00edntomas y las opciones disponibles para usted."
+            };
+        }
+    }
+};
+
+// ─── LISTA DE VERIFICACI&Oacute;N ──────────────────────────────────────────────────
+const checklistItems = [
+    { key: "ed",        label: "Dificultades para lograr o mantener erecciones" },
+    { key: "lowt",      label: "Poca energ\u00eda, bajo deseo sexual o cambios de humor (posible Testosterona Baja)" },
+    { key: "peyronies", label: "Curvatura peneana o dolor" },
+    { key: "urinary",   label: "S\u00edntomas urinarios (chorro d\u00e9bil, urgencia, frecuencia, orina nocturna)" }
+];
+
+// ─── ESTADO ───────────────────────────────────────────────────────────────────
+let state = {
+    step: 'checklist',
+    selectedTopics: [],
+    topicQueue: [],
+    currentTopicIndex: 0,
+    currentQuestionIndex: 0,
+    answers: {},
+    adamAnswers: {},
+    scores: {}
+};
+
+// ─── RENDERIZADO ──────────────────────────────────────────────────────────────
+function render() {
+    const c = document.getElementById('quiz-container');
+    if (state.step === 'checklist') c.innerHTML = renderChecklist();
+    else if (state.step === 'questions') c.innerHTML = renderQuestion();
+    else c.innerHTML = renderResults();
+    attachEvents();
+}
+
+function renderChecklist() {
+    const items = checklistItems.map(item =>
+        `<button class="check-item${state.selectedTopics.includes(item.key) ? ' checked' : ''}" data-key="${item.key}">
+            <span class="check-box"></span>
+            <span>${item.label}</span>
+        </button>`
+    ).join('');
+
+    return `
+    <div class="quiz-disclaimer" style="margin-bottom: 20px;">
+        <strong>Descargo M\u00e9dico:</strong> Esta autoevaluaci\u00f3n es solo para fines informativos y no constituye asesoramiento m\u00e9dico, diagn\u00f3stico o tratamiento.
+    </div>
+    <div class="quiz-card">
+        <h2>Autoevaluaci\u00f3n de Salud Masculina</h2>
+        <p class="quiz-intro-sub">Seleccione las \u00e1reas que le aplican. Le haremos preguntas espec\u00edficas para cada \u00e1rea que elija.</p>
+        <div class="checklist-grid">${items}</div>
+        <div class="quiz-nav">
+            <span></span>
+            <button class="btn-quiz-next" id="btn-start" ${state.selectedTopics.length === 0 ? 'disabled' : ''}>Iniciar Evaluaci\u00f3n \u2192</button>
+        </div>
+    </div>`;
+}
+
+function renderQuestion() {
+    const topicKey = state.topicQueue[state.currentTopicIndex];
+    const section = sections[topicKey];
+    const isAdam = section.type === 'adam';
+
+    let totalQ = 0, doneQ = 0;
+    state.topicQueue.forEach((k, ti) => {
+        totalQ += sections[k].questions.length;
+        if (ti < state.currentTopicIndex) doneQ += sections[k].questions.length;
+    });
+    doneQ += state.currentQuestionIndex;
+    const pct = Math.round((doneQ / totalQ) * 100);
+
+    const q = section.questions[state.currentQuestionIndex];
+    const isFirst = state.currentTopicIndex === 0 && state.currentQuestionIndex === 0;
+    const isLast = state.currentTopicIndex === state.topicQueue.length - 1 &&
+                   state.currentQuestionIndex === section.questions.length - 1;
+
+    let optionsHtml = '';
+    if (isAdam) {
+        const saved = (state.adamAnswers[topicKey] || [])[state.currentQuestionIndex];
+        optionsHtml = `<div class="adam-options">
+            <button class="adam-option${saved === true ? ' selected-yes' : ''}" data-val="yes">S\u00ed</button>
+            <button class="adam-option${saved === false ? ' selected-no' : ''}" data-val="no">No</button>
+        </div>`;
+    } else {
+        const saved = (state.answers[topicKey] || [])[state.currentQuestionIndex];
+        optionsHtml = `<div class="quiz-options">${q.options.map((opt, i) =>
+            `<button class="quiz-option${saved === i ? ' selected' : ''}" data-idx="${i}">
+                <span class="option-dot"></span><span>${opt}</span>
+            </button>`
+        ).join('')}</div>`;
+    }
+
+    const hasAnswer = isAdam
+        ? (state.adamAnswers[topicKey] || [])[state.currentQuestionIndex] !== undefined
+        : (state.answers[topicKey] || [])[state.currentQuestionIndex] !== undefined;
+
+    const adamLabel = isAdam ? ` \u2014 Pregunta ${state.currentQuestionIndex + 1} de ${section.questions.length}` : '';
+
+    return `<div class="quiz-card">
+        <div class="quiz-progress-wrap">
+            <div class="quiz-progress-top">
+                <span class="quiz-section-tag">${section.tag}${adamLabel}</span>
+                <span class="quiz-step-count">${doneQ + 1} de ${totalQ}</span>
+            </div>
+            <div class="quiz-progress-bar-outer">
+                <div class="quiz-progress-bar-inner" style="width:${pct}%"></div>
+            </div>
+        </div>
+        <div class="quiz-question-text">${q.text}</div>
+        ${optionsHtml}
+        <div class="quiz-nav">
+            <button class="btn-quiz-back" id="btn-back" style="visibility:${isFirst ? 'hidden' : 'visible'}">\u2190 Atr\u00e1s</button>
+            <button class="btn-quiz-next" id="btn-next" ${!hasAnswer ? 'disabled' : ''}>${isLast ? 'Ver Mis Resultados \u2192' : 'Siguiente \u2192'}</button>
+        </div>
+    </div>`;
+}
+
+function renderResults() {
+    const blocks = state.topicQueue.map(key => {
+        const section = sections[key];
+        let r;
+
+        if (section.type === 'adam') {
+            const ans = state.adamAnswers[key] || [];
+            r = section.interpret(ans);
+        } else {
+            const score = state.scores[key] || 0;
+            r = section.interpret(score);
+            r.scoreLabel = `Puntuaci\u00f3n: ${score} / ${section.maxScore}`;
+        }
+
+        const barWidth = Math.min(r.pct, 100);
+
+        return `<div class="result-block ${r.color}">
+            <div class="result-block-header">
+                <h3>${section.label}</h3>
+                <span class="score-badge ${r.badge}">${r.level}</span>
+            </div>
+            <div class="score-bar-wrap">
+                <div class="score-bar-track">
+                    <div class="score-bar-fill ${r.bar}" style="width:${barWidth}%"></div>
+                </div>
+            </div>
+            ${r.scoreLabel ? `<p class="result-score-line">${r.scoreLabel}</p>` : ''}
+            <p>${r.text}</p>
+            <p><strong>${r.rec}</strong></p>
+            <a href="${section.page}" class="result-service-link">Saber m\u00e1s sobre ${section.tag} \u2192</a>
+        </div>`;
+    }).join('');
+
+    const results = state.topicQueue.map(k => {
+        const s = sections[k];
+        if (s.type === 'adam') return s.interpret(state.adamAnswers[k] || []);
+        return s.interpret(state.scores[k] || 0);
+    });
+    const redCount = results.filter(r => r.color === 'red').length;
+    const yellowCount = results.filter(r => r.color === 'yellow').length;
+
+    let heroClass, headline, subhead;
+    if (redCount > 0) {
+        heroClass = 'red-hero';
+        headline = 'Recomendamos Ver al Dr. Kashani';
+        subhead = 'Sus resultados indican s\u00edntomas significativos que probablemente est\u00e1n afectando su calidad de vida. Como especialista con formaci\u00f3n de fellowship, el Dr. Kashani proporciona las soluciones avanzadas y de grado m\u00e9dico necesarias para restaurar su rendimiento y confianza. No tiene que \u201csimplemente vivir con ello\u201d \u2014 tenemos opciones efectivas.';
+    } else if (yellowCount > 0) {
+        heroClass = 'yellow-hero';
+        headline = 'Algunas \u00c1reas que Vale la Pena Analizar';
+        subhead = 'Sus puntuaciones sugieren que est\u00e1n ocurriendo algunos cambios manejables en su salud. Este es en realidad el momento ideal para una evaluaci\u00f3n \u2014 la intervenci\u00f3n temprana a menudo conduce a los resultados m\u00e1s simples y efectivos. Volvamos al 100% antes de que estos s\u00edntomas progresen.';
+    } else {
+        heroClass = 'green-hero';
+        headline = 'Sus Resultados Se Ven Tranquilizadores';
+        subhead = 'Sus puntuaciones se ven bien, pero un cuestionario solo puede contar parte de la historia. Una breve consulta con el Dr. Kashani puede proporcionar una l\u00ednea de base cl\u00ednica definitiva y la tranquilidad que viene con una evaluaci\u00f3n profesional de un especialista con formaci\u00f3n de fellowship.';
+    }
+
+    return `<div class="results-hero ${heroClass}">
+        <h2>${headline}</h2>
+        <p>${subhead}</p>
+    </div>
+    <div class="results-sections">${blocks}</div>
+    <div class="results-cta">
+        <h3>Reserve una Consulta con el Dr. Kashani</h3>
+        <p>Atenci\u00f3n discreta y sin prejuicios aqu\u00ed mismo en Long Island \u2014 Rockville Centre y Carle Place.</p>
+        <a href="/contacto" class="cta-button navy-btn large">Reservar su Consulta \u2192</a>
+    </div>`;
+}
+
+// ─── EVENTOS ──────────────────────────────────────────────────────────────────
+function attachEvents() {
+    if (state.step === 'checklist') {
+        document.querySelectorAll('.check-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const k = btn.dataset.key;
+                state.selectedTopics = state.selectedTopics.includes(k)
+                    ? state.selectedTopics.filter(x => x !== k)
+                    : [...state.selectedTopics, k];
+                render();
+            });
+        });
+        const sb = document.getElementById('btn-start');
+        if (sb) sb.addEventListener('click', startQuiz);
+    }
+
+    if (state.step === 'questions') {
+        const topicKey = state.topicQueue[state.currentTopicIndex];
+        const section = sections[topicKey];
+
+        if (section.type === 'adam') {
+            document.querySelectorAll('.adam-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const val = btn.dataset.val === 'yes';
+                    if (!state.adamAnswers[topicKey]) state.adamAnswers[topicKey] = [];
+                    state.adamAnswers[topicKey][state.currentQuestionIndex] = val;
+                    render();
+                });
+            });
+        } else {
+            document.querySelectorAll('.quiz-option').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const idx = parseInt(btn.dataset.idx);
+                    if (!state.answers[topicKey]) state.answers[topicKey] = [];
+                    state.answers[topicKey][state.currentQuestionIndex] = idx;
+                    render();
+                });
+            });
+        }
+
+        const nb = document.getElementById('btn-next');
+        if (nb) nb.addEventListener('click', nextQ);
+        const bb = document.getElementById('btn-back');
+        if (bb) bb.addEventListener('click', prevQ);
+    }
+}
+
+// ─── NAVEGACI&Oacute;N ─────────────────────────────────────────────────────────────
+function startQuiz() {
+    state.topicQueue = checklistItems.map(i => i.key).filter(k => state.selectedTopics.includes(k));
+    state.currentTopicIndex = 0;
+    state.currentQuestionIndex = 0;
+    state.step = 'questions';
+    render();
+    document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function hasCurrentAnswer() {
+    const key = state.topicQueue[state.currentTopicIndex];
+    const section = sections[key];
+    if (section.type === 'adam') {
+        return (state.adamAnswers[key] || [])[state.currentQuestionIndex] !== undefined;
+    }
+    return (state.answers[key] || [])[state.currentQuestionIndex] !== undefined;
+}
+
+function nextQ() {
+    if (!hasCurrentAnswer()) return;
+    const key = state.topicQueue[state.currentTopicIndex];
+    const section = sections[key];
+
+    if (state.currentQuestionIndex < section.questions.length - 1) {
+        state.currentQuestionIndex++;
+    } else if (state.currentTopicIndex < state.topicQueue.length - 1) {
+        state.currentTopicIndex++;
+        state.currentQuestionIndex = 0;
+    } else {
+        computeScores();
+        state.step = 'results';
+    }
+    render();
+    document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function prevQ() {
+    if (state.currentQuestionIndex > 0) {
+        state.currentQuestionIndex--;
+    } else if (state.currentTopicIndex > 0) {
+        state.currentTopicIndex--;
+        state.currentQuestionIndex = sections[state.topicQueue[state.currentTopicIndex]].questions.length - 1;
+    } else {
+        state.step = 'checklist';
+    }
+    render();
+    document.querySelector('.quiz-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function computeScores() {
+    state.topicQueue.forEach(key => {
+        const section = sections[key];
+        if (section.type === 'adam') return;
+        const ans = state.answers[key] || [];
+        state.scores[key] = section.questions.reduce((sum, q, i) =>
+            sum + (ans[i] !== undefined ? (q.scores[ans[i]] || 0) : 0), 0);
+    });
+}
+
+// ─── INICIO ───────────────────────────────────────────────────────────────────
+render();
+</script>
+</body>
+</html>
