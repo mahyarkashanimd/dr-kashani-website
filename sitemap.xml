@@ -30,24 +30,56 @@
   <url><loc>https://www.menshealthlongisland.com/quiz</loc><priority>0.5</priority></url>
 
   <!-- Articles -->
+  <url><loc>https://www.menshealthlongisland.com/article-welcome</loc><priority>0.4</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-oral-PDE5i-inhibitors-ed</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-penile-injection-trimix</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-injections-step-by-step</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-peyronies</loc><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-low-testosterone</loc><priority>0.5</priority></url>
-  <url><loc>https://www.menshealthlongisland.com/article-welcome</loc><priority>0.4</priority></url>
-
-  <!-- Legal -->
-  <url><loc>https://www.menshealthlongisland.com/privacy-policy</loc><priority>0.3</priority></url>
-
-  <!-- Why Choose Us -->
-  <url><loc>https://www.menshealthlongisland.com/Difference</loc><priority>0.6</priority></url>
 
   <!-- Research & Academic -->
   <url><loc>https://www.menshealthlongisland.com/research</loc><priority>0.7</priority></url>
 
-  <!-- Spanish Language Pages -->
-  <url><loc>https://www.menshealthlongisland.com/urologo-nassau</loc><priority>0.8</priority></url>
+  <!-- Legal -->
+  <url><loc>https://www.menshealthlongisland.com/privacy-policy</loc><priority>0.3</priority></url>
+
+  <!-- Spanish Language Pages — Core -->
+  <url><loc>https://www.menshealthlongisland.com/inicio</loc><priority>0.9</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/sobre-el-doctor</loc><priority>0.7</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/servicios</loc><priority>0.7</priority></url>
   <url><loc>https://www.menshealthlongisland.com/contacto</loc><priority>0.8</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/investigacion</loc><priority>0.6</priority></url>
+
+  <!-- Spanish Language Pages — ED -->
+  <url><loc>https://www.menshealthlongisland.com/disfuncion-erectil</loc><priority>0.8</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/implante-peneano</loc><priority>0.8</priority></url>
+
+  <!-- Spanish Language Pages — Sexual Health -->
+  <url><loc>https://www.menshealthlongisland.com/testosterona-baja</loc><priority>0.7</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/enfermedad-peyronie</loc><priority>0.7</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/eyaculacion-precoz</loc><priority>0.7</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/vasectomia</loc><priority>0.7</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/reversal-vasectomia</loc><priority>0.7</priority></url>
+
+  <!-- Spanish Language Pages — General Urology -->
+  <url><loc>https://www.menshealthlongisland.com/circuncision</loc><priority>0.6</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/prostata-agrandada</loc><priority>0.6</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/vejiga-hiperactiva</loc><priority>0.6</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/hidrocele-es</loc><priority>0.6</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/calculos-renales</loc><priority>0.6</priority></url>
+
+  <!-- Spanish Language Pages — Patient Education -->
+  <url><loc>https://www.menshealthlongisland.com/educacion</loc><priority>0.6</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/cuestionario</loc><priority>0.5</priority></url>
+
+  <!-- Spanish Language Pages — Articles -->
+  <url><loc>https://www.menshealthlongisland.com/articulo-bienvenida</loc><priority>0.4</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/articulo-inhibidores-pde5-oral-de</loc><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/articulo-inyeccion-peneana-trimix</loc><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/articulo-inyecciones-paso-a-paso</loc><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/articulo-peyronie-xiaflex</loc><priority>0.5</priority></url>
+
+  <!-- Spanish Language Pages — Legal -->
+  <url><loc>https://www.menshealthlongisland.com/politica-privacidad</loc><priority>0.3</priority></url>
 
 </urlset>

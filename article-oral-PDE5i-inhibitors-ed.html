@@ -224,6 +224,11 @@
             .article-doctor-bio { flex-direction: column; text-align: center; }
             .article-highlight-box { padding: 30px 25px; }
         }
+        /* Tighten desktop nav to accommodate language toggle */
+        @media (min-width: 769px) {
+            .nav-links { gap: 12px; }
+            .btn-appointment { padding: 12px 16px; }
+        }
     </style>
 </head>
 <body>
@@ -271,6 +276,7 @@
                             <li><a href="/privacy-policy">Privacy Policy</a></li>
                         </ul>
                     </li>
+                    <li><a href="/articulo-inhibidores-pde5-oral-de" style="font-size:0.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="Ver en Español">&#127466;&#127480; ESP</a></li>
                     <li><a href="/contact" class="btn-appointment">Book Appointment</a></li>
                 </ul>
             </nav>
