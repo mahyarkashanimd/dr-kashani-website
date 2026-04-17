@@ -6,7 +6,8 @@
       "Bash(where python3:*)",
       "Bash(where python:*)",
       "Bash(where py:*)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\\\\fix_nav.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\\\\fix_nav.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File fix_dropdown2.ps1)"
     ]
   }
 }
