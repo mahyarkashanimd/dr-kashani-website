@@ -4,6 +4,8 @@ Stich -- to help with design
 https://nodejs.org/en/download -- LTS version -- to run JAVA -- restricted on hospital computers
 Five Server -- to jun JAVA within terminal
 sqoosh
+Need to update picture titles
+Should also minimze the door pic on sqoosh
 
 ***Picture --> need to update my headshot w/out Mt Sinai
 
