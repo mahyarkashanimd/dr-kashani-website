@@ -16,6 +16,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* --- REPLACE YOUR OLD BODY BLOCK WITH THIS --- */
+html {
+    background-color: #0f172a; /* Matches hero/drawer dark bg — prevents white flash between page loads */
+}
 html, body {
     max-width: 100%;
     overflow-x: hidden;

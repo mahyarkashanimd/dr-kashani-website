@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>html{background:#0f172a}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dr. Mahyar Kashani, MD is a fellowship-trained urologist and Men's Health Specialist on Long Island. Treating ED, Penile Implants, Low Testosterone, Peyronie's Disease, Kidney Stones & BPH. Offices in Rockville Centre & Carle Place, NY.">
     <meta name="keywords" content="Dr. Mahyar Kashani, Urologist Long Island, Penile Implants, Peyronie's Disease, Low Testosterone, Erectile Dysfunction, Kidney Stones, Vasectomy, Rockville Centre, Carle Place">
@@ -164,6 +165,9 @@
 </script>
 
     <style>
+        /* =============================================
+           SERVICE CARDS (4-up grid)
+           ============================================= */
         .services-grid-4 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -174,21 +178,23 @@
             padding: 40px 35px;
             border: 2px solid var(--accent);
             text-align: left;
-            transition: 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             display: flex;
             flex-direction: column;
             cursor: pointer;
         }
         .service-col-4:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(192,160,98,0.25);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(192,160,98,0.25);
             background: #fdf9f3;
         }
+        .service-col-4:hover .service-icon i { transform: scale(1.1); }
         .service-col-4 .service-icon {
             font-size: 2.5rem;
             color: var(--accent);
             margin-bottom: 20px;
         }
+        .service-col-4 .service-icon i { transition: transform 0.3s ease; display: inline-block; }
         .service-col-4 .service-tag {
             font-size: 0.75rem;
             font-weight: 700;
@@ -220,16 +226,12 @@
             line-height: 1.5;
             list-style: none;
         }
-        .service-col-4 .service-bullets li::before {
-            content: none;
-        }
+        .service-col-4 .service-bullets li::before { content: none; }
         .service-col-4 .service-bullets a {
             color: var(--text-dark);
             transition: 0.2s;
         }
-        .service-col-4 .service-bullets a:hover {
-            color: var(--accent);
-        }
+        .service-col-4 .service-bullets a:hover { color: var(--accent); }
         .service-col-4 .service-link {
             font-weight: 700;
             font-size: 0.9rem;
@@ -244,10 +246,742 @@
         }
         .service-col-4 .service-link:hover { color: var(--accent); }
 
+        /* =============================================
+           HERO 2-COLUMN REVAMP
+           ============================================= */
+
+        /* Strip the hero's own background — we handle it via .hero-kenburns */
+        section.hero {
+            background-image: none !important;
+            align-items: flex-start !important;
+            text-align: left !important;
+            overflow: hidden;
+        }
+
+        /* Ken Burns zoom-out layer */
+        .hero-kenburns {
+            position: absolute;
+            inset: -6%;
+            background: url('/images/hero-bg.jpg') center / cover no-repeat;
+            animation: kenBurns 14s ease-out infinite alternate;
+            transform-origin: center center;
+            z-index: 0;
+        }
+        @keyframes kenBurns {
+            from { transform: scale(1.1); }
+            to   { transform: scale(1.0); }
+        }
+
+        /* Directional gradient overlay — opaque navy on left, fades to transparent right */
+        .hero-overlay-2col {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right,
+                    rgba(15,23,42,0.93) 0%,
+                    rgba(15,23,42,0.78) 45%,
+                    rgba(15,23,42,0.38) 75%,
+                    rgba(15,23,42,0.15) 100%),
+                linear-gradient(to top,
+                    rgba(15,23,42,0.5) 0%,
+                    transparent 40%);
+            z-index: 1;
+        }
+
+        /* 2-column flex container */
+        .hero-content-2col {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            width: 100%;
+            color: white;
+        }
+
+        .hero-left  { flex: 1; min-width: 0; }
+        .hero-right { flex: 0 0 auto; width: 410px; display: flex; align-items: center; justify-content: center; }
+
+        /* Re-align logo & buttons to left inside hero-left */
+        .hero-left .hero-logo-center { margin: 0 0 28px 0 !important; max-width: 155px !important; }
+        .hero-left .hero-buttons     { justify-content: flex-start; }
+
+        /* Refined hero typography — lighter, more elegant */
+        .hero-left h1 {
+            font-size: 3.2rem !important;
+            font-weight: 400 !important;
+            line-height: 1.18 !important;
+            letter-spacing: 0.01em !important;
+            margin-bottom: 20px !important;
+        }
+        .hero-left p {
+            font-size: 1.35rem !important;
+            letter-spacing: 0.02em;
+            opacity: 0.85;
+            margin-bottom: 36px !important;
+        }
+        /* Slim down the CTA buttons inside the hero */
+        .hero-left .cta-button {
+            padding: 13px 24px !important;
+            font-size: 0.82rem !important;
+            min-width: 0 !important;
+            letter-spacing: 1.5px;
+        }
+        .hero-left .hero-buttons { gap: 12px; flex-wrap: wrap; }
+
+        /* ---- Staggered slide-up entrance ---- */
+        @keyframes heroSlideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+        @keyframes heroSlideRight {
+            from { opacity: 0; transform: translateX(45px); }
+            to   { opacity: 1; transform: translateX(0);    }
+        }
+
+        .hero-animate { opacity: 0; animation-fill-mode: forwards; animation-timing-function: cubic-bezier(0.22,1,0.36,1); animation-duration: 0.75s; }
+        .hero-anim-1  { animation-name: heroSlideUp;   animation-delay: 0.10s; }
+        .hero-anim-2  { animation-name: heroSlideUp;   animation-delay: 0.28s; }
+        .hero-anim-3  { animation-name: heroSlideUp;   animation-delay: 0.46s; }
+        .hero-anim-4  { animation-name: heroSlideUp;   animation-delay: 0.64s; }
+        .hero-anim-5  { animation-name: heroSlideUp;   animation-delay: 0.82s; }
+        .hero-anim-img{ animation-name: heroSlideRight; animation-delay: 0.35s; }
+
+        /* ---- Headshot architectural framing ---- */
+        .hero-headshot-wrap {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Gold shadow box — offset bottom-right */
+        .hero-headshot-shadow {
+            position: absolute;
+            bottom: -16px;
+            right: -16px;
+            width: 100%;
+            height: 100%;
+            background: rgba(192,160,98,0.15);
+            border: 2px solid rgba(192,160,98,0.35);
+            z-index: 0;
+        }
+
+        /* Wireframe corner — top-left */
+        .hero-headshot-corner {
+            position: absolute;
+            top: -14px;
+            left: -14px;
+            width: 55px;
+            height: 55px;
+            border-top: 2px solid rgba(192,160,98,0.55);
+            border-left: 2px solid rgba(192,160,98,0.55);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Thin vertical accent line — far right */
+        .hero-headshot-line {
+            position: absolute;
+            top: 8%;
+            right: -26px;
+            width: 2px;
+            height: 84%;
+            background: linear-gradient(to bottom, transparent, rgba(192,160,98,0.5), transparent);
+            z-index: 3;
+        }
+
+        /* Photo container — square, refined border */
+        .hero-headshot-inner {
+            position: relative;
+            z-index: 2;
+            border: 8px solid rgba(255,255,255,0.08);
+            outline: 1px solid rgba(192,160,98,0.25);
+            transform: skewY(-0.6deg);
+            overflow: hidden;
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.6),
+                inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+        .hero-headshot-inner img {
+            display: block;
+            width: 375px;
+            height: 375px;
+            object-fit: cover;
+            object-position: top center;
+            transform: skewY(0.6deg) scale(1.02);
+        }
+
+        /* ---- Scroll indicator ---- */
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            animation: heroSlideUp 0.8s ease forwards 1.3s;
+        }
+        .scroll-mouse {
+            width: 22px;
+            height: 36px;
+            border: 2px solid rgba(255,255,255,0.35);
+            border-radius: 11px;
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+        }
+        .scroll-wheel {
+            width: 3px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: scrollPulse 1.8s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%,100% { transform: translateY(0);    opacity: 1;   }
+            50%      { transform: translateY(9px);  opacity: 0.2; }
+        }
+
+        /* =============================================
+           SCROLL-TRIGGERED REVEAL ANIMATIONS
+           ============================================= */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-45px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(45px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .revealed {
+            opacity: 1 !important;
+            transform: translate(0,0) !important;
+        }
+
+        /* =============================================
+           RESPONSIVE — hero collapses on mobile
+           ============================================= */
+        @media (max-width: 1000px) {
+            section.hero { align-items: center !important; text-align: center !important; }
+            .hero-content-2col { flex-direction: column; gap: 28px; }
+            .hero-left .hero-logo-center { margin: 0 auto 28px auto !important; }
+            .hero-left .hero-buttons     { justify-content: center; }
+            .hero-right { width: 100%; }
+            .hero-headshot-inner img { width: 220px; height: 220px; }
+            .hero-headshot-line { display: none; }
+        }
         @media (max-width: 768px) {
             .services-grid-4 { grid-template-columns: 1fr; }
-            .service-col-4 { padding: 30px 25px; }
+            .service-col-4   { padding: 30px 25px; }
+            .hero-right { display: none; }
+
+            /* Remove backdrop-filter from header on mobile — it silently makes
+               header the containing block for position:fixed children (the drawer),
+               clipping it to header height instead of the full viewport. */
+            header {
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                background: rgba(255,255,255,0.97) !important;
+            }
+
+            /* Show chevrons on mobile */
+            .nav-chevron { display: inline !important; }
+
+            /* Uniform dark overlay on mobile — no directional fade */
+            .hero-overlay-2col {
+                background: rgba(15,23,42,0.78) !important;
+            }
+
+            /* Shrink H1 so "Men's Health &" stays on one line */
+            .hero-left h1 {
+                font-size: 2.05rem !important;
+                line-height: 1.22 !important;
+            }
+
+            /* Tighten paragraph on mobile */
+            .hero-left p {
+                font-size: 1rem !important;
+                margin-bottom: 28px !important;
+            }
         }
+
+        /* =============================================
+           MOBILE SLIDE DRAWER NAV
+           ============================================= */
+
+        /* Desktop: wrapper divs are invisible in layout */
+        .drawer-topbar     { display: none; }
+        .drawer-panel-wrap { display: contents; }
+        .drawer-panel-main { display: contents; }
+        .drawer-panel-sub  { display: none; }
+        .drawer-backdrop   { display: none; }
+
+        /* Chevrons only visible on mobile */
+        .nav-chevron { display: none; }
+
+        @media (max-width: 768px) {
+
+            /* Backdrop */
+            .drawer-backdrop {
+                display: block;
+                position: fixed;
+                inset: 0;
+                background: rgba(15,23,42,0.6);
+                backdrop-filter: blur(3px);
+                -webkit-backdrop-filter: blur(3px);
+                z-index: 998;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+            .drawer-backdrop.visible {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            /* nav becomes the drawer panel */
+            nav {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: 82vw !important;
+                max-width: 340px !important;
+                background: var(--primary) !important;
+                z-index: 999 !important;
+                transform: translateX(110%) !important;
+                transition: transform 0.32s cubic-bezier(0.22,1,0.36,1) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                overflow: hidden !important;
+                box-shadow: -10px 0 50px rgba(0,0,0,0.45) !important;
+            }
+            nav.drawer-open {
+                transform: translateX(0) !important;
+            }
+
+            /* Drawer top bar */
+            .drawer-topbar {
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 22px;
+                border-bottom: 1px solid rgba(192,160,98,0.25);
+                flex-shrink: 0;
+            }
+            .drawer-brand {
+                color: white;
+                font-family: var(--font-heading);
+                font-size: 0.9rem;
+                font-weight: 400;
+                text-decoration: none;
+            }
+            .drawer-brand em { color: var(--accent); font-style: normal; }
+            .drawer-close-btn {
+                background: none;
+                border: none;
+                color: rgba(255,255,255,0.5);
+                font-size: 1.15rem;
+                cursor: pointer;
+                padding: 4px 6px;
+                line-height: 1;
+                transition: color 0.2s;
+            }
+            .drawer-close-btn:hover { color: white; }
+
+            /* Panel wrapper clips both panels */
+            .drawer-panel-wrap {
+                display: flex !important;
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .drawer-panel-main,
+            .drawer-panel-sub {
+                display: block !important;
+                position: absolute !important;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior: contain;
+                background: var(--primary);
+                transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+            }
+            .drawer-panel-main          { transform: translateX(0);    }
+            .drawer-panel-main.pushed   { transform: translateX(-100%); }
+            .drawer-panel-sub           { transform: translateX(100%);  }
+            .drawer-panel-sub.open      { transform: translateX(0);     }
+
+            /* Nav links inside drawer */
+            .nav-links {
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 6px 0 30px !important;
+                gap: 0 !important;
+                position: static !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                width: 100% !important;
+            }
+            .nav-links.active { display: flex !important; }
+            .nav-links > li { position: static !important; width: 100%; }
+
+            .nav-links > li > a {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 15px 22px !important;
+                color: rgba(255,255,255,0.88) !important;
+                font-size: 0.95rem !important;
+                font-weight: 600 !important;
+                text-transform: none !important;
+                letter-spacing: 0.2px !important;
+                border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+                background: transparent !important;
+                border-radius: 0 !important;
+                transition: color 0.2s, background 0.2s !important;
+            }
+            .nav-links > li > a:hover {
+                color: var(--accent) !important;
+                background: rgba(255,255,255,0.04) !important;
+            }
+            .nav-chevron {
+                color: var(--accent);
+                font-size: 1.1rem;
+                opacity: 0.7;
+                line-height: 1;
+                flex-shrink: 0;
+            }
+
+            /* Book Appointment — plain left-aligned nav item, gold text */
+            .nav-links .btn-appointment {
+                background: transparent !important;
+                color: var(--accent) !important;
+                text-align: left !important;
+                padding: 15px 22px !important;
+                font-size: 0.95rem !important;
+                font-weight: 700 !important;
+                border-radius: 0 !important;
+                display: flex !important;
+                width: 100% !important;
+                margin: 0 !important;
+                letter-spacing: 0.2px !important;
+                border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+            }
+            .nav-links .btn-appointment:hover {
+                background: rgba(255,255,255,0.04) !important;
+            }
+
+            /* Move ESP to drawer topbar — hide from list */
+            .nav-links > li:has(> a[href="/inicio"]) { display: none !important; }
+
+            /* Suppress any existing ::after/::before dropdown arrows */
+            .nav-links > li > a::after,
+            .nav-links > li > a::before { display: none !important; content: none !important; }
+
+            /* ESP badge in drawer topbar */
+            .drawer-topbar-right {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .drawer-esp-btn {
+                color: var(--accent) !important;
+                font-size: 0.72rem !important;
+                font-weight: 700 !important;
+                letter-spacing: 1px !important;
+                text-decoration: none !important;
+                padding: 4px 9px;
+                border: 1px solid rgba(192,160,98,0.4);
+                border-radius: 2px;
+                white-space: nowrap;
+                transition: background 0.2s;
+            }
+            .drawer-esp-btn:hover { background: rgba(192,160,98,0.12) !important; }
+
+            /* Sub-panel title as a tappable link */
+            .sub-panel-title a {
+                color: white !important;
+                text-decoration: none !important;
+                display: block;
+                transition: color 0.2s;
+            }
+            .sub-panel-title a:hover { color: var(--accent) !important; }
+            .sub-title-hint {
+                display: block;
+                font-size: 0.68rem;
+                color: rgba(192,160,98,0.55);
+                letter-spacing: 1px;
+                margin-top: 5px;
+                font-family: var(--font-body);
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            /* Sub-panel back button */
+            .sub-back-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                width: 100%;
+                padding: 14px 22px;
+                background: rgba(192,160,98,0.07);
+                border: none;
+                border-bottom: 1px solid rgba(192,160,98,0.2);
+                color: var(--accent);
+                font-size: 0.72rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.8px;
+                cursor: pointer;
+            }
+            .sub-panel-title {
+                padding: 18px 22px 14px;
+                color: white;
+                font-family: var(--font-heading);
+                font-size: 1.05rem;
+                font-weight: 400;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .sub-panel-items { padding: 4px 0 30px; }
+            .sub-panel-items a {
+                display: block !important;
+                padding: 13px 22px !important;
+                color: rgba(255,255,255,0.72) !important;
+                font-size: 0.9rem !important;
+                border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+                text-transform: none !important;
+                letter-spacing: 0 !important;
+                transition: color 0.2s, padding-left 0.2s !important;
+            }
+            .sub-panel-items a:hover {
+                color: var(--accent) !important;
+                padding-left: 30px !important;
+            }
+            .sub-panel-items .drop-header {
+                display: block;
+                padding: 14px 22px 5px;
+                font-size: 0.68rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--accent);
+                opacity: 0.6;
+            }
+
+            /* Hide inline dropdowns entirely */
+            .dropdown { display: none !important; }
+        }
+
+    /* ================================================
+       FOOTER — 3-COLUMN PROFESSIONAL REBUILD
+       ================================================ */
+
+    /* Override base footer styles */
+    footer {
+        background: var(--primary);
+        color: #94a3b8;
+        padding: 0;
+    }
+
+    .footer-top {
+        padding: 72px 0 52px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.8fr 0.9fr 1.1fr;
+        gap: 52px;
+        align-items: start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* --- Col 1: Brand --- */
+    .footer-logo-link {
+        display: inline-flex;
+        flex-direction: column;
+        line-height: 1;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+    .footer-logo-main {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.55rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.01em;
+    }
+    .footer-logo-sub {
+        font-family: 'Lato', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 400;
+        color: var(--accent);
+        letter-spacing: 0.06em;
+        margin-top: 3px;
+    }
+
+    .footer-tagline {
+        font-size: 0.855rem;
+        line-height: 1.75;
+        color: #7a8fa6;
+        margin-bottom: 24px;
+        max-width: 340px;
+    }
+    .footer-tagline strong { color: #94a3b8; font-weight: 600; }
+
+    .footer-social {
+        display: flex;
+        gap: 10px;
+    }
+    .footer-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(192,160,98,0.35);
+        color: var(--accent);
+        font-size: 0.95rem;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .footer-social a:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: var(--primary);
+    }
+
+    /* --- Col heading shared style --- */
+    .footer-col-heading {
+        font-family: var(--font-body, 'Lato', sans-serif);
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(192,160,98,0.2);
+    }
+
+    /* --- Col 2: Quick Links --- */
+    .footer-col-links ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .footer-col-links ul li a {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: color 0.18s, padding-left 0.18s;
+        display: inline-block;
+    }
+    .footer-col-links ul li a:hover {
+        color: #fff;
+        padding-left: 4px;
+    }
+
+    /* --- Col 3: Locations --- */
+    .footer-location {
+        margin-bottom: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .footer-location:last-child { margin-bottom: 0; }
+
+    .footer-location-name {
+        display: block;
+        color: #e2e8f0;
+        font-size: 0.92rem;
+        font-weight: 700;
+        transition: color 0.18s;
+    }
+    .footer-location-name:hover { color: var(--accent); }
+
+    .footer-location-address {
+        display: block;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        color: #64748b;
+        transition: color 0.18s;
+    }
+    .footer-location-address:hover { color: #94a3b8; }
+
+    .footer-phone {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.88rem;
+        color: var(--accent);
+        font-weight: 600;
+        transition: opacity 0.15s;
+    }
+    .footer-phone:hover { opacity: 0.75; }
+
+    /* --- Footer Bottom --- */
+    .footer-bottom {
+        padding: 24px 0 24px;
+        text-align: center;
+    }
+
+    .footer-disclaimer {
+        font-size: 0.75rem;
+        line-height: 1.75;
+        color: #334155;
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 16px;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #334155;
+        margin: 0;
+    }
+
+    /* --- Footer Responsive --- */
+    @media (max-width: 860px) {
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 100%;
+        }
+        .footer-col-brand {
+            grid-column: 1 / -1;
+        }
+        .footer-tagline { max-width: 100%; }
+        .footer-logo-img { width: 140px; }
+    }
+
+    @media (max-width: 520px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        .footer-col-brand { grid-column: auto; }
+        .footer-top { padding: 48px 0 36px; }
+        .footer-social { justify-content: flex-start; }
+    }
     </style>
 </head>
 <body>
@@ -304,17 +1038,47 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <img src="/images/LI-white-edited1.png" alt="Men's Health Long Island - Dr. Mahyar Kashani Urology Practice Logo" class="hero-logo-center">
-            <h1>Long Island's Premier <br>Men's Health & <br>Sexual Medicine Practice</h1>
-            <p style="max-width:100%;">Expert, discreet, and results-driven care to restore confidence and performance.</p>
-            <div class="hero-buttons">
-                <a href="/about" class="cta-button primary">Meet Dr. Kashani</a>
-                <a href="/services" class="cta-button primary">View Services</a>
-                <a href="/contact" class="cta-button primary">Book Appointment</a>
+        <!-- Ken Burns background layer -->
+        <div class="hero-kenburns"></div>
+        <!-- Directional gradient overlay -->
+        <div class="hero-overlay-2col"></div>
+
+        <div class="container hero-content-2col">
+
+            <!-- Left: Staggered text content -->
+            <div class="hero-left">
+                <img src="/images/LI-white-edited1.png"
+                     alt="Men's Health Long Island - Dr. Mahyar Kashani Urology Practice Logo"
+                     class="hero-logo-center hero-animate hero-anim-1">
+                <h1 class="hero-animate hero-anim-2">Long Island's Premier <br><span style="color:var(--accent);">Men's Health &</span> <br><span style="color:var(--accent);">Sexual Medicine Practice</span></h1>
+                <p class="hero-animate hero-anim-3" style="max-width:100%;">Expert, discreet, and results-driven care to restore confidence and performance.</p>
+                <div class="hero-buttons hero-animate hero-anim-4">
+                    <a href="/about" class="cta-button primary">Meet Dr. Kashani</a>
+                    <a href="/services" class="cta-button primary">View Services</a>
+                    <a href="/contact" class="cta-button primary">Book Appointment</a>
+                </div>
             </div>
-            <a href="/urologo-nassau" style="display:inline-block;margin-top:24px;background:transparent;border:1px solid rgba(192,160,98,0.7);color:var(--accent);padding:9px 22px;font-size:0.9rem;font-weight:700;letter-spacing:1px;text-decoration:none;transition:0.2s;" onmouseover="this.style.background='rgba(192,160,98,0.15)'" onmouseout="this.style.background='transparent'">&#127881; Se Habla Espa&ntilde;ol &rarr;</a>
+
+            <!-- Right: Architectural headshot frame -->
+            <div class="hero-right hero-animate hero-anim-img">
+                <div class="hero-headshot-wrap">
+                    <div class="hero-headshot-shadow"></div>
+                    <div class="hero-headshot-corner"></div>
+                    <div class="hero-headshot-inner">
+                        <img src="/images/dr-mahyar-kashani-urologist.webp"
+                             alt="Dr. Mahyar Kashani, MD — Urologist and Men's Health Specialist, Long Island">
+                    </div>
+                    <div class="hero-headshot-line"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
         </div>
     </section>
 
@@ -331,7 +1095,7 @@
                     <a href="/about" class="text-link">Read Full Biography &rarr;</a>
                 </div>
                 <div class="bio-image">
-                    <img src="/images/dr-mahyar-kashani-urologist.jpg" loading="lazy" alt="Dr. Mahyar Kashani, Urologist and Men's Health Specialist in Rockville Centre & Carle Place">
+                    <img src="/images/dr-mahyar-kashani-mens-health-specialist.webp" loading="lazy" alt="Dr. Mahyar Kashani, Urologist and Men's Health Specialist in Rockville Centre & Carle Place">
                 </div>
             </div>
         </div>
@@ -475,7 +1239,7 @@
                 </ul>
             </div>
             <div class="bio-image">
-                <img src="/images/dr-kashani-mens-health-specialist.jpg" loading="lazy" alt="Urology consultation with Dr. Mahyar Kashani on Long Island" style="box-shadow:20px 20px 0 #fff;">
+                <img src="/images/dr-mahyar-kashani-with-patient.jpg" loading="lazy" alt="Urology consultation with Dr. Mahyar Kashani on Long Island" style="box-shadow:20px 20px 0 #fff;">
             </div>
         </div>
     </section>
@@ -520,67 +1284,336 @@
         </div>
     </section>
 
-    <!-- Gold CTA -->
-    <section class="ready-to-act gold-theme">
+    <!-- CTA -->
+    <section style="background: #fff; padding: 80px 0;">
         <div class="container">
-            <h2>Ready to take the next step?</h2>
-            <p>Restore your confidence and performance with expert, discreet care right here on Long Island.</p>
-            <div class="cta-wrapper">
-                <a href="/contact" class="cta-button navy-btn large">Schedule Your Consultation</a>
+            <div style="background: var(--primary); color: white; padding: 60px 40px; text-align: center;">
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 16px;">Ready to take the next step?</h2>
+                <p style="color: #94a3b8; font-size: 1.05rem; max-width: 600px; margin: 0 auto 30px;">Restore your confidence and performance with expert, discreet care right here on Long Island.</p>
+                <a href="/contact" class="cta-button navy-btn large" style="background: var(--accent); border-color: var(--accent);">Schedule Your Consultation</a>
             </div>
         </div>
     </section>
 
-    <!-- Locations -->
-    <section id="locations" class="locations-section">
-        <div class="container">
-            <h2>Our Locations</h2>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <h3>Rockville Centre</h3>
-                    <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7000674,-73.6991327,12.17z/data=!3m1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu" target="_blank" class="address-link">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
-                    <a href="tel:5163902850" class="phone-link">(516) 390-2850</a>
-                </div>
-                <div class="location-card">
-                    <h3>Carle Place</h3>
-                    <a href="https://www.google.com/maps?sca_esv=c72161be23125edc&output=search&q=mahyar+kashani&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX17etG1w5v2C3lSOdVq_SatDHYWrrszGifWA7HOLyF6yeUqAFEhLMfzuWsSrRN0VNkBqj356LpiK5ZqyO4LPVitO3E8ILIoZfTNy10y6A6im2Y8dew&entry=mc&ved=1t:200715&ictx=111" target="_blank" class="address-link">393 Old Country Road<br>Carle Place, NY 11514</a>
-                    <a href="tel:5168770977" class="phone-link">(516) 877-0977</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h4>Men's Health Long Island</h4>
-                    <p>Mahyar Kashani, MD</p>
-                    <div class="footer-social-icons">
-                        <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank"><i class="fab fa-youtube"></i></a>
+
+        <!-- Top: 3-column grid -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Col 1: Brand -->
+                    <div class="footer-col footer-col-brand">
+                        <a href="/" class="footer-logo-link">
+                            <span class="footer-logo-main">Men's Health</span>
+                            <span class="footer-logo-sub">Long Island</span>
+                        </a>
+                        <p class="footer-tagline">Dr. Mahyar Kashani, Director of Male Sexual Health, provides expert urological care across Long Island and Nassau County. With offices in <strong>Rockville Centre</strong> and <strong>Carle Place</strong>, he serves patients from Westbury, Garden City, and Mineola, through the South Shore communities of Oceanside, Lynbrook, and Valley Stream, up to the Great Neck and Roslyn corridor.</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
-                </div>
- <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="/about">Meet Dr. Kashani</a>
-                    <a href="/services">Services</a>
-                    <a href="/education">Patient Education</a>
-                    <a href="/contact">Contact</a>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="footer-col footer-col-links">
+                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">Meet Dr. Kashani</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/education">Patient Education</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Locations -->
+                    <div class="footer-col footer-col-locations">
+                        <h5 class="footer-col-heading">Locations</h5>
+                        <div class="footer-location">
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.6563719,-73.6518517,17z/data=!3m2!4b1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-location-name">Rockville Centre</a>
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.6563719,-73.6518517,17z/data=!3m2!4b1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
+                            <a href="tel:5163902850" class="footer-phone">(516) 390-2850</a>
+                        </div>
+                        <div class="footer-location">
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7460679,-73.6032301,17z/data=!3m1!5s0x89c2877bdf6f2b19:0x46793c13e54a5aed!4m10!1m2!2m1!1s393+Old+Country+Rd,+kashani!3m6!1s0x89c2873ef478808f:0x70bacee24e8e017c!8m2!3d40.746087!4d-73.600605!15sChszOTMgT2xkIENvdW50cnkgUmQsIGthc2hhbmlaHCIaMzkzIG9sZCBjb3VudHJ5IHJkIGthc2hhbmmSAQl1cm9sb2dpc3SaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnBLZW1Gck5URlVTRkpHV2xSS2FGVlZVa3RTVldnMlVXdFNVMVZXUlJBQuABAPoBBAh4EBM!16s%2Fg%2F11ltr_pt1z?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-location-name">Carle Place</a>
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7460679,-73.6032301,17z/data=!3m1!5s0x89c2877bdf6f2b19:0x46793c13e54a5aed!4m10!1m2!2m1!1s393+Old+Country+Rd,+kashani!3m6!1s0x89c2873ef478808f:0x70bacee24e8e017c!8m2!3d40.746087!4d-73.600605!15sChszOTMgT2xkIENvdW50cnkgUmQsIGthc2hhbmlaHCIaMzkzIG9sZCBjb3VudHJ5IHJkIGthc2hhbmmSAQl1cm9sb2dpc3SaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnBLZW1Gck5URlVTRkpHV2xSS2FGVlZVa3RTVldnMlVXdFNVMVZXUlJBQuABAPoBBAh4EBM!16s%2Fg%2F11ltr_pt1z?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="footer-location-address">393 Old Country Road<br>Carle Place, NY 11514</a>
+                            <a href="tel:5168770977" class="footer-phone">(516) 877-0977</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-<p style="font-size: 0.85rem; opacity: 0.6; max-width: 950px; margin: 40px auto 20px auto; line-height: 1.8; text-align: center; clear: both; width: 100%; display: block; padding: 0 20px;">
-    Dr. Mahyar Kashani, Director of Male Sexual Health, provides expert urological care across Long Island and Nassau County. With offices in <strong>Rockville Centre</strong> and <strong>Carle Place</strong>, he serves patients from Westbury, Garden City, and Mineola, through the South Shore communities of Oceanside, Lynbrook, and Valley Stream, up to the Great Neck and Roslyn corridor.
-</p>
-            
-        <p style="font-size: 0.8rem; opacity: 0.55; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.75; text-align: center; width: 100%; display: block; padding: 0 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
-        <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
         </div>
+
+        <!-- Bottom: disclaimer + copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-disclaimer">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
+                <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
+            </div>
+        </div>
+
     </footer>
 
     <script src="/js/main.js"></script>
+
+    <script>
+    /* ================================================
+       SCROLL-TRIGGERED REVEALS (testing4 premium upgrade)
+       ================================================ */
+    (function() {
+
+        // --- 1. Tag elements with reveal classes ---
+        // Section headers (except hero)
+        document.querySelectorAll('section:not(.hero) .section-header').forEach(function(el) {
+            el.classList.add('reveal-up');
+        });
+
+        // Bio split layout — text from left, image from right
+        document.querySelectorAll('.split-layout .bio-text').forEach(function(el) {
+            el.classList.add('reveal-left');
+        });
+        document.querySelectorAll('.split-layout .bio-image').forEach(function(el) {
+            el.classList.add('reveal-right');
+        });
+
+        // Service cards — staggered
+        document.querySelectorAll('.services-grid-4 .service-col-4').forEach(function(el, i) {
+            el.classList.add('reveal-up');
+            el.style.transitionDelay = (i * 0.12) + 's';
+        });
+
+        // Review cards — staggered
+        document.querySelectorAll('.featured-reviews .review-card').forEach(function(el, i) {
+            el.classList.add('reveal-up');
+            el.style.transitionDelay = (i * 0.15) + 's';
+        });
+
+        // Article cards — staggered
+        document.querySelectorAll('[href^="/article-"]').forEach(function(el, i) {
+            el.classList.add('reveal-up');
+            el.style.transitionDelay = (i * 0.13) + 's';
+        });
+
+        // Quote box and trust bar
+        document.querySelectorAll('.quote-box-featured, .trust-bar, .rating-box').forEach(function(el) {
+            el.classList.add('reveal-up');
+        });
+
+        // Location cards
+        document.querySelectorAll('.location-card').forEach(function(el, i) {
+            el.classList.add('reveal-up');
+            el.style.transitionDelay = (i * 0.15) + 's';
+        });
+
+        // --- 2. IntersectionObserver to fire .revealed ---
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target); // fire once
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // --- 3. Navbar shrinks on scroll ---
+        var header = document.querySelector('header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    header.style.padding = '0.5rem 0';
+                    header.style.boxShadow = '0 4px 20px rgba(15,23,42,0.12)';
+                } else {
+                    header.style.padding = '';
+                    header.style.boxShadow = '';
+                }
+            }, { passive: true });
+        }
+
+    })();
+
+    /* ================================================
+       MOBILE SLIDE DRAWER NAV
+       ================================================ */
+    (function() {
+        var menuToggle = document.querySelector('.menu-toggle');
+        var navEl      = document.querySelector('header nav');
+        var navLinks   = document.querySelector('.nav-links');
+        if (!menuToggle || !navEl || !navLinks) return;
+
+        // --- Build drawer DOM structure ---
+        var topbar = document.createElement('div');
+        topbar.className = 'drawer-topbar';
+        topbar.innerHTML =
+            "<a href='/' class='drawer-brand'>Men\u2019s Health <em>Long Island</em></a>" +
+            "<div class='drawer-topbar-right'>" +
+            "<a href='/inicio' class='drawer-esp-btn' title='Ver en Espa\u00f1ol'>\uD83C\uDDEA\uD83C\uDDF8 ESP</a>" +
+            "<button class='drawer-close-btn' aria-label='Close menu'><i class='fas fa-times'></i></button>" +
+            "</div>";
+
+        var panelWrap = document.createElement('div');
+        panelWrap.className = 'drawer-panel-wrap';
+
+        var mainPanel = document.createElement('div');
+        var savedMainScroll = 0;
+        mainPanel.className = 'drawer-panel drawer-panel-main';
+
+        var subPanel = document.createElement('div');
+        subPanel.className = 'drawer-panel drawer-panel-sub';
+
+        panelWrap.appendChild(mainPanel);
+        panelWrap.appendChild(subPanel);
+
+        // Backdrop overlay
+        var backdrop = document.createElement('div');
+        backdrop.className = 'drawer-backdrop';
+        document.body.appendChild(backdrop);
+
+        // Move nav-links into main panel, then wire up nav
+        mainPanel.appendChild(navLinks);
+        navEl.appendChild(topbar);
+        navEl.appendChild(panelWrap);
+
+        // Add › chevrons to parent links (those with a dropdown)
+        navLinks.querySelectorAll(':scope > li').forEach(function(li) {
+            var link     = li.querySelector(':scope > a');
+            var dropdown = li.querySelector('.dropdown');
+            if (link && dropdown) {
+                var chev = document.createElement('span');
+                chev.className = 'nav-chevron';
+                chev.textContent = '\u203a'; // ›
+                link.appendChild(chev);
+            }
+        });
+
+        // --- Open / close helpers ---
+        var savedScrollY = 0;
+
+        function openDrawer() {
+            // iOS-safe scroll lock: position:fixed avoids the rubber-band white flash
+            savedScrollY = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top      = '-' + savedScrollY + 'px';
+            document.body.style.width    = '100%';
+            navEl.classList.add('drawer-open');
+            backdrop.classList.add('visible');
+            menuToggle.querySelector('i').className = 'fas fa-times';
+        }
+        function closeDrawer() {
+            document.body.style.position = '';
+            document.body.style.top      = '';
+            document.body.style.width    = '';
+            window.scrollTo(0, savedScrollY);
+            navEl.classList.remove('drawer-open');
+            backdrop.classList.remove('visible');
+            menuToggle.querySelector('i').className = 'fas fa-bars';
+            closeSubPanel();
+        }
+        function openSubPanel(title, href, dropdown, showParentLink) {
+            subPanel.innerHTML = '';
+
+            var backBtn = document.createElement('button');
+            backBtn.className = 'sub-back-btn';
+            backBtn.innerHTML = '\u2039 &nbsp;Back';
+            backBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeSubPanel();
+            });
+            subPanel.appendChild(backBtn);
+
+            var titleEl = document.createElement('div');
+            titleEl.className = 'sub-panel-title';
+            if (showParentLink) {
+                var titleLink = document.createElement('a');
+                titleLink.href = href;
+                titleLink.textContent = title;
+                titleLink.addEventListener('click', closeDrawer);
+                titleEl.appendChild(titleLink);
+                var hint = document.createElement('span');
+                hint.className = 'sub-title-hint';
+                hint.textContent = 'Tap to view all \u2192';
+                titleEl.appendChild(hint);
+            } else {
+                titleEl.textContent = title;
+            }
+            subPanel.appendChild(titleEl);
+
+            var items = document.createElement('div');
+            items.className = 'sub-panel-items';
+            items.innerHTML = dropdown.innerHTML;
+            items.querySelectorAll('a').forEach(function(a) {
+                a.addEventListener('click', closeDrawer);
+            });
+            subPanel.appendChild(items);
+
+             savedMainScroll = mainPanel.scrollTop;
+             mainPanel.classList.add('pushed');
+            subPanel.classList.add('open');
+        }
+        function closeSubPanel() {
+            mainPanel.classList.remove('pushed');
+            mainPanel.scrollTop = savedMainScroll;
+            subPanel.classList.remove('open');
+            // Clean up any active-dropdown state left by main.js
+            document.querySelectorAll('.active-dropdown').forEach(function(el) {
+                el.classList.remove('active-dropdown');
+            });
+        }
+
+        // --- Event listeners ---
+        // Hamburger toggle
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+        });
+
+        // Backdrop tap closes drawer
+        backdrop.addEventListener('click', closeDrawer);
+
+        // X button inside drawer
+        topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
+
+        // ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeDrawer();
+        });
+
+        // Parent links → push sub-panel; leaf links → close drawer
+        navLinks.querySelectorAll(':scope > li').forEach(function(li) {
+            var link     = li.querySelector(':scope > a');
+            var dropdown = li.querySelector('.dropdown');
+            if (!link) return;
+
+            if (dropdown) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        // Pull just the text node (not the chevron span)
+                        var title = Array.from(link.childNodes)
+                            .filter(function(n) { return n.nodeType === 3; })
+                            .map(function(n) { return n.textContent.trim(); })
+                            .join('');
+                        var showParentLink = (link.getAttribute('href') === '/services');
+                        openSubPanel(title, link.getAttribute('href'), dropdown, showParentLink);
+                    }
+                });
+            } else {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) closeDrawer();
+                });
+            }
+        });
+
+    })();
+    </script>
 </body>
 </html>
