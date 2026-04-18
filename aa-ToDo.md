@@ -3,6 +3,7 @@ To Do List
 Stich -- to help with design
 https://nodejs.org/en/download -- LTS version -- to run JAVA -- restricted on hospital computers
 Five Server -- to jun JAVA within terminal
+sqoosh
 
 ***Picture --> need to update my headshot w/out Mt Sinai
 
