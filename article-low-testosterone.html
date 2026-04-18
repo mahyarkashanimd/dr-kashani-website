@@ -257,6 +257,366 @@
             .article-highlight-box { padding: 30px 25px; }
         }
     </style>
+    <style>
+    /* =====================================================================
+       SCROLL-TRIGGERED REVEAL ANIMATIONS
+       ===================================================================== */
+    .reveal-up,
+    .reveal-left,
+    .reveal-right {
+      opacity: 0;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+      will-change: opacity, transform;
+    }
+    .reveal-up    { transform: translateY(40px); }
+    .reveal-left  { transform: translateX(-40px); }
+    .reveal-right { transform: translateX(40px); }
+    .reveal-up.revealed,
+    .reveal-left.revealed,
+    .reveal-right.revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* =====================================================================
+       MOBILE SLIDE-DRAWER NAV
+       ===================================================================== */
+    .drawer-topbar {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      /* hide the old desktop nav completely */
+      header { display: none !important; }
+
+      .drawer-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 56px;
+        background: var(--primary, #0a1628);
+        padding: 0 18px;
+        z-index: 1100;
+        box-shadow: 0 2px 8px rgba(0,0,0,.45);
+      }
+      .drawer-brand {
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 52px);
+      }
+      .drawer-hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex-shrink: 0;
+      }
+      .drawer-hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+
+      /* ---------- panel wrap ---------- */
+      .drawer-panel-wrap {
+        position: fixed;
+        top: 0; right: 0;
+        width: min(80vw, 300px);
+        height: 100%;
+        z-index: 1200;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+        pointer-events: none;
+      }
+      .drawer-panel-wrap.open {
+        transform: translateX(0);
+        pointer-events: auto;
+      }
+
+      /* ---------- main panel ---------- */
+      .drawer-panel-main {
+        position: absolute;
+        inset: 0;
+        background: var(--primary, #0a1628);
+        overflow-y: auto;
+        padding: 20px 0 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .drawer-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0 18px 10px;
+      }
+      .drawer-panel-main ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+      }
+      .drawer-panel-main ul li a,
+      .drawer-sub-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 22px;
+        color: #e2e8f0;
+        text-decoration: none;
+        font-size: 0.97rem;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        background: none;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .drawer-panel-main ul li a:hover,
+      .drawer-sub-trigger:hover { background: rgba(255,255,255,.06); }
+
+      /* sub-menu accordion */
+      .drawer-sub {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        background: rgba(0,0,0,.25);
+      }
+      .drawer-sub.open { max-height: 500px; }
+      .drawer-sub li a {
+        padding-left: 36px !important;
+        font-size: 0.9rem !important;
+        color: #94a3b8 !important;
+      }
+
+      /* chevron */
+      .nav-chevron {
+        width: 16px; height: 16px;
+        stroke: currentColor; fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round; stroke-linejoin: round;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+      }
+      .drawer-sub-trigger.active .nav-chevron { transform: rotate(90deg); }
+
+      /* CTA button inside drawer */
+      .drawer-cta {
+        display: block;
+        margin: 24px 18px 0;
+        padding: 13px;
+        background: var(--accent, #c8a96e);
+        color: #fff !important;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      /* backdrop */
+      .drawer-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.55);
+        z-index: 1150;
+      }
+      .drawer-backdrop.open { display: block; }
+
+      /* push body down below topbar */
+      body { padding-top: 56px; }
+
+      /* hide ESP link from desktop nav (already hidden via header:none, but belt+braces) */
+      .nav-esp-item { display: none !important; }
+    }
+
+    /* =====================================================================
+       3-COLUMN PROFESSIONAL FOOTER REBUILD
+       ===================================================================== */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 0;
+        }
+        .footer-top {
+            padding: 72px 0 52px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 0.9fr 1.1fr;
+            gap: 52px;
+            align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .footer-logo-link {
+            display: inline-flex;
+            flex-direction: column;
+            line-height: 1;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .footer-logo-main {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
+        .footer-logo-sub {
+            font-family: 'Lato', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--accent);
+            letter-spacing: 0.06em;
+            margin-top: 3px;
+        }
+        .footer-tagline {
+            font-size: 0.855rem;
+            line-height: 1.75;
+            color: #7a8fa6;
+            margin-bottom: 24px;
+            max-width: 340px;
+        }
+        .footer-tagline strong { color: #94a3b8; font-weight: 600; }
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(192,160,98,0.35);
+            color: var(--accent);
+            font-size: 0.95rem;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+        .footer-social a:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--primary);
+        }
+        .footer-col-heading {
+            font-family: var(--font-body, 'Lato', sans-serif);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(192,160,98,0.2);
+        }
+        .footer-col-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .footer-col-links ul li a {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.18s, padding-left 0.18s;
+            display: inline-block;
+        }
+        .footer-col-links ul li a:hover {
+            color: #fff;
+            padding-left: 4px;
+        }
+        .footer-location {
+            margin-bottom: 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .footer-location:last-child { margin-bottom: 0; }
+        .footer-location-name {
+            display: block;
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            font-weight: 700;
+            transition: color 0.18s;
+        }
+        .footer-location-name:hover { color: var(--accent); }
+        .footer-location-address {
+            display: block;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: #64748b;
+            transition: color 0.18s;
+        }
+        .footer-location-address:hover { color: #94a3b8; }
+        .footer-phone {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.88rem;
+            color: var(--accent);
+            font-weight: 600;
+            transition: opacity 0.15s;
+        }
+        .footer-phone:hover { opacity: 0.75; }
+        .footer-bottom {
+            padding: 24px 0 24px;
+            text-align: center;
+        }
+        .footer-disclaimer {
+            font-size: 0.75rem;
+            line-height: 1.75;
+            color: #334155;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 16px;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #334155;
+            margin: 0;
+        }
+        @media (max-width: 860px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                max-width: 100%;
+            }
+            .footer-col-brand { grid-column: 1 / -1; }
+            .footer-tagline { max-width: 100%; }
+        }
+        @media (max-width: 520px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .footer-col-brand { grid-column: auto; }
+            .footer-top { padding: 48px 0 36px; }
+            .footer-social { justify-content: flex-start; }
+        }
+    </style>
 </head>
 <body>
 
@@ -303,7 +663,7 @@
                             <li><a href="/privacy-policy">Privacy Policy</a></li>
                         </ul>
                     </li>
-                    <li><a href="/testosterona-baja" style="font-size:0.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
+                    <li class="nav-esp-item"><a href="/testosterona-baja" style="font-size:0.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
                     <li><a href="/contact" class="btn-appointment">Book Appointment</a></li>
                 </ul>
             </nav>
@@ -418,35 +778,172 @@
     </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h4>Men's Health Long Island</h4>
-                    <p>Mahyar Kashani, MD</p>
-                    <div class="footer-social-icons">
-                        <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank"><i class="fab fa-youtube"></i></a>
+
+        <!-- Top: 3-column grid -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Col 1: Brand -->
+                    <div class="footer-col footer-col-brand">
+                        <a href="/" class="footer-logo-link">
+                            <span class="footer-logo-main">Men's Health</span>
+                            <span class="footer-logo-sub">Long Island</span>
+                        </a>
+                        <p class="footer-tagline">Dr. Mahyar Kashani, Director of Male Sexual Health, provides expert urological care across Long Island and Nassau County. With offices in <strong>Rockville Centre</strong> and <strong>Carle Place</strong>, he serves patients from Westbury, Garden City, and Mineola, through the South Shore communities of Oceanside, Lynbrook, and Valley Stream, up to the Great Neck and Roslyn corridor.</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/mahyarkashanimd/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@mahyarkashani_md" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/@MahyarKashaniMD" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="/about">Meet Dr. Kashani</a>
-                    <a href="/services">Services</a>
-                    <a href="/education">Patient Education</a>
-                    <a href="/contact">Contact</a>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="footer-col footer-col-links">
+                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">Meet Dr. Kashani</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/education">Patient Education</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Locations -->
+                    <div class="footer-col footer-col-locations">
+                        <h5 class="footer-col-heading">Locations</h5>
+                        <div class="footer-location">
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7000674,-73.6991327,12.17z/data=!3m1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu" target="_blank" class="footer-location-name">Rockville Centre</a>
+                            <a href="https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7000674,-73.6991327,12.17z/data=!3m1!5s0x89c27b4dbf83e8d9:0xd205d04173015531!4m6!3m5!1s0x89c27b54b4d9e767:0xb0e4d98b912a6b72!8m2!3d40.6563719!4d-73.6492768!16s%2Fg%2F11x2kh83ds?entry=ttu" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
+                            <a href="tel:5163902850" class="footer-phone">(516) 390-2850</a>
+                        </div>
+                        <div class="footer-location">
+                            <a href="https://www.google.com/maps?sca_esv=c72161be23125edc&output=search&q=mahyar+kashani&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX17etG1w5v2C3lSOdVq_SatDHYWrrszGifWA7HOLyF6yeUqAFEhLMfzuWsSrRN0VNkBqj356LpiK5ZqyO4LPVitO3E8ILIoZfTNy10y6A6im2Y8dew&entry=mc&ved=1t:200715&ictx=111" target="_blank" class="footer-location-name">Carle Place</a>
+                            <a href="https://www.google.com/maps?sca_esv=c72161be23125edc&output=search&q=mahyar+kashani&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeuYzzFkfneXafNx6OMdA4MRo3L_oOc-1oJ7O1RV73dx3MIyCigtuiU2aDjExIvydX17etG1w5v2C3lSOdVq_SatDHYWrrszGifWA7HOLyF6yeUqAFEhLMfzuWsSrRN0VNkBqj356LpiK5ZqyO4LPVitO3E8ILIoZfTNy10y6A6im2Y8dew&entry=mc&ved=1t:200715&ictx=111" target="_blank" class="footer-location-address">393 Old Country Road<br>Carle Place, NY 11514</a>
+                            <a href="tel:5168770977" class="footer-phone">(516) 877-0977</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <p style="font-size: 0.85rem; opacity: 0.6; max-width: 950px; margin: 40px auto 20px auto; line-height: 1.8; text-align: center; clear: both; width: 100%; display: block; padding: 0 20px;">
-                Dr. Mahyar Kashani, Director of Male Sexual Health, provides expert urological care across Long Island and Nassau County. With offices in Rockville Centre and Carle Place, he serves patients seeking low testosterone testing, TRT, erectile dysfunction treatment, and Peyronie's disease care.
-            </p>
-            
-        <p style="font-size: 0.8rem; opacity: 0.55; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.75; text-align: center; width: 100%; display: block; padding: 0 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
-        <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
         </div>
+
+        <!-- Bottom: disclaimer + copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-disclaimer">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
+                <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
+            </div>
+        </div>
+
     </footer>
 
     <script src="/js/main.js"></script>
+    <script>
+    // ── Scroll-triggered reveal ──────────────────────────────────────────────
+    (function(){
+      const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+      if(!revealEls.length) return;
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); } });
+      },{threshold:0.15});
+      revealEls.forEach(el=>io.observe(el));
+    })();
+
+    // ── Mobile slide-drawer nav ──────────────────────────────────────────────
+    (function(){
+      const nav = document.querySelector('header nav') || document.querySelector('nav');
+      if(!nav) return;
+
+      // --- build topbar ---
+      const topbar = document.createElement('div');
+      topbar.className = 'drawer-topbar';
+      topbar.innerHTML = `
+        <span class="drawer-brand">Men's Health Long Island</span>
+        <button class="drawer-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>`;
+      document.body.prepend(topbar);
+
+      // --- build backdrop ---
+      const backdrop = document.createElement('div');
+      backdrop.className = 'drawer-backdrop';
+      document.body.appendChild(backdrop);
+
+      // --- build main panel ---
+      const mainPanel = document.createElement('div');
+      mainPanel.className = 'drawer-panel-wrap';
+
+      // gather top-level nav links (skip ESP button + Book Appointment)
+      const navUl = nav.querySelector('ul');
+      let mainHTML = '<ul>';
+      if(navUl){
+        navUl.querySelectorAll(':scope > li').forEach(li => {
+          const a = li.querySelector(':scope > a');
+          if(!a) return;
+          if(a.classList.contains('btn-appointment')) return;
+          if(li.classList.contains('nav-esp-item')) return;
+          const sub = li.querySelector('ul');
+          if(sub){
+            mainHTML += `<li class="has-sub"><button class="drawer-sub-trigger">${a.textContent.trim()} <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>`;
+            mainHTML += '<ul class="drawer-sub">';
+            sub.querySelectorAll('a').forEach(sa=>{
+              mainHTML += `<li><a href="${sa.getAttribute('href')}">${sa.textContent.trim()}</a></li>`;
+            });
+            mainHTML += '</ul></li>';
+          } else {
+            mainHTML += `<li><a href="${a.getAttribute('href')}">${a.textContent.trim()}</a></li>`;
+          }
+        });
+      }
+      mainHTML += '</ul>';
+      mainHTML += '<a href="/contact" class="drawer-cta">Book Appointment</a>';
+
+      mainPanel.innerHTML = `
+        <div class="drawer-panel-main">
+          <button class="drawer-close" aria-label="Close menu">&times;</button>
+          ${mainHTML}
+        </div>`;
+      document.body.appendChild(mainPanel);
+
+      // --- wire up ---
+      const hamburger = topbar.querySelector('.drawer-hamburger');
+      const closeBtn  = mainPanel.querySelector('.drawer-close');
+
+      function openDrawer(){
+        mainPanel.classList.add('open');
+        backdrop.classList.add('open');
+        hamburger.setAttribute('aria-expanded','true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeDrawer(){
+        mainPanel.classList.remove('open');
+        backdrop.classList.remove('open');
+        hamburger.setAttribute('aria-expanded','false');
+        document.body.style.overflow = '';
+        // also close any open sub
+        mainPanel.querySelectorAll('.drawer-sub.open').forEach(s=>s.classList.remove('open'));
+        mainPanel.querySelectorAll('.drawer-sub-trigger.active').forEach(b=>b.classList.remove('active'));
+      }
+
+      hamburger.addEventListener('click', openDrawer);
+      closeBtn.addEventListener('click', closeDrawer);
+      backdrop.addEventListener('click', closeDrawer);
+
+      // sub-menu accordion
+      mainPanel.querySelectorAll('.drawer-sub-trigger').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const sub = btn.nextElementSibling;
+          const isOpen = sub.classList.contains('open');
+          // close others
+          mainPanel.querySelectorAll('.drawer-sub.open').forEach(s=>s.classList.remove('open'));
+          mainPanel.querySelectorAll('.drawer-sub-trigger.active').forEach(b=>b.classList.remove('active'));
+          if(!isOpen){ sub.classList.add('open'); btn.classList.add('active'); }
+        });
+      });
+    })();
+    </script>
 </body>
 </html>
