@@ -14,6 +14,16 @@ Minimizeed the picture w/ patient --> need to change and update name
 ***When you hit back onto a page on mobile.... I want it to stay where you went, not go to the top of the screen
 ***Update sitemap
 
+
+
+***THe last edit --> i feel like it changed some of the formating and still has the issue where when you click on it it goes to white screen first
+
+
+
+
+
+
+
 # 🩺 Men's Health Long Island - Growth Roadmap
 
 ## 🛑 Phase 1: Technical Foundation (CURRENT)

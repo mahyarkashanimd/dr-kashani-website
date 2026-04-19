@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>html{background:#0f172a}body{margin:0;background:#fff}header{background:rgba(255,255,255,.8);position:sticky;top:0;z-index:1000}.nav-links{display:flex;gap:12px;align-items:center}.menu-toggle{display:none}.dropdown{display:none}.page-hero{background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),url(/images/hero-bg.jpg);background-size:cover;background-position:center;padding:120px 0 60px;text-align:center;color:#fff}</style>
+    <style>html{background:#fff}body{margin:0;background:#fff}header{background:rgba(255,255,255,.8);position:sticky;top:0;z-index:1000}.nav-links{display:flex;gap:12px;align-items:center}.menu-toggle{display:none}.dropdown{display:none}.page-hero{background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),url(/images/hero-bg.jpg);background-size:cover;background-position:center;padding:120px 0 60px;text-align:center;color:#fff}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn how to do penile injections step by step with this patient guide to intracavernosal injection therapy. Dr. Mahyar Kashani explains Trimix, injection technique, safety, and what to expect.">
     <meta name="keywords" content="how to do penile injections, penile injections step by step, ICI injections, Trimix instructions, erectile dysfunction injection therapy, penile injection guide, ED treatment, men's health, urologist Long Island">
@@ -1178,7 +1178,7 @@
        SCROLL-TRIGGERED REVEALS
        ================================================ */
     (function() {
-        document.querySelectorAll('section h2').forEach(function(el) {
+        document.querySelectorAll('section:not(.article-body) h2, .section-header').forEach(function(el) {
             el.classList.add('reveal-up');
         });
         document.querySelectorAll('.section-header').forEach(function(el) {
@@ -1189,10 +1189,6 @@
         });
         document.querySelectorAll('.split-layout .bio-image').forEach(function(el) {
             el.classList.add('reveal-right');
-        });
-        document.querySelectorAll('.cause-card, .treatment-card, .service-card, .research-card').forEach(function(el, i) {
-            el.classList.add('reveal-up');
-            el.style.transitionDelay = (i * 0.08) + 's';
         });
         document.querySelectorAll('.faq-item').forEach(function(el, i) {
             el.classList.add('reveal-up');
