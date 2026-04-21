@@ -1,48 +1,24 @@
-To Do List
 
-Stich -- to help with design
-Five Server -- to jun JAVA within terminal
-sqoosh
-Need to update picture titles
-Should also minimze the door pic on sqoosh
-Minimizeed the picture w/ patient --> need to change and update name
-***When clicking menshealthlong island on the hamberger .. should go to home as well. 
-***Picture --> need to update my headshot w/out Mt Sinai
-*** Carle Place Link needs to be updated -- https://www.google.com/maps/place/Mahyar+Kashani,+MD/@40.7460869,-73.6054759,17z/data=!3m2!4b1!5s0x89c2877bdf6f2b19:0x46793c13e54a5aed!4m6!3m5!1s0x89c2873ef478808f:0x70bacee24e8e017c!8m2!3d40.746087!4d-73.600605!16s%2Fg%2F11ltr_pt1z?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D
-***Google Maps footer links -- both offices (2 Lincoln Ave + 393 Old Country Rd) should link to the EXACT address pin, not just "Mahyar Kashani" search. Need correct direct Google Maps URLs for each.
+******************
 
-***When you hit back onto a page on mobile.... I want it to stay where you went, not go to the top of the screen
-***Update sitemap
+SITES:
 
-****HAVE to make sure I come up on chatgpt and other AI sites
+1. Stitch - design
+2. Fiver server -- run Java within Terminal
+3. Sqoosh - fix picture sizes
 
-***THe last edit --> i feel like it changed some of the formating and still has the issue where when you click on it it goes to white screen first
+*******************
 
-****************
-FOR TOMORROW:
-
-Session Summary — ED Page Fix
-The Problem
-The English ED page (and other English pages) had a white flash on load — unstyled nav text appeared briefly before the page rendered correctly. Spanish pages like disfuncion-erectil.html worked fine.
-
-Root Cause (finally identified)
-Previous fix attempts had added a mobile media query directly into the first-paint critical CSS on line 5:
+To Do: 
+1. Update picture titels
+2. Confirm sizes are all minimized
+3. Make sure all pictures of Mt Sinai are off
+4. Update SiteMap before launcing
+6. Update SEO for AI --> the 3 things that are on "Optimize Site For AI Search" on google AI and that Tik Tok
 
 
-@media(max-width:768px){.nav-links{display:none!important}nav{transform:translateX(110%)!important;...}}
-This pushed the nav off-screen at the very first paint — before the drawer JavaScript had run — causing a visible flash/reflow. The Spanish page's line 5 had none of this; just 5 bare-minimum rules.
 
-The Fix
-Rebuilt ed.html from scratch using disfuncion-erectil.html as the structural template:
 
-Line 5 critical CSS: now matches the minimal Spanish version (no mobile overrides)
-All CSS (animations, drawer, footer) in one merged <style> block after the <link> tags
-English nav, English content, English footer — same JS drawer system
-This session also:
-
-Removed the "Our Locations" section from the bottom of ed.html
-Changed the CTA to float in white space (matching penile-implant.html)
-Tomorrow's work — if ed.html is confirmed fixed, the same rebuild approach should be applied to the other broken English pages: bph.html, low-testosterone.html, peyronies.html, etc. Each one follows the same pattern: take the working Spanish equivalent as the structural base, swap in the English content.
 
 
 
