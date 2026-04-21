@@ -230,7 +230,8 @@
             min-width: 0 !important;
             letter-spacing: 1.5px;
         }
-        .hero-left .hero-buttons { gap: 12px; flex-wrap: wrap; }
+        .hero-left .hero-buttons { gap: 12px; flex-wrap: nowrap; }
+        @media (max-width: 768px) { .hero-left .hero-buttons { flex-wrap: wrap; } }
 
         /* ---- Staggered slide-up entrance ---- */
         @keyframes heroSlideUp {
@@ -907,7 +908,7 @@
                         <a href="/servicios">Servicios</a>
                         <ul class="dropdown">
                             <li class="drop-header">Disfunción Eréctil</li>
-                            <li><a href="/disfuncion-erectil">DE — Visión General</a></li>
+                            <li><a href="/disfuncion-erectil">Disfunción Eréctil</a></li>
                             <li><a href="/implante-peneano">Implantes Peneanos (IPP)</a></li>
                             <li class="drop-header">Salud Sexual y Testosterona</li>
                             <li><a href="/testosterona-baja">Testosterona Baja (TRT)</a></li>
