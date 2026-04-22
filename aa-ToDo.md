@@ -10,14 +10,23 @@ SITES:
 *******************
 
 To Do: 
-1. Update picture titels
+
+1. Update picture titles
 2. Confirm sizes are all minimized
 3. Make sure all pictures of Mt Sinai are off
 4. Update SiteMap before launcing
 6. Update SEO for AI --> the 3 things that are on "Optimize Site For AI Search" on google AI and that Tik Tok
 7. Update Site w/ Gorin sheet + Sinai Media page
 8. Google --> incorporate questions into a top 10 questions for ED for SEO etc
+9. Bus Ticket
+10. AI animations
+11. Step-by-step spanish site needs to be fixed...
+12. Low Testosterone English --> needs a spanish site
 
+*******************
+
+SOCIAL MEDIA: 
+1. Make sure all accounts 
 
 
 4.21.2026
