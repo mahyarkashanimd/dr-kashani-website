@@ -29,33 +29,51 @@ SOCIAL MEDIA:
 1. Make sure all accounts 
 
 
-4.21.2026
 
-Handoff Summary — Dr. Kashani / Men's Health Long Island
-c:\Users\M804143.MSNYUHEALTH\Downloads\dr-kashani-website | Branch: main | Deployed: Netlify
 
-Key Technical Facts (unchanged)
-Working reference template: ed.html — gold standard for all English pages
-Every page must have exactly 2 </style> tags: one critical inline on line 5, one merged main block
-Critical inline CSS (line 5): html{background:#0f172a} — do not touch
-Floating CTA pattern: <section style="background:#fff;padding:80px 0"><div class="container"><div class="cta-box"> — required so CTA floats above footer
-Line endings: Windows CRLF. No BOMs on working pages.
-Nav/drawer: JS-injected, not hardcoded
-What Was Done — This Session (not yet committed)
-Fix	Files
-Remove BOM	contact.html
-Remove "Se Habla Español" pill	contact.html
-Add padding-top: 60px; padding-bottom: 80px to contact grid section	contact.html
-Add floating navy CTA above footer ("Ready to Take the Next Step?")	quiz.html
-Hero buttons flex-wrap: nowrap on desktop, restore wrap on mobile ≤768px	inicio.html
-Remove gold "Reserve una Consulta" box from quiz results (keep blue section below)	cuestionario.html
-Rename nav item DE — Visión General → Disfunción Eréctil under Servicios	all 27 Spanish pages
-Still Needed / Open Items
-Not committed — user controls commit timing (per standing rule)
-User to verify contact.html formatting looks correct after deploy
-User to verify inicio.html hero buttons render on one line at all desktop breakpoints
-Any additional pages the user identifies as having issues after live verification
-Do Not Commit Without Asking First.
+4.22.26 -- last memory file
+
+Additional SEO Wins to Add to the Checklist
+These are high-impact and not yet done:
+
+1. FAQ Schema (biggest quick win)
+Once you do the AEO H2 rewrites, add FAQPage JSON-LD to each service page. This gets Google to show expandable Q&A dropdowns directly in search results — free real estate above other listings. Works across Google, Perplexity, and ChatGPT.
+
+2. Review/Rating Schema
+If you have Google reviews, add aggregateRating to the Physician schema on the home page. Gets star ratings shown directly in search results. Massive click-through boost.
+
+3. Video Schema
+You have a YouTube channel (@MahyarKashaniMD). Embed relevant videos on service pages and add VideoObject schema. Google surfaces video thumbnails in results and YouTube videos appear in Google's AI answers.
+
+4. BreadcrumbList Schema
+Add breadcrumb JSON-LD to service pages (Home > Services > BPH). Signals page hierarchy to Google and shows the breadcrumb path in search result listings.
+
+5. MedicalProcedure Schema on Service Pages
+The service pages currently use Physician schema. Adding MedicalProcedure or MedicalCondition schema (specific to each page) gives AI answer engines much stronger signals about what each page is actually about.
+
+6. IndexNow (Bing instant indexing)
+One-line ping after each deploy tells Bing/Yandex/Yahoo about your changes within hours instead of weeks. You add a verification key file to the site once, then ping an API URL after each update.
+
+7. Missing Spanish article
+article-low-testosterone.html has no Spanish pair. The sitemap confirms it. If you want full bilingual coverage, this is the gap.
+
+8. Google Business Profile posts
+Posting to GBP weekly (even a single sentence with a link) signals active practice to Google Maps ranking. This directly impacts "urologist near me" queries.
+
+Priority Order for Maximum Long Island Rankings
+Priority	Task	Effort	Impact
+1	Submit sitemap to Bing Webmaster Tools	10 min	High
+2	Add <lastmod> to sitemap.xml	5 min (I can do it)	Medium
+3	Phase 3 AEO rewrites (doctor writes answers)	Hours	Very High
+4	FAQ JSON-LD schema on service pages	Medium	Very High
+5	Review/Rating schema if you have reviews	30 min	High
+6	Video schema + embed YouTube videos	Medium	High
+7	IndexNow key file	15 min	Medium
+8	Weekly GBP posts	Ongoing	High
+Want me to start with the sitemap <lastmod> update now (it's a quick win), or do you want to tackle FAQ schema on the BPH and ED pages first?
+
+
+
 
 
 
