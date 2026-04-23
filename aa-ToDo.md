@@ -6,6 +6,10 @@ SITES:
 1. Stitch - design
 2. Fiver server -- run Java within Terminal
 3. Sqoosh - fix picture sizes
+4. Node.js -- consider installing on computer eventually -- from SKOOL
+    a. https://www.skool.com/quantum-quill-lyceum-1116/classroom/036893d9?md=fd76648c16ad429fb6e828b01bfa9177 14:03
+5. 
+
 
 *******************
 
@@ -20,7 +24,7 @@ To Do:
 8. Google --> incorporate questions into a top 10 questions for ED for SEO etc
 9. Bus Ticket
 10. AI animations
-11. Step-by-step spanish site needs to be fixed...
+11. XStep-by-step spanish site needs to be fixed...
 12. Low Testosterone English --> needs a spanish site
 
 *******************

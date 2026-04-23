@@ -1,12 +1,46 @@
 # Dr. Kashani Website — Status & Roadmap
 
-**Last updated:** April 22, 2026  
+**Last updated:** April 23, 2026  
 **Site:** menshealthlongisland.com (Netlify, GitHub repo)  
 **Stack:** Static HTML/CSS/JS, deployed via Netlify
 
 ---
 
-## ✅ COMPLETED (This Session)
+## ✅ COMPLETED (April 23, 2026 Session — continued)
+
+### Mount Sinai Compliance Prep
+- Added bold "Do not include sensitive medical information" warning to contact.html and contacto.html (above Netlify form)
+- Reviewed MSHS Social Media Policy + Website Governance docs
+- **Pending until Mount Sinai meeting:** Netlify form HIPAA issue (form collects PHI on non-BAA platform), footer disclaimer visibility
+- Contact: Conflicts.of.Interest@mssm.edu when ready for approval
+
+### Hreflang Fix
+- Fixed broken pair: articulo-inyecciones-paso-a-paso.html was pointing hreflang en → /article-injections-step-by-step
+- Corrected to: /penile-injections-step-by-step (matches article-injections-step-by-step.html canonical)
+- All other hreflang pairs confirmed correct across all ~50 pages ✅
+
+### Quiz / Cuestionario Schema
+- Added MedicalWebPage JSON-LD to quiz.html (EN) — covers ED, Low-T, Peyronie's, BPH, OAB
+- Added MedicalWebPage JSON-LD to cuestionario.html (ES) — Spanish equivalents, inLanguage: "es"
+
+---
+
+## ✅ COMPLETED (April 23, 2026 Session)
+
+### Schema — Service Pages (Claude)
+- Added `FAQPage` JSON-LD to: ed.html, bph.html, low-testosterone.html, penile-implant.html, peyronies.html, vasectomy.html
+- Added `BreadcrumbList` JSON-LD to all 6 service pages above
+- Added `MedicalCondition` or `MedicalProcedure` JSON-LD to all 6 service pages above
+- Added `sameAs` (Instagram, TikTok, Facebook, YouTube) to all 6 service page Physician schemas
+- Added `@id: "https://www.menshealthlongisland.com/#physician"` to all 6 service page Physician schemas
+- Standardized `@id` on index.html + inicio.html from bare URL to `#physician` fragment
+
+### IndexNow
+- Created `/d8f3a1c2b4e6f9a7d2c5b8e1f4a7d0c3.txt` key file in site root
+
+---
+
+## ✅ COMPLETED (April 22, 2026 Session)
 
 ### Bug Fixes — article-low-testosterone.html
 - Removed duplicate `<meta name="viewport">` tag
@@ -54,7 +88,12 @@
 
 ### High Priority
 
-1. **Bing Webmaster Tools submission**
+1. **IndexNow — complete Bing registration** *(Key file already deployed — complete the Bing side)*
+   - Go to bing.com/webmasters → Add your site
+   - Verify using the meta tag OR the key file already in root: `d8f3a1c2b4e6f9a7d2c5b8e1f4a7d0c3.txt`
+   - After any future deploy, ping: `https://www.bing.com/indexnow?url=https://www.menshealthlongisland.com/sitemap.xml&key=d8f3a1c2b4e6f9a7d2c5b8e1f4a7d0c3`
+
+2. **Bing Webmaster Tools submission**
    - Add Bing verification meta tag to `<head>` of `index.html` and `inicio.html`
    - Submit sitemap at bing.com/webmasters
    - This gets the site indexed on Bing → Perplexity AI and Copilot pick it up
@@ -87,6 +126,7 @@
    - `article-bph-treatment-options.html` — "enlarged prostate treatment" is high intent
    - `article-testosterone-therapy-types.html` — "injections vs pellets vs gel" decision article
    - `article-penile-implant-what-to-expect.html` — "IPP surgery recovery" is underserved
+   - **Top 10 Questions series** — One article per condition formatted as "Top 10 Questions Patients Ask About [X]" — high SEO/AEO value. Conditions: ED, BPH, Low-T, Peyronie's, vasectomy, penile implant. Doctor writes the Q&A, Claude formats HTML.
 
 7. **Spanish service pages — hreflang audit**
    - Most Spanish service pages (testosterona-baja, disfuncion-erectil, etc.) need to be checked for hreflang pairs pointing to the correct English counterparts
@@ -155,8 +195,14 @@ When creating new article pages, use this checklist:
 
 | Page | Schema Types |
 |------|-------------|
-| index.html | Physician + aggregateRating (233 reviews, 5★) |
-| inicio.html | Physician + aggregateRating (233 reviews, 5★) |
+| index.html | Physician + aggregateRating (233 reviews, 5★) + sameAs + @id |
+| inicio.html | Physician + aggregateRating (233 reviews, 5★) + sameAs + @id |
+| ed.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (10 Q) |
+| bph.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (7 Q) |
+| low-testosterone.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (6 Q) |
+| penile-implant.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (8 Q) |
+| peyronies.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (10 Q) |
+| vasectomy.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (6 Q) |
 | article-*.html | Article + FAQPage + HowTo (step articles) |
 | articulo-*.html | Article + FAQPage + HowTo (step articles) |
 | education.html | CollectionPage |
