@@ -6,6 +6,23 @@
 
 ---
 
+## ✅ COMPLETED (April 23, 2026 Session — Part 2)
+
+### Schema — Remaining Service Pages (6 pages)
+- Added `FAQPage` JSON-LD to: oab.html, premature-ejaculation.html, circumcision.html, hydrocele.html, kidney-stones.html, vasectomy-reversal.html
+- Added `BreadcrumbList` JSON-LD to all 6 pages above
+- Added `MedicalCondition` or `MedicalProcedure` JSON-LD to all 6 pages above
+- Added `sameAs` (Instagram, TikTok, Facebook, YouTube) to all 6 pages above
+- Added `@id: "https://www.menshealthlongisland.com/#physician"` to all 6 pages above
+
+### Bug Fix
+- Fixed `og:url` in `article-low-testosterone.html` — was pointing to `/low-testosterone`, corrected to `/article-low-testosterone`
+
+### Sitemap
+- Updated all `<lastmod>` dates to `2026-04-23`
+
+---
+
 ## ✅ COMPLETED (April 23, 2026 Session — continued)
 
 ### Mount Sinai Compliance Prep
@@ -203,6 +220,12 @@ When creating new article pages, use this checklist:
 | penile-implant.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (8 Q) |
 | peyronies.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (10 Q) |
 | vasectomy.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (6 Q) |
+| oab.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (7 Q) |
+| premature-ejaculation.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (5 Q) |
+| circumcision.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (5 Q) |
+| hydrocele.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (4 Q) |
+| kidney-stones.html | Physician + MedicalCondition + BreadcrumbList + FAQPage (5 Q) |
+| vasectomy-reversal.html | Physician + MedicalProcedure + BreadcrumbList + FAQPage (5 Q) |
 | article-*.html | Article + FAQPage + HowTo (step articles) |
 | articulo-*.html | Article + FAQPage + HowTo (step articles) |
 | education.html | CollectionPage |
