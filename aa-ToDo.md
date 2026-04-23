@@ -27,7 +27,7 @@ To Do:
 11. XStep-by-step spanish site needs to be fixed...
 12. Low Testosterone English --> needs a spanish site
 
-UPLOAD SANDY PICS
+UPLOAD SANDY PICS!!!
 
 *******************
 
