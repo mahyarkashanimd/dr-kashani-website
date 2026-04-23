@@ -16,6 +16,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* --- REPLACE YOUR OLD BODY BLOCK WITH THIS --- */
+html {
+    background-color: #0f172a; /* Matches hero/drawer dark bg — prevents white flash between page loads */
+}
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -72,11 +75,11 @@ header {
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; }
 .sub-logo { color: var(--accent); font-weight: 400; }
 
-.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links { display: flex; gap: 12px; align-items: center; }
 .nav-links a { color: var(--secondary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 .nav-links a:hover, .nav-links .active { color: var(--accent); }
 
-.btn-appointment { background: var(--primary); color: white !important; padding: 12px 25px; border-radius: 2px; }
+.btn-appointment { background: var(--primary); color: white !important; padding: 12px 16px; border-radius: 2px; }
 .btn-appointment:hover { background: var(--accent); color: white !important; }
 
 .menu-toggle { display: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; width: 30px; text-align: center; }
