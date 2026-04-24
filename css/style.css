@@ -450,13 +450,17 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 @media (max-width: 768px) {
     /* 1. Fix: Bunched Up Gold Button */
     .cta-button.large {
-        width: 95% !important;        /* Fill the screen width */
-        min-width: unset !important;   /* Remove restricted width */
-        padding: 18px 10px !important; /* Adjust padding for better fit */
-        font-size: 1rem !important;    /* Slightly smaller font to keep it on one line */
-        white-space: nowrap !important; /* Forces text to stay on one line */
+        width: 95% !important;
+        min-width: unset !important;
+        padding: 18px 10px !important;
+        font-size: 1rem !important;
+        white-space: normal !important;
         display: block;
         margin: 0 auto;
+    }
+    /* Reduce side padding of dark CTA box so button has full width to breathe */
+    .cta-section-box {
+        padding: 40px 16px !important;
     }
 
     /* 2. Fix: Dropdown Menu Cut-off */
