@@ -24,12 +24,7 @@ To Do:
 8. Google --> incorporate questions into a top 10 questions for ED for SEO etc
 9. Bus Ticket
 10. AI animations
-11. XStep-by-step spanish site needs to be fixed...
-12. Low Testosterone English --> needs a spanish site
-
-UPLOAD SANDY PICS!!
-
-Change pics
+11. Need to make Elevated PSA and Hematuria pages 
 
 *******************
 
@@ -37,49 +32,68 @@ SOCIAL MEDIA:
 1. Make sure all accounts 
 
 
+4.24.256
+
+What was done
+Change	Files
+CP map embed fixed (real Google Maps pin)	urologist-carle-place.html, urologo-carle-place.html
+RVC map embed fixed (real Google Maps pin)	urologist-rockville-centre.html, urologo-rockville-centre.html
+Schema geo coordinates updated to match real embeds	All 4 location pages
+"Serving Nassau County & Long Island" community strip added	All 4 location pages
+Mobile drawer nav fully wired (hamburger, subpanels, backdrop, ESC)	All 4 location pages
+ESP button in EN drawer → correct Spanish page	urologist-CP, urologist-RVC
+ENG button in ES drawer → correct English page	urologo-CP, urologo-RVC
+You're ready to deploy to Netlify
+Drag the folder and you're done.
+
+Next session priorities (in order)
+FAQ schema on ed.html, low-testosterone.html, peyronies.html — ready to build, just say go
+Microsoft Clarity — create free account at clarity.microsoft.com, give me the 10-char Project ID
+Elevated PSA page (EN + ES) — I can write it, no content needed from you
+Hematuria page (EN + ES) — same
+AEO H2 rewrites on ed.html, low-testosterone.html — give me your top 2–3 patient questions
+
+4.24.26 --> session before
+
+After uploading to Netlify (do these in order)
+Same day — 5 min each:
+
+Google Search Console — submit sitemap, request indexing on: ed, disfuncion-erectil, urologist-rockville-centre, urologist-carle-place, article-injections-step-by-step
+Bing Webmaster Tools — add site, verify, submit sitemap
+IndexNow ping — bing.com/indexnow?url=[sitemap]&key=d8f3a1c2b4e6f9a7d2c5b8e1f4a7d0c3
+Update your GBP (Google Business Profile):
+
+Change Carle Place address to 393-401 Old Country Road to match the site
+Next coding session — by priority
+High (no content needed from you):
+
+Task	Note
+Microsoft Clarity	Create free account at clarity.microsoft.com → "New Project" → copy the Project ID → give me 10-char code, 5-min install on all pages
+FAQ schema on ed.html, low-testosterone.html, peyronies.html	Ready to build — say go
+High (needs content from you):
+
+Task	What I need
+AEO H2 rewrites	For ed.html, low-testosterone.html: tell me the top 2–3 questions patients ask, I'll write the 40-word answers
+Blog posts	Dictate a Q&A on ED, Low T, or vasectomy — I build the full article
+Medium:
+
+Task	What I need
+AggregateRating update	Check your current Google review count, tell me the number
+Video schema	YouTube video IDs (the part after ?v=) for any pages with embedded videos
+Spanish article FAQ schema	No content needed — I can build anytime
+Off-site (you handle):
+
+Ask Mt. Sinai web team to add a link to menshealthlongisland.com from your profile page
+Verify GBP NAP matches site exactly for both locations
 
 
-4.22.26 -- last memory file
 
-Additional SEO Wins to Add to the Checklist
-These are high-impact and not yet done:
+****On mobile, urologo-RVC & CP --> ENG button is off on nav in both top right and in the listed buttons
+please fix and include something in the memory for all mobile pages the way the nav needs to be set up moving forward its a problem that happens every time
 
-1. FAQ Schema (biggest quick win)
-Once you do the AEO H2 rewrites, add FAQPage JSON-LD to each service page. This gets Google to show expandable Q&A dropdowns directly in search results — free real estate above other listings. Works across Google, Perplexity, and ChatGPT.
+***On contact --> above footer, there is a serving long island and NC --> on urology and urology RVC/CP these are not there. PLease add them if you think it's a good idea.
 
-2. Review/Rating Schema
-If you have Google reviews, add aggregateRating to the Physician schema on the home page. Gets star ratings shown directly in search results. Massive click-through boost.
-
-3. Video Schema
-You have a YouTube channel (@MahyarKashaniMD). Embed relevant videos on service pages and add VideoObject schema. Google surfaces video thumbnails in results and YouTube videos appear in Google's AI answers.
-
-4. BreadcrumbList Schema
-Add breadcrumb JSON-LD to service pages (Home > Services > BPH). Signals page hierarchy to Google and shows the breadcrumb path in search result listings.
-
-5. MedicalProcedure Schema on Service Pages
-The service pages currently use Physician schema. Adding MedicalProcedure or MedicalCondition schema (specific to each page) gives AI answer engines much stronger signals about what each page is actually about.
-
-6. IndexNow (Bing instant indexing)
-One-line ping after each deploy tells Bing/Yandex/Yahoo about your changes within hours instead of weeks. You add a verification key file to the site once, then ping an API URL after each update.
-
-7. Missing Spanish article
-article-low-testosterone.html has no Spanish pair. The sitemap confirms it. If you want full bilingual coverage, this is the gap.
-
-8. Google Business Profile posts
-Posting to GBP weekly (even a single sentence with a link) signals active practice to Google Maps ranking. This directly impacts "urologist near me" queries.
-
-Priority Order for Maximum Long Island Rankings
-Priority	Task	Effort	Impact
-1	Submit sitemap to Bing Webmaster Tools	10 min	High
-2	Add <lastmod> to sitemap.xml	5 min (I can do it)	Medium
-3	Phase 3 AEO rewrites (doctor writes answers)	Hours	Very High
-4	FAQ JSON-LD schema on service pages	Medium	Very High
-5	Review/Rating schema if you have reviews	30 min	High
-6	Video schema + embed YouTube videos	Medium	High
-7	IndexNow key file	15 min	Medium
-8	Weekly GBP posts	Ongoing	High
-Want me to start with the sitemap <lastmod> update now (it's a quick win), or do you want to tackle FAQ schema on the BPH and ED pages first?
-
+***Also need "next steps" like google/bing etc.... 
 
 
 
