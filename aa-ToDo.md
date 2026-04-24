@@ -8,7 +8,7 @@ SITES:
 3. Sqoosh - fix picture sizes
 4. Node.js -- consider installing on computer eventually -- from SKOOL
     a. https://www.skool.com/quantum-quill-lyceum-1116/classroom/036893d9?md=fd76648c16ad429fb6e828b01bfa9177 14:03
-5. 
+5. Adobe Express
 
 
 *******************
@@ -30,6 +30,9 @@ To Do:
 
 SOCIAL MEDIA: 
 1. Make sure all accounts 
+
+
+
 
 
 4.24.256
