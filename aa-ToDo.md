@@ -35,7 +35,7 @@ SOCIAL MEDIA:
 
 
 
-4.24.256
+4.24.26 PM
 
 What was done
 Change	Files
@@ -56,7 +56,7 @@ Elevated PSA page (EN + ES) — I can write it, no content needed from you
 Hematuria page (EN + ES) — same
 AEO H2 rewrites on ed.html, low-testosterone.html — give me your top 2–3 patient questions
 
-4.24.26 --> session before
+4.24.26 AM
 
 After uploading to Netlify (do these in order)
 Same day — 5 min each:

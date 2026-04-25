@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -71,7 +71,7 @@
         .drawer-topbar { display:none; } .drawer-panel-wrap { display:contents; } .drawer-panel-main { display:contents; } .drawer-panel-sub { display:none; } .drawer-backdrop { display:none; } .nav-chevron { display:none; }
         @media (max-width:768px) {
             header { backdrop-filter:none !important; -webkit-backdrop-filter:none !important; background:rgba(255,255,255,0.97) !important; }
-            .nav-chevron { display:inline !important; } .nav-esp-item { display:none !important; }
+            .nav-chevron { display:inline !important; } .nav-esp-item { display:none !important; } .nav-eng-item { display:none !important; }
             .drawer-backdrop { display:block; position:fixed; inset:0; background:rgba(15,23,42,0.6); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); z-index:998; opacity:0; pointer-events:none; transition:opacity .3s ease; }
             .drawer-backdrop.visible { opacity:1; pointer-events:all; }
             nav { position:fixed !important; top:0 !important; right:0 !important; bottom:0 !important; width:82vw !important; max-width:340px !important; background:var(--primary) !important; z-index:999 !important; transform:translateX(110%) !important; transition:transform .32s cubic-bezier(.22,1,.36,1) !important; display:flex !important; flex-direction:column !important; overflow:hidden !important; box-shadow:-10px 0 50px rgba(0,0,0,.45) !important; }
@@ -90,7 +90,7 @@
             .nav-links .btn-appointment { background:transparent !important; color:var(--accent) !important; text-align:left !important; padding:15px 22px !important; font-size:.95rem !important; font-weight:700 !important; border-radius:0 !important; display:flex !important; width:100% !important; margin:0 !important; border-bottom:1px solid rgba(255,255,255,.07) !important; }
             .nav-links > li > a::after, .nav-links > li > a::before { display:none !important; content:none !important; }
             .drawer-topbar-right { display:flex; align-items:center; gap:10px; }
-            .drawer-esp-btn { color:var(--accent) !important; font-size:.72rem !important; font-weight:700 !important; letter-spacing:1px !important; text-decoration:none !important; padding:4px 9px; border:1px solid rgba(192,160,98,.4); border-radius:2px; white-space:nowrap; }
+            .drawer-esp-btn, .drawer-eng-btn { color:var(--accent) !important; font-size:.72rem !important; font-weight:700 !important; letter-spacing:1px !important; text-decoration:none !important; padding:4px 9px; border:1px solid rgba(192,160,98,.4); border-radius:2px; white-space:nowrap; }
             .sub-back-btn { display:flex; align-items:center; gap:8px; width:100%; padding:14px 22px; background:rgba(192,160,98,.07); border:none; border-bottom:1px solid rgba(192,160,98,.2); color:var(--accent); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.8px; cursor:pointer; }
             .sub-panel-title { padding:18px 22px 14px; color:white; font-family:var(--font-heading); font-size:1.05rem; font-weight:400; border-bottom:1px solid rgba(255,255,255,.1); }
             .sub-panel-title a { color:white !important; text-decoration:none !important; display:block; }
@@ -178,6 +178,8 @@
                             <li><a href="/vejiga-hiperactiva">Vejiga Hiperactiva</a></li>
                             <li><a href="/hidrocele-es">Hidrocele</a></li>
                             <li><a href="/calculos-renales">C&aacute;lculos Renales</a></li>
+                            <li><a href="/psa-elevado">PSA Elevado</a></li>
+                            <li><a href="/hematuria-es">Hematuria (Sangre en la Orina)</a></li>
                         </ul>
                     </li>
                     <li>
@@ -188,7 +190,7 @@
                             <li><a href="/educacion">Art&iacute;culos</a></li>
                         </ul>
                     </li>
-                    <li><a href="/urologist-rockville-centre" style="font-size:.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="View in English">&#127482;&#127480; ENG</a></li>
+                    <li class="nav-eng-item"><a href="/urologist-rockville-centre" style="font-size:.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="View in English">&#127482;&#127480; ENG</a></li>
                     <li><a href="/contacto" class="btn-appointment">Reservar Cita</a></li>
                 </ul>
             </nav>
@@ -270,6 +272,14 @@
     <section style="background:#f8fafc;padding:32px 0;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;text-align:center;">
         <div class="container">
             <p style="color:#475569;font-size:.95rem;margin:0;">Tambi&eacute;n atendemos en nuestro <a href="/urologo-carle-place" style="color:var(--accent);font-weight:700;">consultorio de Carle Place</a> &mdash; 393-401 Old Country Road &nbsp;&middot;&nbsp; (516) 877-0977</p>
+        </div>
+    </section>
+
+    <!-- Comunidades atendidas -->
+    <section style="background:#fff;padding:28px 0;border-top:1px solid #e2e8f0;">
+        <div class="container" style="text-align:center;">
+            <p style="margin:0 0 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);">Atendiendo el Condado de Nassau y Long Island</p>
+            <p style="color:#64748b;font-size:.87rem;margin:0;line-height:1.8;">Oceanside &nbsp;&bull;&nbsp; Lynbrook &nbsp;&bull;&nbsp; Valley Stream &nbsp;&bull;&nbsp; Long Beach &nbsp;&bull;&nbsp; Baldwin &nbsp;&bull;&nbsp; Freeport &nbsp;&bull;&nbsp; Merrick &nbsp;&bull;&nbsp; Hewlett &nbsp;&bull;&nbsp; y comunidades de Long Island</p>
         </div>
     </section>
 

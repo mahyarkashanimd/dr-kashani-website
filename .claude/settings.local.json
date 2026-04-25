@@ -11,7 +11,13 @@
       "Bash(grep -i \"\\\\.webp$\")",
       "WebSearch",
       "WebFetch(domain:profiles.mountsinai.org)",
-      "WebFetch(domain:npiregistry.cms.hhs.gov)"
+      "WebFetch(domain:npiregistry.cms.hhs.gov)",
+      "Bash(python -c \"print\\('hello'\\)\")",
+      "Bash(py -c \"print\\('hello'\\)\")",
+      "Bash(python3 -c \"print\\('hello'\\)\")",
+      "Bash(node -e \"console.log\\('node works'\\)\")",
+      "Bash(powershell -Command \"echo 'powershell works'\")",
+      "Bash(pwsh -Command \"echo 'pwsh works'\")"
     ]
   }
 }
