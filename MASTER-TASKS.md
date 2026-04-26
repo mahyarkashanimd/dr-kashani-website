@@ -89,6 +89,13 @@ _Last updated: 2026-04-26 | Add new tasks at the bottom of their priority sectio
 
 ---
 
+## FUTURE / VERY LOW PRIORITY — Only if redesigning or doing major updates
+
+- [ ] **J. CSS/JS Consolidation** — Move all inline `<style>` blocks (drawer, reveal animations) into `style.css` and all inline `<script>` blocks (drawer logic) into `main.js`. Eliminates ~37,000 lines of duplication across 63 files. Only worth doing if: (a) global style needs to change, or (b) site is being rebuilt. Risk: high — requires touching every HTML file.
+- [ ] **K. Office Address / Phone Find-Replace** — If office location changes, do a global find-and-replace in all 63 HTML files for the old address → new address, and old phone → new phone. Schema + footer + header all need updating. (Note: do this when needed, not in advance.)
+
+---
+
 ## COMPLETED ✅
 
 ### April 2026
