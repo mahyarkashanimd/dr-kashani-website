@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -57,7 +57,27 @@
     "name": "Mount Sinai Health System",
     "url": "https://www.mountsinai.org"
   },
-  "openingHours": ["Tu-We 08:30-16:00", "Th 8:30-17:00", "Fr 09:00-13:00"]
+  "openingHours": ["Tu-We 08:30-16:00", "Th 8:30-17:00", "Fr 09:00-13:00"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "175"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Urólogo en Rockville Centre, NY | Dr. Mahyar Kashani, MD",
+  "url": "https://www.menshealthlongisland.com/urologo-rockville-centre",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".page-hero h1", ".loc-info-card p"]
+  }
 }
 </script>
 
@@ -162,25 +182,33 @@
                     </li>
                     <li>
                         <a href="/servicios">Servicios</a>
-                        <ul class="dropdown">
-                            <li class="drop-header">Disfunci&oacute;n Er&eacute;ctil</li>
-                            <li><a href="/disfuncion-erectil">Tratamiento DE</a></li>
-                            <li><a href="/implante-peneano">Implante Peneano</a></li>
-                            <li class="drop-header">Salud Sexual &amp; Testosterona</li>
-                            <li><a href="/testosterona-baja">Testosterona Baja (TRT)</a></li>
-                            <li><a href="/enfermedad-peyronie">Enfermedad de Peyronie</a></li>
-                            <li><a href="/eyaculacion-precoz">Eyaculaci&oacute;n Precoz</a></li>
-                            <li><a href="/vasectomia">Vasectom&iacute;a</a></li>
-                            <li><a href="/reversal-vasectomia">Reversi&oacute;n de Vasectom&iacute;a</a></li>
-                            <li class="drop-header">Urolog&iacute;a General</li>
-                            <li><a href="/circuncision">Circuncisi&oacute;n</a></li>
-                            <li><a href="/prostata-agrandada">Pr&oacute;stata Agrandada (HBP)</a></li>
-                            <li><a href="/vejiga-hiperactiva">Vejiga Hiperactiva</a></li>
-                            <li><a href="/hidrocele-es">Hidrocele</a></li>
-                            <li><a href="/calculos-renales">C&aacute;lculos Renales</a></li>
-                            <li><a href="/psa-elevado">PSA Elevado</a></li>
-                            <li><a href="/hematuria-es">Hematuria (Sangre en la Orina)</a></li>
-                        </ul>
+                        <ul class="dropdown dropdown-mega">
+                        <li class="mega-col">
+                            <ul>
+                                <li class="drop-header">Disfunci&#243;n Er&#233;ctil</li>
+                                <li><a href="/disfuncion-erectil">Disfunci&#243;n Er&#233;ctil</a></li>
+                                <li><a href="/implante-peneano">Implantes Peneanos (IPP)</a></li>
+                                <li class="drop-header">Salud Sexual y Testosterona</li>
+                                <li><a href="/testosterona-baja">Testosterona Baja (TRT)</a></li>
+                                <li><a href="/enfermedad-peyronie">Enfermedad de Peyronie</a></li>
+                                <li><a href="/eyaculacion-precoz">Eyaculaci&#243;n Precoz</a></li>
+                                <li><a href="/vasectomia">Vasectom&#237;a</a></li>
+                                <li><a href="/reversal-vasectomia">Reversi&#243;n de Vasectom&#237;a</a></li>
+                            </ul>
+                        </li>
+                        <li class="mega-col">
+                            <ul>
+                                <li class="drop-header">Urolog&#237;a General</li>
+                                <li><a href="/circuncision">Circuncisi&#243;n</a></li>
+                                <li><a href="/prostata-agrandada">Pr&#243;stata Agrandada (HBP)</a></li>
+                                <li><a href="/vejiga-hiperactiva">Vejiga Hiperactiva (VH)</a></li>
+                                <li><a href="/hidrocele-es">Hidrocele</a></li>
+                                <li><a href="/calculos-renales">C&#225;lculos Renales</a></li>
+                                <li><a href="/psa-elevado">PSA Elevado</a></li>
+                                <li><a href="/hematuria-es">Hematuria (Sangre en la Orina)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                     </li>
                     <li>
                         <a href="/educacion">Educaci&oacute;n</a>
@@ -478,5 +506,10 @@
     })();
     </script>
 
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+    </div>
 </body>
 </html>

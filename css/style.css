@@ -683,3 +683,55 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
         line-height: 1.3 !important;
     }
 }
+/* =============================================
+   SERVICES MEGA-MENU (desktop only)
+   ============================================= */
+@media (min-width: 769px) {
+    .dropdown-mega {
+        flex-direction: row;
+        min-width: 560px;
+        padding: 0;
+    }
+    .nav-links li:hover .dropdown-mega { display: flex; }
+    .mega-col {
+        flex: 1;
+        padding: 10px 0;
+        list-style: none;
+        margin: 0;
+    }
+    .mega-col + .mega-col { border-left: 1px solid #f1f5f9; }
+    .mega-col ul { list-style: none; margin: 0; padding: 0; }
+    .mega-col .drop-header { padding-left: 18px; }
+    .mega-col a { padding-left: 18px; }
+}
+
+/* =============================================
+   FLOATING CTA
+   ============================================= */
+.floating-cta {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 990;
+}
+.floating-cta a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+    transition: background 0.2s, transform 0.2s;
+}
+.floating-cta a:hover { background: #d4b475; transform: translateY(-2px); }
+@media (max-width: 600px) {
+    .floating-cta { bottom: 16px; right: 16px; }
+    .floating-cta a { font-size: 0.78rem; padding: 11px 16px; }
+}
