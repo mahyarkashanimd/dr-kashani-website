@@ -30,7 +30,8 @@ To Do:
 *******************
 
 SOCIAL MEDIA: 
-1. Make sure all accounts 
+1. Make sure all accounts
+testing 
 
 
 
