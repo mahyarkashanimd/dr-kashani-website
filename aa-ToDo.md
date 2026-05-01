@@ -33,9 +33,37 @@ SOCIAL MEDIA:
 1. Make sure all accounts
 testing 
 
+*********************
+HOW TO SAVE
 
+The "Right-Click" Trick (Bypassing VS Code)
+Minimize VS Code so you are looking at your regular computer desktop.
+Open your standard Windows File Explorer (the yellow folder icon).
+Find and open your dr-kashani-website folder (wherever you saved it, likely in Documents or Desktop). You should see your index.html, style.css, etc.
+Right-click on any empty white space inside that folder.
+In the menu that pops up, click "Open Git Bash here".
+(Note: If you are on Windows 11, you might have to click "Show more options" at the bottom of the menu first, then click "Open Git Bash here").
+A black/colored window will pop open. Because you right-clicked inside the folder, it already knows exactly where your website files are!
 
+Now, type your 3 commands:
+Inside that new window, type these three commands, pressing Enter after each one:
 
+Stage your files:
+code
+Bash
+git add .
+(Don't forget the space and the period)
+Save the snapshot:
+code
+Bash
+git commit -m "Updated files from new computer"
+Send to GitHub:
+code
+Bash
+git push
+That's it! Once the text finishes loading, your files are on GitHub, and Netlify will automatically update your live website in 30 seconds.
+
+************************
 
 4.24.26 PM
 

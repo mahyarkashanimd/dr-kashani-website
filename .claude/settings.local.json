@@ -17,7 +17,8 @@
       "Bash(python3 -c \"print\\('hello'\\)\")",
       "Bash(node -e \"console.log\\('node works'\\)\")",
       "Bash(powershell -Command \"echo 'powershell works'\")",
-      "Bash(pwsh -Command \"echo 'pwsh works'\")"
+      "Bash(pwsh -Command \"echo 'pwsh works'\")",
+      "Bash(python3 -c \"import sys; print\\(sys.version\\)\")"
     ]
   }
 }
