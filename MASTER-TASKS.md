@@ -5,7 +5,7 @@ _Last updated: 2026-04-26 | Add new tasks at the bottom of their priority sectio
 
 ## HIGH PRIORITY — You Do
 
-- [ ] **1. Deploy to Netlify** — `git add ... && git commit -m "..." && git push` (auto-deploys in ~30 sec)
+- [x] **1. Deploy to Netlify** — `git add ... && git commit -m "..." && git push` (auto-deploys in ~30 sec)
 - [ ] **2. GSC: Request Indexing (4 pages)** — search.google.com/search-console → paste each URL → "Request Indexing"
   - https://www.menshealthlongisland.com/hematuria
   - https://www.menshealthlongisland.com/elevated-psa

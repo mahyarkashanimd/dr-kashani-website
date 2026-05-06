@@ -7,8 +7,14 @@
 [build.processing.html]
   pretty_urls = true
 
-# This ensures that if someone types /ed.html, 
-# they are permanently redirected to the clean /ed (Better for SEO)
+# Force canonical www domain — all non-www traffic redirects to www
+[[redirects]]
+  from = "https://menshealthlongisland.com/*"
+  to = "https://www.menshealthlongisland.com/:splat"
+  status = 301
+  force = true
+
+# Strip .html extensions (better for SEO)
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
