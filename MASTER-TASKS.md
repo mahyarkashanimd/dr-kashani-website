@@ -29,8 +29,8 @@ _Last updated: 2026-05-08 | Add new tasks at the bottom of their priority sectio
 
 ## HIGH PRIORITY — Claude Does
 
-- [ ] **A. Twitter/X Card meta tags** — All pages missing Twitter tags entirely; without them X shows plain link preview instead of rich card. Claude adds `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image` to all pages.
-- [ ] **B. og:image:width + og:image:height tags** — Facebook scraper needs explicit dimensions to render preview correctly. Claude adds to all pages.
+- [x] **A. Twitter/X Card meta tags** — Added to 59 pages (4 skipped — no OG tags: privacy-policy, politica-privacidad, success, success-es).
+- [x] **B. og:image:width + og:image:height tags** — Added 1200×630 to all 59 pages with OG tags.
 - [ ] **C. Patient-tone update on remaining pages** — same framework as hematuria + PSA:
   - ed.html + disfuncion-erectil.html
   - peyronies.html + enfermedad-peyronie.html
