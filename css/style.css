@@ -781,3 +781,13 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
     color: var(--accent-dark) !important;
     border-color: var(--accent-dark) !important;
 }
+
+/* FAQ Q/P badge — white on gold (#c0a062) fails 4.5:1; use dark navy */
+.faq-item h3::before { color: #0f172a !important; }
+
+/* CTA box primary button — white on gold fails; use dark navy */
+.cta-box .btn-primary { color: #0f172a !important; }
+
+/* Homepage service-col-4 tags and icons — gold on white cards fails */
+.service-col-4 .service-tag { color: var(--accent-dark) !important; }
+.service-col-4 .service-icon { color: var(--accent-dark) !important; }
