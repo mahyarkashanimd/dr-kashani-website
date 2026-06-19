@@ -770,6 +770,9 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 /* Cause-card icons are decorative — darken for sighted users as backup */
 .cause-icon { color: var(--accent-dark) !important; }
 
+/* Treatment card dr-note — #64748b on white fails; #475569 passes */
+.treatment-card .dr-note { color: #475569 !important; }
+
 /* Footer contrast fixes — dark text on dark background was failing */
 .footer-disclaimer { color: #94a3b8 !important; }
 .copyright { color: #94a3b8 !important; }
