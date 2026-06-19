@@ -796,9 +796,28 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 .footer-logo-sub { color: var(--accent) !important; }
 .footer-col-heading { color: var(--accent) !important; }
 .footer-phone { color: var(--accent) !important; }
+.footer-social a { color: var(--accent) !important; }
+/* Footer text on dark-navy — #334155 = 1.79:1 fail; #64748b = 3.76:1 fail; #94a3b8 = 7.26:1 pass */
+.footer-location-address { color: #94a3b8 !important; }
+.footer-disclaimer { color: #7a8fa6 !important; }
+.copyright { color: #7a8fa6 !important; }
 
 /* Article tag chip — white on gold bg fails 2.49:1; dark navy on gold passes 7.62:1 */
 .article-tag { color: #0f172a !important; }
 
 /* Location info card left border — gold on near-white fails non-text 3:1; dark gold passes */
 .loc-info-card { border-left-color: var(--accent-dark) !important; }
+
+/* Mobile drawer — dark gold (#7d5c1d) on dark-navy fails; gold (#c0a062) passes.
+   Higher-specificity selectors override per-page !important declarations (source-order workaround). */
+@media (max-width: 768px) {
+    header nav .drawer-brand em { color: var(--accent) !important; }
+    header nav .nav-links > li > a:hover { color: var(--accent) !important; }
+    header nav .nav-chevron { color: var(--accent) !important; }
+    header nav .nav-links .btn-appointment { color: var(--accent) !important; }
+    header nav .drawer-esp-btn,
+    header nav .drawer-eng-btn { color: var(--accent) !important; }
+    header nav .sub-back-btn { color: var(--accent) !important; }
+    header nav .sub-panel-items a:hover { color: var(--accent) !important; }
+    header nav .sub-panel-items .drop-header { color: var(--accent) !important; opacity: 1 !important; }
+}
