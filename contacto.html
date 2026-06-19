@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -564,16 +564,17 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
         <div class="container nav-container">
             <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
 
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0">
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </div>
 
-            <nav>
+            <nav aria-label="Navegación principal">
                 <ul class="nav-links">
                     <li><a href="/inicio">Inicio</a></li>
                     <li>
@@ -628,6 +629,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <!-- Page Hero -->
     <section class="page-hero">
@@ -677,13 +679,13 @@
 
                 <!-- Mount Sinai Online Booking Option -->
                 <div style="background: var(--light-bg); border: 1px solid var(--accent); border-left: 4px solid var(--accent); padding: 20px 22px; margin-bottom: 30px;">
-                    <p style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px;">Citas en L&iacute;nea Disponibles</p>
+                    <p style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-dark); margin-bottom: 6px;">Citas en L&iacute;nea Disponibles</p>
                     <p style="font-size: 1rem; color: var(--primary); font-weight: 600; margin-bottom: 6px;">Reserve a trav&eacute;s de Mount Sinai</p>
                     <p style="font-size: 0.92rem; color: #475569; margin-bottom: 14px;">Tambi&eacute;n puede reservar directamente a trav&eacute;s del perfil del Dr. Kashani en Mount Sinai para disponibilidad en tiempo real.</p>
                     <a href="https://profiles.mountsinai.org/mahyar-kashani" target="_blank" rel="noopener" style="display: inline-block; background: var(--primary); color: #fff; font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 11px 22px; text-decoration: none;">Reservar en Mount Sinai &rarr;</a>
                 </div>
 
-                <p style="font-size: 0.88rem; color: #94a3b8; text-align: center; margin-bottom: 20px;">&mdash; o complete el formulario a continuaci&oacute;n &mdash;</p>
+                <p style="font-size: 0.88rem; color: #64748b; text-align: center; margin-bottom: 20px;">&mdash; o complete el formulario a continuaci&oacute;n &mdash;</p>
 
                 <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 20px;"><strong>No incluya información médica confidencial en este formulario.</strong> Este formulario es solo para solicitudes de citas. Para preguntas médicas, comuníquese con nuestra oficina directamente por teléfono.</p>
 
@@ -743,7 +745,7 @@
                     <button type="submit">Enviar Solicitud</button>
                 </form>
 
-                <p style="font-size:0.85rem;color:#94a3b8;margin-top:16px;line-height:1.6;">
+                <p style="font-size:0.85rem;color:#64748b;margin-top:16px;line-height:1.6;">
                     <strong>Aviso de privacidad:</strong> La informaci&oacute;n enviada a trav&eacute;s de este formulario se utiliza &uacute;nicamente para responder a su solicitud y programar consultas. No compartimos su informaci&oacute;n personal con terceros.
                 </p>
             </div>
@@ -808,7 +810,9 @@
     </section>
 
     <!-- Footer -->
-        <footer>
+        </main>
+
+    <footer>
 
         <!-- Top: 3-column grid -->
         <div class="footer-top">
@@ -832,7 +836,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -844,7 +848,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -995,6 +999,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1004,6 +1009,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1055,6 +1061,12 @@
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+        });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
         });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);

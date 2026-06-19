@@ -823,13 +823,14 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navigation -->
     <header>
         <div class="container nav-container">
             <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -884,6 +885,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <!-- Article Content -->
     <div class="article-body">
@@ -921,13 +923,13 @@
         <div class="article-highlight-box">
     <h3>Our Areas of Expertise</h3>
     <ul>
-        <li><strong><a href="/ed" style="color:var(--accent);border-bottom:1px solid var(--accent);">Erectile Dysfunction (ED)</a></strong> — including advanced treatments like penile injections, penile Doppler ultrasound, and penile implants for men who haven't responded to oral medications</li>
-        <li><strong><a href="/penile-implant" style="color:var(--accent);border-bottom:1px solid var(--accent);">Penile Implants (IPP)</a></strong> — a permanent, spontaneous solution for men with ED who want to reclaim full sexual function</li>
-        <li><strong><a href="/low-testosterone" style="color:var(--accent);border-bottom:1px solid var(--accent);">Low Testosterone (Low T / TRT)</a></strong> — comprehensive hormonal evaluation and testosterone replacement therapy tailored to your specific levels and symptoms</li>
-        <li><strong><a href="/peyronies" style="color:var(--accent);border-bottom:1px solid var(--accent);">Peyronie's Disease</a></strong> — scar tissue causing painful curvature, treated with both non-surgical and surgical options</li>
-        <li><strong><a href="/premature-ejaculation" style="color:var(--accent);border-bottom:1px solid var(--accent);">Premature Ejaculation</a></strong> — a far more common condition than most men realize, with effective treatment options</li>
-        <li><strong><a href="/vasectomy" style="color:var(--accent);border-bottom:1px solid var(--accent);">Vasectomy</a></strong> & <strong><a href="/vasectomy-reversal" style="color:var(--accent);border-bottom:1px solid var(--accent);">Vasectomy Reversal</a></strong> — performed with precision and minimal downtime</li>
-        <li><strong><a href="/services#general-urology" style="color:var(--accent);border-bottom:1px solid var(--accent);">General Urology</a></strong> — kidney stones, enlarged prostate (BPH), hydrocele, circumcision, and elevated PSA evaluation</li>
+        <li><strong><a href="/ed" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Erectile Dysfunction (ED)</a></strong> — including advanced treatments like penile injections, penile Doppler ultrasound, and penile implants for men who haven't responded to oral medications</li>
+        <li><strong><a href="/penile-implant" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Penile Implants (IPP)</a></strong> — a permanent, spontaneous solution for men with ED who want to reclaim full sexual function</li>
+        <li><strong><a href="/low-testosterone" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Low Testosterone (Low T / TRT)</a></strong> — comprehensive hormonal evaluation and testosterone replacement therapy tailored to your specific levels and symptoms</li>
+        <li><strong><a href="/peyronies" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Peyronie's Disease</a></strong> — scar tissue causing painful curvature, treated with both non-surgical and surgical options</li>
+        <li><strong><a href="/premature-ejaculation" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Premature Ejaculation</a></strong> — a far more common condition than most men realize, with effective treatment options</li>
+        <li><strong><a href="/vasectomy" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Vasectomy</a></strong> & <strong><a href="/vasectomy-reversal" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">Vasectomy Reversal</a></strong> — performed with precision and minimal downtime</li>
+        <li><strong><a href="/services#general-urology" style="color:var(--accent-dark);border-bottom:1px solid var(--accent-dark);">General Urology</a></strong> — kidney stones, enlarged prostate (BPH), hydrocele, circumcision, and elevated PSA evaluation</li>
     </ul>
 </div>
 
@@ -980,6 +982,8 @@
     </div>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1004,7 +1008,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1016,7 +1020,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1115,6 +1119,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1124,6 +1129,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1176,6 +1182,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1209,7 +1221,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

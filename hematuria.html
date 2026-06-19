@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -388,12 +388,13 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
         <div class="container nav-container">
             <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -448,6 +449,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -512,17 +514,17 @@
             <p style="max-width: 750px;">Blood in the urine shows up in two ways — either you can see it, or it is found on a routine urine test. Both are worth evaluating, and both are very common.</p>
             <div class="causes-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-eye"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-eye"></i></div>
                     <h3>Visible Blood</h3>
                     <p>Urine that appears pink, red, or darker than usual. It can be unsettling to see, but there are many possible explanations. Most cases turn out to have a straightforward, treatable cause. The next step is simply to understand where it is coming from.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-microscope"></i></div>
                     <h3>Blood Found on a Lab Test</h3>
                     <p>Sometimes red blood cells are detected on a routine urine test even though the urine looks completely normal. This is very commonly found during routine check-ups. Just like visible blood, it deserves a follow-up to identify the cause — and most of the time, the cause turns out to be benign.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-check-circle"></i></div>
                     <h3>What to Expect</h3>
                     <p>However the blood was found, the evaluation is often more straightforward than patients expect. Many find that the explanation is clear and manageable. Dr. Kashani performs in-office cystoscopy so you are not sent to multiple facilities, and most patients have answers within one to two visits.</p>
                 </div>
@@ -721,6 +723,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -739,7 +743,7 @@
                         </div>
                     </div>
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -749,7 +753,7 @@
                         </ul>
                     </div>
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -774,7 +778,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 
     <script src="/js/main.js"></script>
@@ -858,6 +862,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -867,6 +872,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -910,6 +916,12 @@
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+        });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
         });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -728,15 +728,16 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
     <div class="container nav-container">
         <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
         
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0">
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </div>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -791,6 +792,7 @@
             </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -827,22 +829,22 @@
             <p style="max-width: 750px;">There are several valid medical and personal reasons why adult men seek circumcision. Dr. Kashani evaluates each patient individually to ensure circumcision is the right solution for your specific situation.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-exclamation-circle"></i></div>
                     <h3>Phimosis</h3>
                     <p>Phimosis is a condition where the foreskin is too tight to retract over the head of the penis. It can cause pain during erections or sex, difficulty urinating, or recurrent infections. Circumcision is the definitive treatment. In mild cases, steroid creams or preputioplasty may be tried first.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-shield-alt"></i></div>
                     <h3>Recurrent Infections</h3>
                     <p>Recurrent balanitis (infection of the head of the penis) or posthitis (infection of the foreskin) can significantly impact quality of life. Circumcision eliminates the environment where bacteria and fungi thrive and is highly effective at preventing recurrences.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Cosmetic or Personal Preference</h3>
                     <p>Some men choose circumcision for personal, cultural, religious, or aesthetic reasons. This is a completely valid reason to seek the procedure. Dr. Kashani approaches all requests without judgment and focuses on achieving the best possible cosmetic result.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Sexual Function or Discomfort</h3>
                     <p>Some men experience pain, tearing, or discomfort of the foreskin during sexual activity due to tightness or scarring. Circumcision or targeted procedures like frenuloplasty can resolve these issues and significantly improve sexual comfort and function.</p>
                 </div>
@@ -970,6 +972,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -994,7 +998,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1006,7 +1010,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1151,6 +1155,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1160,6 +1165,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1212,6 +1218,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1245,7 +1257,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

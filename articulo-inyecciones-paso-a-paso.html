@@ -907,12 +907,13 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
         <div class="container nav-container">
             <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Navegación principal">
                 <ul class="nav-links">
                     <li><a href="/inicio">Inicio</a></li>
                     <li>
@@ -967,6 +968,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <div class="article-body">
         <a href="/educacion" class="article-back-link">&#8592; Volver a Educaci&oacute;n para el Paciente</a>
@@ -992,7 +994,7 @@
 
         <h2>Qu&eacute; Son las Inyecciones Peneanas</h2>
         <p>Las inyecciones peneanas, tambi&eacute;n llamadas <strong>terapia de inyecci&oacute;n intracavernosa</strong> o <strong>inyecciones ICI</strong>, son un tratamiento para la disfunci&oacute;n er&eacute;ctil que deposita medicamento directamente en el tejido er&eacute;ctil del pene. Si los medicamentos orales como Viagra o Cialis ya no ofrecen resultados suficientes, las inyecciones suelen ser el siguiente paso recomendado. <a href="/disfuncion-erectil">Conozca las opciones de tratamiento para la DE &rarr;</a></p>
-        <p>Los medicamentos comunes incluyen alprostadil o combinaciones formuladas como TriMix. Cuando se usan correctamente, las inyecciones peneanas pueden ser muy efectivas y brindar una respuesta m&aacute;s predecible que las pastillas. <a href="/articulo-inyeccion-peneana-trimix" style="color: var(--accent); font-weight: 700;">Lea nuestra guía completa sobre Trimix para la DE →</a></p>
+        <p>Los medicamentos comunes incluyen alprostadil o combinaciones formuladas como TriMix. Cuando se usan correctamente, las inyecciones peneanas pueden ser muy efectivas y brindar una respuesta m&aacute;s predecible que las pastillas. <a href="/articulo-inyeccion-peneana-trimix" style="color: var(--accent-dark); font-weight: 700;">Lea nuestra guía completa sobre Trimix para la DE →</a></p>
 
         <div class="article-pull-quote">
             &ldquo;Con la ense&ntilde;anza adecuada, la mayor&iacute;a de los hombres se sorprende de lo sencilla que puede ser la terapia de inyecci&oacute;n peneana.&rdquo;
@@ -1178,6 +1180,8 @@
         </div>
     </div>
 
+    </main>
+
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -1196,7 +1200,7 @@
                         </div>
                     </div>
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegaci&oacute;n</h5>
+                        <h3 class="footer-col-heading">Navegaci&oacute;n</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -1206,7 +1210,7 @@
                         </ul>
                     </div>
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1327,6 +1331,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1336,6 +1341,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1388,6 +1394,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1422,7 +1434,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

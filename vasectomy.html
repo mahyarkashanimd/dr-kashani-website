@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -747,15 +747,16 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
     <div class="container nav-container">
         <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
 
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0">
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </div>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -810,6 +811,7 @@
             </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -871,22 +873,22 @@
             <p style="max-width: 750px;">The no-scalpel technique has replaced the traditional incision approach as the gold standard for vasectomy. The differences are meaningful.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-cut"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-cut"></i></div>
                     <h3>No Incision</h3>
                     <p>A small sharp instrument makes a tiny puncture in the scrotal skin — no scalpel, no stitches required. The opening is so small it heals on its own within a day or two.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-tint-slash"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-tint-slash"></i></div>
                     <h3>Less Bleeding</h3>
                     <p>The no-scalpel technique causes significantly less bleeding than the traditional approach, reducing the risk of bruising and hematoma (blood pooling).</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-smile"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-smile"></i></div>
                     <h3>Less Discomfort</h3>
                     <p>Most men are surprised by how comfortable the procedure is. Post-operative soreness is typically mild and resolves within a few days with simple pain medication and ice packs.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bolt"></i></div>
                     <h3>Faster Recovery</h3>
                     <p>Most men return to desk work within 2 to 3 days and resume full physical activity within 1 week. Recovery is significantly faster than with the traditional scalpel technique.</p>
                 </div>
@@ -1014,6 +1016,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1038,7 +1042,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1050,7 +1054,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1195,6 +1199,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1204,6 +1209,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1256,6 +1262,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1289,7 +1301,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

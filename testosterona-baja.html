@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -735,11 +735,12 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
     <div class="container nav-container">
         <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-        <nav>
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+        <nav aria-label="Navegación principal">
             <ul class="nav-links">
                 <li><a href="/inicio">Inicio</a></li>
                 <li>
@@ -794,6 +795,7 @@
         </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -854,42 +856,42 @@
             <p style="max-width: 750px;">La testosterona baja afecta casi todos los sistemas del cuerpo. Los síntomas suelen ser sutiles al principio y tienden a descartarse como estrés o envejecimiento. Si experimenta varios de estos, vale la pena hacerse una prueba.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bed"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bed"></i></div>
                     <h3>Fatiga y Bajo Nivel de Energía</h3>
                     <p>Cansancio persistente que no mejora con el sueño. Muchos hombres describen sentirse "apagados" o carecer de la motivación y el impulso que tenían antes.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Bajo Deseo Sexual (Libido Baja)</h3>
                     <p>Una disminución notable del interés en el sexo. Este es uno de los síntomas más comunes y angustiantes de la testosterona baja para los hombres y sus parejas.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Disfunción Eréctil</h3>
                     <p>La testosterona baja puede contribuir a la dificultad para lograr o mantener erecciones. Con frecuencia es un factor coexistente junto a causas vasculares de la DE.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-brain"></i></div>
                     <h3>Niebla Mental y Dificultad de Concentración</h3>
                     <p>La dificultad para concentrarse, los lapsos de memoria y la confusión mental son quejas comunes en hombres con testosterona baja.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-frown"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-frown"></i></div>
                     <h3>Depresión e Irritabilidad</h3>
                     <p>La testosterona juega un papel clave en la regulación del estado de ánimo. Los niveles bajos están fuertemente asociados con la depresión, la ansiedad y el aumento de la irritabilidad.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-weight"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-weight"></i></div>
                     <h3>Aumento de Peso y Pérdida de Masa Muscular</h3>
                     <p>La testosterona baja reduce la masa muscular y aumenta la grasa corporal — particularmente en el abdomen. Esto puede crear un ciclo que baja aún más los niveles de testosterona.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bone"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bone"></i></div>
                     <h3>Pérdida de Densidad Ósea</h3>
                     <p>La testosterona ayuda a mantener la densidad ósea. Una testosterona baja prolongada puede aumentar el riesgo de osteoporosis y fracturas.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-thermometer"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-thermometer"></i></div>
                     <h3>Sofocos y Sudores Nocturnos</h3>
                     <p>A menudo considerados síntomas femeninos, los sofocos y sudores nocturnos pueden ocurrir en hombres con testosterona baja — especialmente cuando los niveles caen rápidamente.</p>
                 </div>
@@ -1037,6 +1039,8 @@
         </div>
     </div>
     </section>
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1061,7 +1065,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -1073,7 +1077,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1223,6 +1227,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1232,6 +1237,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1284,6 +1290,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1318,7 +1330,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

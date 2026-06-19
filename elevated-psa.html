@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -429,12 +429,13 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
         <div class="container nav-container">
             <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -489,6 +490,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -554,32 +556,32 @@
             <p style="max-width: 750px; margin-bottom: 0;">The most common causes of elevated PSA — in order of frequency — are:</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-compress-alt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-compress-alt"></i></div>
                     <h3>Enlarged Prostate</h3>
                     <p>An enlarged prostate produces more PSA simply because there is more prostate tissue. This is the most common non-cancerous cause. A large prostate with a mildly elevated PSA may be entirely explained by its size alone.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-fire-alt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-fire-alt"></i></div>
                     <h3>Prostate Inflammation</h3>
                     <p>Inflammation or infection of the prostate can raise PSA significantly — sometimes producing results that appear elevated on paper. After addressing the inflammation, PSA often returns to a lower level. Repeat testing after treatment is part of the evaluation.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-procedures"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-procedures"></i></div>
                     <h3>Recent Procedures or Activity</h3>
                     <p>Prostate biopsy, catheterization, cystoscopy, or even vigorous bicycle riding can temporarily raise PSA. Ejaculation within 48 hours of testing can also affect results. Timing of the test is something Dr. Kashani will take into account.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-search"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-search"></i></div>
                     <h3>Prostate Cancer</h3>
                     <p>Prostate cancer is one possible cause of an elevated PSA, but most elevated PSA results turn out to have a non-cancerous explanation. A careful evaluation helps clarify the picture — and when cancer is identified early, it is generally very manageable.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heartbeat"></i></div>
                     <h3>Age and Prostate Changes</h3>
                     <p>PSA naturally rises with age even in men with healthy prostates. This is why age is an important part of interpreting any result. The same PSA value may carry different meaning depending on a patient's age and prostate size.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-capsules"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-capsules"></i></div>
                     <h3>Medication Effects</h3>
                     <p>Certain medications used to treat an enlarged prostate (such as finasteride or dutasteride) can lower PSA levels. Accounting for this is an important part of interpretation — Dr. Kashani will ask about medications before drawing any conclusions.</p>
                 </div>
@@ -737,6 +739,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -755,7 +759,7 @@
                         </div>
                     </div>
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -765,7 +769,7 @@
                         </ul>
                     </div>
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -790,7 +794,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 
     <script src="/js/main.js"></script>
@@ -876,6 +880,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -885,6 +890,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -928,6 +934,12 @@
         menuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+        });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
         });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);

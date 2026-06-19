@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -700,11 +700,12 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
     <div class="container nav-container">
         <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-        <nav>
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+        <nav aria-label="Navegación principal">
             <ul class="nav-links">
                 <li><a href="/inicio">Inicio</a></li>
                 <li>
@@ -759,6 +760,7 @@
         </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -794,22 +796,22 @@
             <p style="max-width: 750px;">Existen varias razones m&eacute;dicas y personales v&aacute;lidas por las que los hombres adultos buscan la circuncisi&oacute;n. El Dr. Kashani eval&uacute;a a cada paciente individualmente para asegurarse de que sea la soluci&oacute;n correcta para su situaci&oacute;n espec&iacute;fica.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-exclamation-circle"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-exclamation-circle"></i></div>
                     <h3>Fimosis</h3>
                     <p>La fimosis es una condici&oacute;n en la que el prepucio est&aacute; demasiado apretado para retraerse sobre el glande del pene. Puede causar dolor durante las erecciones o el sexo, dificultad para orinar o infecciones recurrentes. La circuncisi&oacute;n es el tratamiento definitivo. En casos leves, pueden probarse primero cremas con corticosteroides o la preputioplastia.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-shield-alt"></i></div>
                     <h3>Infecciones Recurrentes</h3>
                     <p>La balanitis recurrente (infecci&oacute;n del glande) o la postitis (infecci&oacute;n del prepucio) pueden afectar significativamente la calidad de vida. La circuncisi&oacute;n elimina el entorno donde prosperan las bacterias y hongos, y es muy efectiva para prevenir las recurrencias.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Preferencia Est&eacute;tica o Personal</h3>
                     <p>Algunos hombres eligen la circuncisi&oacute;n por razones personales, culturales, religiosas o est&eacute;ticas. Esta es una raz&oacute;n completamente v&aacute;lida para buscar el procedimiento. El Dr. Kashani aborda todas las solicitudes sin juicio y se enfoca en lograr el mejor resultado est&eacute;tico posible.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Funci&oacute;n Sexual o Malestar</h3>
                     <p>Algunos hombres experimentan dolor, desgarros o malestar del prepucio durante la actividad sexual debido a tensi&oacute;n o cicatrices. La circuncisi&oacute;n o procedimientos focalizados como la frenuloplastia pueden resolver estos problemas y mejorar significativamente el comfort y la funci&oacute;n sexual.</p>
                 </div>
@@ -931,6 +933,8 @@
         </div>
     </div>
     </section>
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -955,7 +959,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -967,7 +971,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1117,6 +1121,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1126,6 +1131,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1178,6 +1184,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1212,7 +1224,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

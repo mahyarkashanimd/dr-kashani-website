@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -803,12 +803,13 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
 <header>
     <div class="container nav-container">
         <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-        <nav>
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+        <nav aria-label="Navegación principal">
             <ul class="nav-links">
                 <li><a href="/inicio">Inicio</a></li>
                 <li>
@@ -863,6 +864,7 @@
         </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -924,22 +926,22 @@
             <p style="max-width: 750px;">La prótesis peniana inflable es un sistema hidráulico de tres piezas colocado por completo dentro del cuerpo durante una sola cirugía ambulatoria. Así es como funciona en términos sencillos.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-circle"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-circle"></i></div>
                     <h3>Dos Cilindros</h3>
                     <p>Se colocan cilindros flexibles dentro de las cámaras eréctiles del pene (los cuerpos cavernosos) — los mismos espacios que se llenan de sangre durante una erección natural. Al inflarse, producen una erección firme y natural.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-tint"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-tint"></i></div>
                     <h3>Depósito de Líquido</h3>
                     <p>Un pequeño depósito lleno de solución salina se coloca detrás del hueso púbico o detrás del músculo según su anatomía e historial quirúrgico. Es el suministro de fluido del sistema. Está completamente oculto y no puede palparse desde el exterior del cuerpo.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-hand-pointer"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-hand-pointer"></i></div>
                     <h3>Bomba en el Escroto</h3>
                     <p>Se coloca una pequeña bomba dentro del escroto — discreta y fácil de localizar al tacto. Al apretar la bomba se transfiere líquido del depósito a los cilindros, creando una erección en aproximadamente 60 segundos.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-redo"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-redo"></i></div>
                     <h3>Para Desinflar</h3>
                     <p>Al presionar un botón de liberación en la bomba se transfiere el líquido de vuelta al depósito, devolviendo el pene a su estado flácido natural. Todo el proceso es sencillo y tarda unos segundos.</p>
                 </div>
@@ -1245,6 +1247,8 @@
         </div>
     </div>
     </section>
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1269,7 +1273,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -1281,7 +1285,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1431,6 +1435,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1440,6 +1445,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1492,6 +1498,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1526,7 +1538,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

@@ -4,7 +4,8 @@
 :root {
     --primary: #0f172a;      /* Deep Navy */
     --secondary: #1e293b;    /* Slate */
-    --accent: #c0a062;       /* Muted Gold */
+    --accent: #c0a062;       /* Muted Gold — use for backgrounds, borders, icons */
+    --accent-dark: #7d5c1d;  /* Dark Gold — use for TEXT on light backgrounds (WCAG 4.5:1) */
     --light-bg: #f8fafc;     /* Very light grey */
     --text-dark: #334155;
     --text-light: #ffffff;
@@ -73,11 +74,11 @@ header {
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; }
-.sub-logo { color: var(--accent); font-weight: 400; }
+.sub-logo { color: var(--accent-dark); font-weight: 400; }
 
 .nav-links { display: flex; gap: 12px; align-items: center; }
 .nav-links a { color: var(--secondary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
-.nav-links a:hover, .nav-links .active { color: var(--accent); }
+.nav-links a:hover, .nav-links .active { color: var(--accent-dark); }
 
 .btn-appointment { background: var(--primary); color: white !important; padding: 12px 16px; border-radius: 2px; }
 .btn-appointment:hover { background: var(--accent); color: white !important; }
@@ -112,7 +113,7 @@ header {
 
 .hero-buttons { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
 .cta-button { padding: 18px 40px; text-transform: uppercase; font-size: 1.1rem; font-weight: 700; min-width: 230px; text-align: center; }
-.cta-button.primary { background: var(--accent); color: white; border: 2px solid var(--accent); }
+.cta-button.primary { background: var(--accent); color: var(--primary); border: 2px solid var(--accent); }
 
 /* Internal Page Hero */
 .page-hero {
@@ -133,7 +134,7 @@ header {
 }
 .bio-text { flex: 1; }
 .bio-text h2 { font-size: 2.8rem; margin-bottom: 10px; }
-.bio-text h3 { color: var(--accent); font-size: 1rem; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
+.bio-text h3 { color: var(--accent-dark); font-size: 1rem; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
 
 .bio-image { flex: 1; text-align: center; }
 .bio-image img { max-width: 100%; border-radius: 4px; box-shadow: 20px 20px 0px var(--accent) !important; }
@@ -158,7 +159,7 @@ header {
 .service-icon { font-size: 3rem; color: var(--primary); margin-bottom: 25px; }
 .service-bullets { text-align: left; margin: 25px 0; flex-grow: 1; }
 .service-bullets li { padding-left: 30px; position: relative; margin-bottom: 12px; font-size: 1.1rem; }
-.service-bullets li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+.service-bullets li::before { content: "→"; position: absolute; left: 0; color: var(--accent-dark); font-weight: bold; }
 
 /* Detailed Services Page */
 .service-category { margin-bottom: 80px; padding-bottom: 40px; border-bottom: 1px solid #e2e8f0; }
@@ -196,12 +197,12 @@ header {
 .featured-reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px; }
 .review-card { background: #fff; padding: 40px; border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
 .review-card:hover { border-color: var(--accent); }
-.patient-name { display: block; font-weight: 700; color: var(--accent); margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; }
+.patient-name { display: block; font-weight: 700; color: var(--accent-dark); margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; }
 
 .difference-home { padding: 120px 0; background-color: var(--light-bg); border-top: 1px solid #e2e8f0; }
 .difference-home .bio-image img { max-width: 480px; box-shadow: 20px 20px 0 var(--accent) !important; }
 .benefit-list li { position: relative; padding-left: 35px; margin-bottom: 25px; font-size: 1.2rem; }
-.benefit-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+.benefit-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent-dark); font-weight: bold; }
 
 /* =========================================
    9. GOLD CTA & LOCATIONS (RESTORED)
@@ -209,7 +210,7 @@ header {
 .ready-to-act.gold-theme { background: var(--accent); padding: 120px 0; text-align: center; color: var(--primary); }
 .ready-to-act.gold-theme h2 { color: var(--primary); font-size: 3.5rem; margin-bottom: 25px; }
 .ready-to-act.gold-theme p { font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: 50px; }
-.cta-button.navy-btn { background: var(--primary); color: white !important; }
+.cta-button.navy-btn { background: var(--primary); color: white; }
 .cta-button.large { padding: 25px 70px; font-size: 1.2rem; transition: 0.3s; }
 .cta-button.large:hover { transform: scale(1.05); }
 
@@ -355,7 +356,7 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-dark);
     letter-spacing: 1.2px;
 }
 
@@ -734,4 +735,49 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 @media (max-width: 600px) {
     .floating-cta { bottom: 16px; right: 16px; }
     .floating-cta a { font-size: 0.78rem; padding: 11px 16px; }
+}
+
+/* =============================================
+   ADA / WCAG 2.1 AA ACCESSIBILITY
+   ============================================= */
+
+/* Skip to main content link — visually hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    z-index: 10000;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.15s ease;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Visible keyboard focus indicator on all interactive elements */
+:focus-visible {
+    outline: 3px solid var(--accent-dark);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Cause-card icons are decorative — darken for sighted users as backup */
+.cause-icon { color: var(--accent-dark) !important; }
+
+/* Footer contrast fixes — dark text on dark background was failing */
+.footer-disclaimer { color: #94a3b8 !important; }
+.copyright { color: #94a3b8 !important; }
+.footer-location-address { color: #94a3b8 !important; }
+
+/* Nav ESP/ENG toggle buttons — gold (#c0a062) on white header fails 4.5:1; use dark gold */
+.nav-esp-item > a,
+.nav-eng-item > a {
+    color: var(--accent-dark) !important;
+    border-color: var(--accent-dark) !important;
 }

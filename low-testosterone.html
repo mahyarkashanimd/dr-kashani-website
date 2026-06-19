@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -759,15 +759,16 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
     <div class="container nav-container">
         <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
 
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0">
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </div>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -822,6 +823,7 @@
             </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -882,42 +884,42 @@
             <p style="max-width: 750px;">Low T affects nearly every system in the body. Symptoms are often subtle at first and tend to be dismissed as stress or aging. If you are experiencing several of these, it is worth getting tested.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bed"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bed"></i></div>
                     <h3>Fatigue & Low Energy</h3>
                     <p>Persistent tiredness that doesn't improve with sleep. Many men describe feeling "flat" or lacking the drive and motivation they used to have.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Low Sex Drive (Low Libido)</h3>
                     <p>A noticeable decrease in interest in sex. This is one of the most common and distressing symptoms of low testosterone for men and their partners.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Erectile Dysfunction</h3>
                     <p>Low T can contribute to difficulty getting or maintaining erections. It is often a co-existing factor alongside vascular causes of ED.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-brain"></i></div>
                     <h3>Brain Fog & Poor Concentration</h3>
                     <p>Difficulty focusing, memory lapses, and mental cloudiness are common complaints in men with low testosterone.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-frown"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-frown"></i></div>
                     <h3>Depression & Irritability</h3>
                     <p>Testosterone plays a key role in mood regulation. Low levels are strongly associated with depression, anxiety, and increased irritability.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-weight"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-weight"></i></div>
                     <h3>Weight Gain & Muscle Loss</h3>
                     <p>Low T reduces muscle mass and increases body fat — particularly around the abdomen. This can create a cycle that further lowers testosterone levels.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bone"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bone"></i></div>
                     <h3>Bone Density Loss</h3>
                     <p>Testosterone helps maintain bone density. Prolonged low T can increase the risk of osteoporosis and fractures.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-thermometer"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-thermometer"></i></div>
                     <h3>Hot Flashes & Night Sweats</h3>
                     <p>Often thought of as a female symptom, hot flashes and night sweats can occur in men with low testosterone — especially when levels drop rapidly.</p>
                 </div>
@@ -1067,6 +1069,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1091,7 +1095,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1103,7 +1107,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1248,6 +1252,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1257,6 +1262,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1309,6 +1315,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1342,7 +1354,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

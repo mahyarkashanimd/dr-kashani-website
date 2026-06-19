@@ -106,7 +106,7 @@
             nav.drawer-open { transform:translateX(0) !important; }
             .drawer-topbar { display:flex !important; align-items:center; justify-content:space-between; padding:18px 22px; border-bottom:1px solid rgba(192,160,98,.25); flex-shrink:0; }
             .drawer-brand { color:white; font-family:var(--font-heading); font-size:.9rem; font-weight:400; text-decoration:none; }
-            .drawer-brand em { color:var(--accent); font-style:normal; }
+            .drawer-brand em { color:var(--accent-dark); font-style:normal; }
             .drawer-close-btn { background:none; border:none; color:rgba(255,255,255,.5); font-size:1.15rem; cursor:pointer; padding:4px 6px; line-height:1; transition:color .2s; }
             .drawer-panel-wrap { display:flex !important; flex:1; position:relative; overflow:hidden; }
             .drawer-panel-main, .drawer-panel-sub { display:block !important; position:absolute !important; top:0; left:0; width:100%; height:100%; overflow-y:auto; background:var(--primary); transition:transform .3s cubic-bezier(.22,1,.36,1); }
@@ -114,19 +114,19 @@
             .nav-links { display:flex !important; flex-direction:column !important; padding:6px 0 30px !important; gap:0 !important; position:static !important; background:transparent !important; box-shadow:none !important; width:100% !important; }
             .nav-links > li { position:static !important; width:100%; }
             .nav-links > li > a { display:flex !important; align-items:center !important; justify-content:space-between !important; padding:15px 22px !important; color:rgba(255,255,255,.88) !important; font-size:.95rem !important; font-weight:600 !important; border-bottom:1px solid rgba(255,255,255,.07) !important; background:transparent !important; border-radius:0 !important; }
-            .nav-chevron { color:var(--accent); font-size:1.1rem; opacity:.7; line-height:1; flex-shrink:0; }
-            .nav-links .btn-appointment { background:transparent !important; color:var(--accent) !important; text-align:left !important; padding:15px 22px !important; font-size:.95rem !important; font-weight:700 !important; border-radius:0 !important; display:flex !important; width:100% !important; margin:0 !important; border-bottom:1px solid rgba(255,255,255,.07) !important; }
+            .nav-chevron { color:var(--accent-dark); font-size:1.1rem; opacity:.7; line-height:1; flex-shrink:0; }
+            .nav-links .btn-appointment { background:transparent !important; color:var(--accent-dark) !important; text-align:left !important; padding:15px 22px !important; font-size:.95rem !important; font-weight:700 !important; border-radius:0 !important; display:flex !important; width:100% !important; margin:0 !important; border-bottom:1px solid rgba(255,255,255,.07) !important; }
             .nav-links > li > a::after, .nav-links > li > a::before { display:none !important; content:none !important; }
             .drawer-topbar-right { display:flex; align-items:center; gap:10px; }
-            .drawer-esp-btn, .drawer-eng-btn { color:var(--accent) !important; font-size:.72rem !important; font-weight:700 !important; letter-spacing:1px !important; text-decoration:none !important; padding:4px 9px; border:1px solid rgba(192,160,98,.4); border-radius:2px; white-space:nowrap; }
-            .sub-back-btn { display:flex; align-items:center; gap:8px; width:100%; padding:14px 22px; background:rgba(192,160,98,.07); border:none; border-bottom:1px solid rgba(192,160,98,.2); color:var(--accent); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.8px; cursor:pointer; }
+            .drawer-esp-btn, .drawer-eng-btn { color:var(--accent-dark) !important; font-size:.72rem !important; font-weight:700 !important; letter-spacing:1px !important; text-decoration:none !important; padding:4px 9px; border:1px solid rgba(192,160,98,.4); border-radius:2px; white-space:nowrap; }
+            .sub-back-btn { display:flex; align-items:center; gap:8px; width:100%; padding:14px 22px; background:rgba(192,160,98,.07); border:none; border-bottom:1px solid rgba(192,160,98,.2); color:var(--accent-dark); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.8px; cursor:pointer; }
             .sub-panel-title { padding:18px 22px 14px; color:white; font-family:var(--font-heading); font-size:1.05rem; font-weight:400; border-bottom:1px solid rgba(255,255,255,.1); }
             .sub-panel-title a { color:white !important; text-decoration:none !important; display:block; }
             .sub-title-hint { display:block; font-size:.68rem; color:rgba(192,160,98,.55); letter-spacing:1px; margin-top:5px; font-family:var(--font-body); font-weight:400; text-transform:uppercase; }
             .sub-panel-items { padding:4px 0 30px; }
             .sub-panel-items a { display:block !important; padding:13px 22px !important; color:rgba(255,255,255,.72) !important; font-size:.9rem !important; border-bottom:1px solid rgba(255,255,255,.05) !important; }
-            .sub-panel-items a:hover { color:var(--accent) !important; padding-left:30px !important; }
-            .sub-panel-items .drop-header { display:block; padding:14px 22px 5px; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent); opacity:.6; }
+            .sub-panel-items a:hover { color:var(--accent-dark) !important; padding-left:30px !important; }
+            .sub-panel-items .drop-header { display:block; padding:14px 22px 5px; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--accent-dark); opacity:.6; }
             .dropdown { display:none !important; }
         }
         footer { background:var(--primary); color:#94a3b8; padding:0; }
@@ -134,22 +134,22 @@
         .footer-grid { display:grid; grid-template-columns:1.8fr .9fr 1.1fr; gap:52px; align-items:start; max-width:1000px; margin:0 auto; }
         .footer-logo-link { display:inline-flex; flex-direction:column; line-height:1; text-decoration:none; margin-bottom:20px; }
         .footer-logo-main { font-family:'Lato',sans-serif; font-size:1.55rem; font-weight:700; color:#fff; }
-        .footer-logo-sub { font-family:'Lato',sans-serif; font-size:.82rem; font-weight:400; color:var(--accent); letter-spacing:.06em; margin-top:3px; }
+        .footer-logo-sub { font-family:'Lato',sans-serif; font-size:.82rem; font-weight:400; color:var(--accent-dark); letter-spacing:.06em; margin-top:3px; }
         .footer-tagline { font-size:.855rem; line-height:1.75; color:#7a8fa6; margin-bottom:24px; max-width:340px; }
         .footer-tagline strong { color:#94a3b8; font-weight:600; }
         .footer-social { display:flex; gap:10px; }
-        .footer-social a { display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:1px solid rgba(192,160,98,.35); color:var(--accent); font-size:.95rem; transition:background .2s,border-color .2s,color .2s; }
-        .footer-social a:hover { background:var(--accent); border-color:var(--accent); color:var(--primary); }
-        .footer-col-heading { font-family:var(--font-body,'Lato',sans-serif); font-size:.7rem; font-weight:700; color:var(--accent); letter-spacing:.2em; text-transform:uppercase; margin-bottom:22px; padding-bottom:10px; border-bottom:1px solid rgba(192,160,98,.2); }
+        .footer-social a { display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:1px solid rgba(192,160,98,.35); color:var(--accent-dark); font-size:.95rem; transition:background .2s,border-color .2s,color .2s; }
+        .footer-social a:hover { background:var(--accent); border-color:var(--accent-dark); color:var(--primary); }
+        .footer-col-heading { font-family:var(--font-body,'Lato',sans-serif); font-size:.7rem; font-weight:700; color:var(--accent-dark); letter-spacing:.2em; text-transform:uppercase; margin-bottom:22px; padding-bottom:10px; border-bottom:1px solid rgba(192,160,98,.2); }
         .footer-col-links ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
         .footer-col-links ul li a { color:#94a3b8; font-size:.9rem; font-weight:600; transition:color .18s,padding-left .18s; display:inline-block; }
         .footer-col-links ul li a:hover { color:#fff; padding-left:4px; }
         .footer-location { margin-bottom:26px; display:flex; flex-direction:column; gap:3px; }
         .footer-location:last-child { margin-bottom:0; }
         .footer-location-name { display:block; color:#e2e8f0; font-size:.92rem; font-weight:700; transition:color .18s; }
-        .footer-location-name:hover { color:var(--accent); }
+        .footer-location-name:hover { color:var(--accent-dark); }
         .footer-location-address { display:block; font-size:.82rem; line-height:1.6; color:#64748b; transition:color .18s; }
-        .footer-phone { display:block; margin-top:4px; font-size:.88rem; color:var(--accent); font-weight:600; }
+        .footer-phone { display:block; margin-top:4px; font-size:.88rem; color:var(--accent-dark); font-weight:600; }
         .footer-bottom { padding:24px 0; text-align:center; }
         .footer-disclaimer { font-size:.75rem; line-height:1.75; color:#334155; text-align:center; max-width:720px; margin:0 auto 16px; }
         .copyright { text-align:center; font-size:.8rem; color:#334155; margin:0; }
@@ -157,28 +157,29 @@
         @media (max-width:520px) { .footer-grid { grid-template-columns:1fr; gap:32px; } .footer-col-brand { grid-column:auto; } }
         .loc-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
         .loc-info-card { background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid var(--accent); padding:28px 28px 24px; margin-bottom:24px; }
-        .loc-info-card h3 { margin:0 0 4px; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--accent); }
+        .loc-info-card h3 { margin:0 0 4px; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:var(--accent-dark); }
         .loc-info-card p { margin:0 0 16px; color:#475569; font-size:1rem; line-height:1.6; }
         .loc-info-card p:last-child { margin-bottom:0; }
-        .loc-phone { color:var(--accent); font-size:1.15rem; font-weight:700; text-decoration:none; }
+        .loc-phone { color:var(--accent-dark); font-size:1.15rem; font-weight:700; text-decoration:none; }
         .loc-map iframe { width:100%; height:420px; border:0; border-radius:2px; display:block; }
         .services-loc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
         .service-loc-card { background:#fff; border:1px solid #e2e8f0; padding:20px 18px; transition:border-color .2s,box-shadow .2s; }
-        .service-loc-card:hover { border-color:var(--accent); box-shadow:0 4px 16px rgba(192,160,98,.15); }
+        .service-loc-card:hover { border-color:var(--accent-dark); box-shadow:0 4px 16px rgba(192,160,98,.15); }
         .service-loc-card a { color:var(--primary); text-decoration:none; font-weight:700; font-size:.92rem; display:block; margin-bottom:6px; }
-        .service-loc-card a:hover { color:var(--accent); }
+        .service-loc-card a:hover { color:var(--accent-dark); }
         .service-loc-card p { margin:0; font-size:.82rem; color:#64748b; line-height:1.5; }
         @media (max-width:768px) { .loc-grid { grid-template-columns:1fr; } .services-loc-grid { grid-template-columns:1fr 1fr; } }
         @media (max-width:480px) { .services-loc-grid { grid-template-columns:1fr; } }
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
         <div class="container nav-container">
             <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Navegación principal">
                 <ul class="nav-links">
                     <li><a href="/inicio">Inicio</a></li>
                     <li>
@@ -226,12 +227,13 @@
                             <li><a href="/educacion">Art&iacute;culos</a></li>
                         </ul>
                     </li>
-                    <li class="nav-eng-item"><a href="/urologist-rockville-centre" style="font-size:.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="View in English">&#127482;&#127480; ENG</a></li>
+                    <li class="nav-eng-item"><a href="/urologist-rockville-centre" style="font-size:.85rem;color:var(--accent-dark);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="View in English">&#127482;&#127480; ENG</a></li>
                     <li><a href="/contacto" class="btn-appointment">Reservar Cita</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -253,8 +255,8 @@
                     </div>
                     <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" rel="noopener" style="display:inline-block;background:var(--primary);color:#fff;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:12px 24px;text-decoration:none;margin-bottom:36px;">C&oacute;mo Llegar &rarr;</a>
                     <h2 style="color:var(--primary);font-size:1.3rem;margin:0 0 14px;">Sobre el Dr. Kashani</h2>
-                    <p style="color:#475569;line-height:1.75;margin:0 0 20px;">El Dr. Mahyar Kashani es urólogo y especialista en salud masculina que atiende a pacientes en Long Island y el Condado de Nassau. En este consultorio de Rockville Centre — en la Costa Sur — atiende a pacientes de Oceanside, Lynbrook, Valley Stream y comunidades cercanas, tratando <a href="/disfuncion-erectil" style="color:var(--accent);">disfunci&oacute;n er&eacute;ctil</a>, <a href="/testosterona-baja" style="color:var(--accent);">testosterona baja</a>, <a href="/implante-peneano" style="color:var(--accent);">implantes peneanos</a>, <a href="/enfermedad-peyronie" style="color:var(--accent);">enfermedad de Peyronie</a>, y una amplia gama de condiciones urol&oacute;gicas. <strong>Se habla espa&ntilde;ol.</strong></p>
-                    <a href="/sobre-el-doctor" style="color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem;">Conocer al Dr. Kashani &rarr;</a>
+                    <p style="color:#475569;line-height:1.75;margin:0 0 20px;">El Dr. Mahyar Kashani es urólogo y especialista en salud masculina que atiende a pacientes en Long Island y el Condado de Nassau. En este consultorio de Rockville Centre — en la Costa Sur — atiende a pacientes de Oceanside, Lynbrook, Valley Stream y comunidades cercanas, tratando <a href="/disfuncion-erectil" style="color:var(--accent-dark);">disfunci&oacute;n er&eacute;ctil</a>, <a href="/testosterona-baja" style="color:var(--accent-dark);">testosterona baja</a>, <a href="/implante-peneano" style="color:var(--accent-dark);">implantes peneanos</a>, <a href="/enfermedad-peyronie" style="color:var(--accent-dark);">enfermedad de Peyronie</a>, y una amplia gama de condiciones urol&oacute;gicas. <strong>Se habla espa&ntilde;ol.</strong></p>
+                    <a href="/sobre-el-doctor" style="color:var(--accent-dark);font-weight:600;text-decoration:none;font-size:.9rem;">Conocer al Dr. Kashani &rarr;</a>
                 </div>
                 <div>
                     <div class="loc-map">
@@ -268,7 +270,7 @@
     <!-- Comunidades atendidas -->
     <section style="background:#fff;padding:28px 0;border-top:1px solid #e2e8f0;">
         <div class="container" style="text-align:center;">
-            <p style="margin:0 0 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);">Atendemos en la Costa Sur de Nassau County y Long Island</p>
+            <p style="margin:0 0 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--accent-dark);">Atendemos en la Costa Sur de Nassau County y Long Island</p>
             <p style="color:#64748b;font-size:.87rem;margin:0;line-height:1.8;">Oceanside &nbsp;&bull;&nbsp; Lynbrook &nbsp;&bull;&nbsp; Valley Stream &nbsp;&bull;&nbsp; Long Beach &nbsp;&bull;&nbsp; Baldwin &nbsp;&bull;&nbsp; Freeport &nbsp;&bull;&nbsp; Merrick &nbsp;&bull;&nbsp; Hewlett &nbsp;&bull;&nbsp; y comunidades cercanas en Long Island</p>
         </div>
     </section>
@@ -297,7 +299,7 @@
     <section style="background:var(--primary);padding:60px 0;text-align:center;">
         <div class="container">
             <h2 style="color:#fff;font-size:1.8rem;margin-bottom:12px;">Reserve su Consulta en Rockville Centre</h2>
-            <p style="color:#94a3b8;max-width:520px;margin:0 auto 30px;line-height:1.7;">Llame al <a href="tel:5163902850" style="color:var(--accent);font-weight:700;">(516) 390-2850</a> o env&iacute;e una solicitud en l&iacute;nea. Consultorio en 2 Lincoln Avenue, Suite 102, Rockville Centre, NY 11570. <strong style="color:var(--accent);">Se habla espa&ntilde;ol.</strong></p>
+            <p style="color:#94a3b8;max-width:520px;margin:0 auto 30px;line-height:1.7;">Llame al <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">(516) 390-2850</a> o env&iacute;e una solicitud en l&iacute;nea. Consultorio en 2 Lincoln Avenue, Suite 102, Rockville Centre, NY 11570. <strong style="color:var(--accent-dark);">Se habla espa&ntilde;ol.</strong></p>
             <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
                 <a href="/contacto" style="background:var(--accent);color:var(--primary);font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:14px 30px;text-decoration:none;">Reservar Cita</a>
                 <a href="https://profiles.mountsinai.org/mahyar-kashani" target="_blank" rel="noopener" style="background:transparent;color:#fff;font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:14px 30px;text-decoration:none;border:1px solid rgba(255,255,255,.35);">Reservar en Mount Sinai</a>
@@ -307,17 +309,19 @@
 
     <section style="background:#f8fafc;padding:32px 0;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;text-align:center;">
         <div class="container">
-            <p style="color:#475569;font-size:.95rem;margin:0;">Tambi&eacute;n atendemos en nuestro <a href="/urologo-carle-place" style="color:var(--accent);font-weight:700;">consultorio de Carle Place</a> &mdash; 393-401 Old Country Road &nbsp;&middot;&nbsp; (516) 877-0977</p>
+            <p style="color:#475569;font-size:.95rem;margin:0;">Tambi&eacute;n atendemos en nuestro <a href="/urologo-carle-place" style="color:var(--accent-dark);font-weight:700;">consultorio de Carle Place</a> &mdash; 393-401 Old Country Road &nbsp;&middot;&nbsp; (516) 877-0977</p>
         </div>
     </section>
 
     <!-- Comunidades atendidas -->
     <section style="background:#fff;padding:28px 0;border-top:1px solid #e2e8f0;">
         <div class="container" style="text-align:center;">
-            <p style="margin:0 0 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--accent);">Atendiendo el Condado de Nassau y Long Island</p>
+            <p style="margin:0 0 8px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--accent-dark);">Atendiendo el Condado de Nassau y Long Island</p>
             <p style="color:#64748b;font-size:.87rem;margin:0;line-height:1.8;">Oceanside &nbsp;&bull;&nbsp; Lynbrook &nbsp;&bull;&nbsp; Valley Stream &nbsp;&bull;&nbsp; Long Beach &nbsp;&bull;&nbsp; Baldwin &nbsp;&bull;&nbsp; Freeport &nbsp;&bull;&nbsp; Merrick &nbsp;&bull;&nbsp; Hewlett &nbsp;&bull;&nbsp; y comunidades de Long Island</p>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="footer-top">
@@ -337,7 +341,7 @@
                         </div>
                     </div>
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegaci&oacute;n</h5>
+                        <h3 class="footer-col-heading">Navegaci&oacute;n</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -347,7 +351,7 @@
                         </ul>
                     </div>
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -438,6 +442,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -447,6 +452,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -491,6 +497,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDrawer(); });
@@ -517,7 +529,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

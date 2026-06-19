@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -790,12 +790,13 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
         <div class="container nav-container">
             <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-            <nav>
+            <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -850,6 +851,7 @@
             </nav>
         </div>
     </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -917,32 +919,32 @@
             <p style="max-width: 750px; margin-bottom: 0;">OAB primarily causes irritative (storage) symptoms. If your symptoms are mostly obstructive — weak stream, straining, hesitancy — that points more toward BPH.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bolt"></i></div>
                     <h3>Urgency</h3>
                     <p>A sudden, strong, difficult-to-control urge to urinate. The defining symptom of OAB. Can come on without warning and is not always relieved by urinating.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-redo"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-redo"></i></div>
                     <h3>Urinary Frequency</h3>
                     <p>Urinating more than 8 times per day. Most people urinate 6 to 8 times in a 24-hour period — going more frequently is a key OAB indicator.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-moon"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-moon"></i></div>
                     <h3>Nocturia</h3>
                     <p>Waking 2 or more times per night to urinate. Severely disrupts sleep quality, daytime function, and in older men, significantly increases fall risk.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-tint-slash"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-tint-slash"></i></div>
                     <h3>Urge Incontinence</h3>
                     <p>Leaking urine before reaching the toilet when urgency strikes. Not all OAB patients experience incontinence — but when present, it is often the most distressing symptom.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-map-marked-alt"></i></div>
                     <h3>Bathroom Planning</h3>
                     <p>Constantly mapping out bathroom locations before going anywhere. Avoiding situations where a bathroom isn't immediately accessible. A major quality-of-life indicator.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-bed"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-bed"></i></div>
                     <h3>Sleep Disruption</h3>
                     <p>OAB-related nocturia is one of the most underrecognized causes of poor sleep quality in men. Poor sleep compounds fatigue, mood, and cardiovascular risk.</p>
                 </div>
@@ -1164,6 +1166,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1188,7 +1192,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1200,7 +1204,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1345,6 +1349,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1354,6 +1359,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1406,6 +1412,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1439,7 +1451,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

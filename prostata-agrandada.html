@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -729,11 +729,12 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
     <div class="container nav-container">
         <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-        <nav>
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+        <nav aria-label="Navegación principal">
             <ul class="nav-links">
                 <li><a href="/inicio">Inicio</a></li>
                 <li>
@@ -788,6 +789,7 @@
         </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -852,32 +854,32 @@
             <p style="max-width: 750px; margin-bottom: 0;">La HBP principalmente causa s&iacute;ntomas obstructivos (de vaciado), aunque pueden desarrollarse s&iacute;ntomas irritativos secundariamente a la obstrucci&oacute;n.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-water"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-water"></i></div>
                     <h3>Chorro D&eacute;bil o Lento</h3>
                     <p>Flujo de orina m&aacute;s d&eacute;bil que antes, que tarda m&aacute;s en comenzar, o que se detiene y comienza. La se&ntilde;al cl&aacute;sica de obstrucci&oacute;n uretral por una pr&oacute;stata agrandada.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-hourglass-half"></i></div>
                     <h3>Vaciado Incompleto</h3>
                     <p>La sensaci&oacute;n de que la vejiga nunca se vac&iacute;a por completo &mdash; que a menudo lleva a regresar al ba&ntilde;o poco despu&eacute;s de orinar. Es una se&ntilde;al de obstrucci&oacute;n significativa.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-moon"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-moon"></i></div>
                     <h3>Nicturia</h3>
                     <p>Levantarse 2 o m&aacute;s veces por noche para orinar. Uno de los s&iacute;ntomas m&aacute;s perturbadores de la HBP &mdash; que afecta significativamente la calidad del sue&ntilde;o, la energ&iacute;a y la funci&oacute;n diaria.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-tint"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-tint"></i></div>
                     <h3>Goteo Post-Micci&oacute;n</h3>
                     <p>Continuaci&oacute;n del goteo de orina despu&eacute;s de terminar de orinar. Causado por orina acumulada en la uretra &mdash; com&uacute;n en la HBP y a menudo socialmente embarazoso.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-pause-circle"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-pause-circle"></i></div>
                     <h3>Hesitaci&oacute;n y Esfuerzo</h3>
                     <p>Dificultad para iniciar la micci&oacute;n &mdash; tener que esperar a que comience el flujo de orina, o necesitar esforzarse. Causado por mayor resistencia en la salida de la vejiga.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-redo"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-redo"></i></div>
                     <h3>Frecuencia Urinaria</h3>
                     <p>Orinar m&aacute;s de 8 veces al d&iacute;a &mdash; a menudo un efecto secundario del vaciado incompleto, ya que la vejiga se siente llena nuevamente r&aacute;pidamente despu&eacute;s de orinar.</p>
                 </div>
@@ -1105,6 +1107,8 @@
         </div>
     </div>
     </section>
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1129,7 +1133,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -1141,7 +1145,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1291,6 +1295,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1300,6 +1305,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1352,6 +1358,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1386,7 +1398,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>

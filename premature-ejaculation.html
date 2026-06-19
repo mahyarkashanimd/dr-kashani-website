@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -741,15 +741,16 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
     <div class="container nav-container">
         <a href="/" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
         
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0">
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </div>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li>
@@ -804,6 +805,7 @@
             </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -840,22 +842,22 @@
             <p style="max-width: 750px;">PE has both psychological and biological components. In most men it is a combination of both — which is why the most effective treatments often combine medical and behavioral approaches.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-brain"></i></div>
                     <h3>Anxiety & Performance Pressure</h3>
                     <p>Performance anxiety is one of the most common triggers for PE — especially in younger men or those with a new partner. The worry about ejaculating too quickly can actually make it happen faster, creating a cycle.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-flask"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-flask"></i></div>
                     <h3>Serotonin Levels</h3>
                     <p>Serotonin is a neurotransmitter that plays a direct role in ejaculation control. Men with PE often have lower serotonin activity in the areas of the brain that regulate ejaculation — which is why SSRIs are effective treatments.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Erectile Dysfunction</h3>
                     <p>Men who struggle to maintain an erection often rush to ejaculate before losing it — creating a habit of rapid ejaculation. Treating the underlying ED often significantly improves PE as well.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Relationship & Psychological Factors</h3>
                     <p>Stress, relationship conflict, guilt, or a history of sexual trauma can all contribute to PE. In these cases, a combined approach with behavioral therapy produces the best outcomes.</p>
                 </div>
@@ -982,6 +984,8 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -1006,7 +1010,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Quick Links</h5>
+                        <h3 class="footer-col-heading">Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">Meet Dr. Kashani</a></li>
@@ -1018,7 +1022,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Locations</h5>
+                        <h3 class="footer-col-heading">Locations</h3>
                         <div class="footer-location">
                             <a href="/urologist-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1163,6 +1167,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1172,6 +1177,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1224,6 +1230,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1257,7 +1269,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contact"><i class="fas fa-calendar-check"></i> Book Consultation</a>
+        <a href="/contact"><i class="fas fa-calendar-check" aria-hidden="true"></i> Book Consultation</a>
     </div>
 </body>
 </html>

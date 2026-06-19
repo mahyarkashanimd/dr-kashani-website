@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -703,11 +703,12 @@
     </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
     <div class="container nav-container">
         <a href="/inicio" class="logo">Men's Health <span class="sub-logo">Long Island</span></a>
-        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0"><i class="fas fa-bars"></i></div>
-        <nav>
+        <div class="menu-toggle" aria-label="Open Menu" role="button" tabindex="0" aria-expanded="false"><i class="fas fa-bars"></i></div>
+        <nav aria-label="Navegación principal">
             <ul class="nav-links">
                 <li><a href="/inicio">Inicio</a></li>
                 <li>
@@ -762,6 +763,7 @@
         </nav>
     </div>
 </header>
+    <main id="main-content">
 
     <section class="page-hero">
         <div class="container">
@@ -798,22 +800,22 @@
             <p style="max-width: 750px;">La EP tiene componentes tanto psicol&oacute;gicos como biol&oacute;gicos. En la mayor&iacute;a de los hombres es una combinaci&oacute;n de ambos &mdash; por lo que los tratamientos m&aacute;s efectivos a menudo combinan enfoques m&eacute;dicos y conductuales.</p>
             <div class="causes-grid">
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-brain"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-brain"></i></div>
                     <h3>Ansiedad y Presi&oacute;n por el Rendimiento</h3>
                     <p>La ansiedad por el rendimiento es uno de los desencadenantes m&aacute;s comunes de la EP, especialmente en hombres j&oacute;venes o con una nueva pareja. La preocupaci&oacute;n por eyacular demasiado r&aacute;pido puede en realidad hacer que suceda m&aacute;s r&aacute;pido, creando un ciclo.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-flask"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-flask"></i></div>
                     <h3>Niveles de Serotonina</h3>
                     <p>La serotonina es un neurotransmisor que juega un papel directo en el control de la eyaculaci&oacute;n. Los hombres con EP a menudo tienen menor actividad de serotonina en las &aacute;reas del cerebro que regulan la eyaculaci&oacute;n &mdash; por eso los ISRS son tratamientos efectivos.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-venus-mars"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-venus-mars"></i></div>
                     <h3>Disfunci&oacute;n Er&eacute;ctil</h3>
                     <p>Los hombres que tienen dificultades para mantener una erecci&oacute;n a menudo se apresuran a eyacular antes de perderla, creando un h&aacute;bito de eyaculaci&oacute;n r&aacute;pida. Tratar la DE subyacente a menudo mejora significativamente la EP tambi&eacute;n.</p>
                 </div>
                 <div class="cause-card">
-                    <div class="cause-icon"><i class="fas fa-heart"></i></div>
+                    <div class="cause-icon"><i aria-hidden="true" class="fas fa-heart"></i></div>
                     <h3>Factores Relacionales y Psicol&oacute;gicos</h3>
                     <p>El estr&eacute;s, conflictos en la relaci&oacute;n, culpa o un historial de trauma sexual pueden contribuir a la EP. En estos casos, un enfoque combinado con terapia conductual produce los mejores resultados.</p>
                 </div>
@@ -938,6 +940,8 @@
         </div>
     </div>
     </section>
+    </main>
+
     <footer>
 
         <!-- Top: 3-column grid -->
@@ -962,7 +966,7 @@
 
                     <!-- Col 2: Quick Links -->
                     <div class="footer-col footer-col-links">
-                        <h5 class="footer-col-heading">Navegación</h5>
+                        <h3 class="footer-col-heading">Navegación</h3>
                         <ul>
                             <li><a href="/inicio">Inicio</a></li>
                             <li><a href="/sobre-el-doctor">Dr. Kashani</a></li>
@@ -974,7 +978,7 @@
 
                     <!-- Col 3: Locations -->
                     <div class="footer-col footer-col-locations">
-                        <h5 class="footer-col-heading">Ubicaciones</h5>
+                        <h3 class="footer-col-heading">Ubicaciones</h3>
                         <div class="footer-location">
                             <a href="/urologo-rockville-centre" class="footer-location-name">Rockville Centre</a>
                             <a href="https://maps.app.goo.gl/FwDMG611RYVwN9Qs8" target="_blank" class="footer-location-address">2 Lincoln Avenue, Suite 102<br>Rockville Centre, NY 11570</a>
@@ -1124,6 +1128,7 @@
             navEl.classList.add('drawer-open');
             backdrop.classList.add('visible');
             menuToggle.querySelector('i').className = 'fas fa-times';
+            menuToggle.setAttribute('aria-expanded', 'true');
         }
         function closeDrawer() {
             document.body.style.position = '';
@@ -1133,6 +1138,7 @@
             navEl.classList.remove('drawer-open');
             backdrop.classList.remove('visible');
             menuToggle.querySelector('i').className = 'fas fa-bars';
+            menuToggle.setAttribute('aria-expanded', 'false');
             closeSubPanel();
         }
         function openSubPanel(title, href, dropdown, showParentLink) {
@@ -1185,6 +1191,12 @@
             e.stopPropagation();
             navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
         });
+        menuToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navEl.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+            }
+        });
         backdrop.addEventListener('click', closeDrawer);
         topbar.querySelector('.drawer-close-btn').addEventListener('click', closeDrawer);
         document.addEventListener('keydown', function(e) {
@@ -1219,7 +1231,7 @@
 
     <!-- Floating CTA -->
     <div class="floating-cta">
-        <a href="/contacto"><i class="fas fa-calendar-check"></i> Reservar Cita</a>
+        <a href="/contacto"><i class="fas fa-calendar-check" aria-hidden="true"></i> Reservar Cita</a>
     </div>
 </body>
 </html>
