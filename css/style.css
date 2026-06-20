@@ -804,8 +804,8 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 .footer-social a { color: var(--accent) !important; }
 /* Footer text on dark-navy — #334155 = 1.79:1 fail; #64748b = 3.76:1 fail; #94a3b8 = 7.26:1 pass */
 .footer-location-address { color: #94a3b8 !important; }
-.footer-disclaimer { color: #7a8fa6 !important; }
-.copyright { color: #7a8fa6 !important; }
+.footer-disclaimer { color: #94a3b8 !important; }
+.copyright { color: #94a3b8 !important; }
 
 /* Article tag chip — white on gold bg fails 2.49:1; dark navy on gold passes 7.62:1 */
 .article-tag { color: #0f172a !important; }
