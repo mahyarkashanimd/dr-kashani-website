@@ -824,3 +824,5 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
     header nav .sub-panel-items a:hover { color: var(--accent) !important; }
     header nav .sub-panel-items .drop-header { color: var(--accent) !important; opacity: 1 !important; }
 }
+.highlight-card .step-badge { color: #0f172a !important; }
+.related-box a { color: var(--accent-dark) !important; }
