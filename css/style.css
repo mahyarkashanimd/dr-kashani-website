@@ -817,6 +817,17 @@ h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
     opacity: 1 !important;
 }
 
+/* Homepage hero uses .hero-animate (not reveal-up) with the same opacity:0 start */
+.hero-animate { opacity: 1 !important; }
+
+/* Homepage JS adds reveal-up to these content containers — text inside becomes invisible */
+.quote-box-featured.reveal-up,
+.trust-bar.reveal-up,
+.rating-box.reveal-up { opacity: 1 !important; }
+
+/* Stars: amber #f59e0b on light-bg #f8fafc = 2.02:1 fails; dark gold passes 6.1:1 */
+.stars { color: var(--accent-dark) !important; }
+
 /* Article tag chip — white on gold bg fails 2.49:1; dark navy on gold passes 7.62:1 */
 .article-tag { color: #0f172a !important; }
 
