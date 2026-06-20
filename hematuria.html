@@ -281,13 +281,13 @@
         .related-box { background: #f1f5f9; border: 1px solid #e2e8f0; border-left: 4px solid #c0a062; padding: 20px 24px; border-radius: 0 4px 4px 0; margin: 30px 0; }
         .related-box p { margin-bottom: 8px; font-size: 0.98rem; color: #475569; }
         .related-box strong { color: #0f172a; }
-        .related-box a { color: #c0a062; font-weight: 700; text-decoration: none; }
+        .related-box a { color: var(--accent-dark); font-weight: 700; text-decoration: none; }
         .related-box a:hover { text-decoration: underline; }
         .causes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 40px; }
         .cause-card { background: white; border: 1px solid #e2e8f0; border-top: 4px solid #c0a062; padding: 28px 24px; border-radius: 0 0 4px 4px; }
         .cause-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #0f172a; }
         .cause-card p { font-size: 0.95rem; color: #475569; margin-bottom: 0; }
-        .cause-icon { font-size: 1.5rem; color: #c0a062; margin-bottom: 12px; }
+        .cause-icon { font-size: 1.5rem; color: var(--accent-dark); margin-bottom: 12px; }
         .section-divider { background: #0f172a; padding: 30px 0; text-align: center; }
         .section-divider h3 { color: white; font-size: 1.4rem; margin: 0; }
         .section-divider p { color: #94a3b8; margin: 8px 0 0; font-size: 0.95rem; }
@@ -299,7 +299,7 @@
         .treatment-card p { font-size: 0.95rem; color: #475569; margin-bottom: 0; }
         .treatment-card .dr-note { margin-top: 14px; font-size: 0.88rem; color: #64748b; font-style: italic; padding-top: 14px; border-top: 1px solid #f1f5f9; }
         .highlight-card { background: #0f172a; border: 2px solid #c0a062; padding: 32px 28px; border-radius: 4px; }
-        .highlight-card .step-badge { background: #c0a062; color: white; }
+        .highlight-card .step-badge { background: #c0a062; color: #0f172a; }
         .highlight-card h3 { color: white; }
         .highlight-card p { color: #94a3b8; }
         .highlight-card .dr-note { color: #c0a062; border-top-color: rgba(255,255,255,0.1); }
@@ -307,13 +307,13 @@
         .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
         .faq-item:first-child { border-top: 1px solid #e2e8f0; }
         .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
-        .faq-item h3::before { content: "Q"; background: #c0a062; color: white; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+        .faq-item h3::before { content: "Q"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
         .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
         .cta-box { background: #0f172a; color: white; padding: 60px 40px; text-align: center; margin-top: 60px; }
         .cta-box h2 { color: white; font-size: 2rem; margin-bottom: 16px; }
         .cta-box p { color: #94a3b8; font-size: 1.05rem; max-width: 600px; margin: 0 auto 30px; }
         .cta-box .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .cta-box .btn-primary { background: #c0a062; color: white; padding: 14px 32px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; display: inline-block; }
+        .cta-box .btn-primary { background: #c0a062; color: #0f172a; padding: 14px 32px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; display: inline-block; }
         .cta-box .btn-primary:hover { background: #d4b475; }
         @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; gap: 30px; } .treatment-grid { grid-template-columns: 1fr; } .stats-bar .stats-inner { gap: 24px; } .stat-number { font-size: 1.5rem; } .cta-box { padding: 40px 20px; } .content-section { padding: 50px 0; } }
 
@@ -346,11 +346,11 @@
             .sub-back-btn { display: flex; align-items: center; gap: 8px; width: 100%; padding: 14px 22px; background: rgba(192,160,98,0.07); border: none; border-bottom: 1px solid rgba(192,160,98,0.2); color: var(--accent); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; cursor: pointer; }
             .sub-panel-title { padding: 18px 22px 14px; color: white; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 400; border-bottom: 1px solid rgba(255,255,255,0.1); }
             .sub-panel-title a { color: white !important; text-decoration: none !important; display: block; }
-            .sub-title-hint { display: block; font-size: 0.68rem; color: rgba(192,160,98,0.55); letter-spacing: 1px; margin-top: 5px; font-family: var(--font-body); font-weight: 400; text-transform: uppercase; }
+            .sub-title-hint { display: block; font-size: 0.68rem; color: var(--accent); letter-spacing: 1px; margin-top: 5px; font-family: var(--font-body); font-weight: 400; text-transform: uppercase; }
             .sub-panel-items { padding: 4px 0 30px; }
             .sub-panel-items a { display: block !important; padding: 13px 22px !important; color: rgba(255,255,255,0.72) !important; font-size: 0.9rem !important; border-bottom: 1px solid rgba(255,255,255,0.05) !important; }
             .sub-panel-items a:hover { color: var(--accent) !important; padding-left: 30px !important; }
-            .sub-panel-items .drop-header { display: block; padding: 14px 22px 5px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); opacity: 0.6; }
+            .sub-panel-items .drop-header { display: block; padding: 14px 22px 5px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); opacity: 1; }
             .dropdown { display: none !important; }
         }
 
@@ -373,11 +373,11 @@
         .footer-location:last-child { margin-bottom: 0; }
         .footer-location-name { display: block; color: #e2e8f0; font-size: 0.92rem; font-weight: 700; transition: color 0.18s; }
         .footer-location-name:hover { color: var(--accent); }
-        .footer-location-address { display: block; font-size: 0.82rem; line-height: 1.6; color: #64748b; }
+        .footer-location-address { display: block; font-size: 0.82rem; line-height: 1.6; color: #94a3b8; }
         .footer-phone { display: block; margin-top: 4px; font-size: 0.88rem; color: var(--accent); font-weight: 600; }
         .footer-bottom { padding: 24px 0; text-align: center; }
-        .footer-disclaimer { font-size: 0.75rem; line-height: 1.75; color: #334155; text-align: center; max-width: 720px; margin: 0 auto 16px; }
-        .copyright { text-align: center; font-size: 0.8rem; color: #334155; margin: 0; }
+        .footer-disclaimer { font-size: 0.75rem; line-height: 1.75; color: #7a8fa6; text-align: center; max-width: 720px; margin: 0 auto 16px; }
+        .copyright { text-align: center; font-size: 0.8rem; color: #7a8fa6; margin: 0; }
         @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } .footer-col-brand { grid-column: 1 / -1; } }
         @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } .footer-col-brand { grid-column: auto; } }
 
@@ -443,7 +443,7 @@
                             <li><a href="/privacy-policy">Privacy Policy</a></li>
                         </ul>
                     </li>
-                    <li class="nav-esp-item"><a href="/hematuria-es" style="font-size:0.85rem;color:var(--accent);font-weight:700;letter-spacing:1px;border:1px solid var(--accent);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
+                    <li class="nav-esp-item"><a href="/hematuria-es" style="font-size:0.85rem;color:var(--accent-dark);font-weight:700;letter-spacing:1px;border:1px solid var(--accent-dark);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
                     <li><a href="/contact" class="btn-appointment">Book Appointment</a></li>
                 </ul>
             </nav>

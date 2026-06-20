@@ -826,3 +826,8 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 }
 .highlight-card .step-badge { color: #0f172a !important; }
 .related-box a { color: var(--accent-dark) !important; }
+/* sub-title-hint "Tap to view all" — rgba opacity was too low (3:1); full gold on dark-nav passes 7.85:1 */
+.sub-title-hint { color: var(--accent) !important; }
+/* phase-badge on active/highlight phase cards — white on gold fails; dark-navy passes */
+.phase-card.active-phase .phase-badge,
+.phase-card.highlight .phase-badge { color: #0f172a !important; }
