@@ -806,7 +806,16 @@ footer { background: var(--secondary); color: #94a3b8; padding: 80px 0 30px; }
 .footer-location-address { color: #94a3b8 !important; }
 .footer-tagline { color: #94a3b8 !important; }
 .footer-disclaimer { color: #94a3b8 !important; }
-.copyright { color: #94a3b8 !important; }
+/* opacity:0.7 in base rule reduces effective contrast to ~3.3:1; reset to 1 */
+.copyright { color: #94a3b8 !important; opacity: 1 !important; }
+
+/* Scroll-reveal animation starts headings at opacity:0 — WAVE flags them as contrast failures.
+   Headings must always be readable; keep the transform slide but don't fade them. */
+h1.reveal-up, h2.reveal-up, h3.reveal-up, h4.reveal-up,
+h1.reveal-left, h2.reveal-left, h3.reveal-left, h4.reveal-left,
+h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
+    opacity: 1 !important;
+}
 
 /* Article tag chip — white on gold bg fails 2.49:1; dark navy on gold passes 7.62:1 */
 .article-tag { color: #0f172a !important; }
