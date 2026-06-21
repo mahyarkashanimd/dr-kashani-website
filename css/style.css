@@ -862,3 +862,5 @@ h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
 .svc-card .card-link-hint { color: var(--accent-dark) !important; }
 /* education page category tags — gold on white fails; dark gold passes */
 .edu-card-tag { color: var(--accent-dark) !important; }
+/* step-label uses hardcoded #c0a062 on Spanish implant page — override to dark gold */
+.step-content .step-label { color: var(--accent-dark) !important; }
