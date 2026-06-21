@@ -858,3 +858,7 @@ h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
 .nav-chevron { opacity: 1 !important; }
 /* treatment-card dr-note inline links use gold (#c0a062) on white bg — switch to dark gold */
 .treatment-card .dr-note a { color: var(--accent-dark) !important; }
+/* services page "Learn more →" spans — gold on light-bg fails; dark gold passes */
+.svc-card .card-link-hint { color: var(--accent-dark) !important; }
+/* education page category tags — gold on white fails; dark gold passes */
+.edu-card-tag { color: var(--accent-dark) !important; }
