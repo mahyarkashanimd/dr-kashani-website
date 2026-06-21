@@ -864,3 +864,5 @@ h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
 .edu-card-tag { color: var(--accent-dark) !important; }
 /* step-label uses hardcoded #c0a062 on Spanish implant page — override to dark gold */
 .step-content .step-label { color: var(--accent-dark) !important; }
+/* article date/author use #94a3b8 on white = 2.5:1 fail; #475569 = 5.9:1 pass */
+.article-date, .article-author { color: #475569 !important; }
