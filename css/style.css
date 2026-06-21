@@ -854,3 +854,7 @@ h1.reveal-right, h2.reveal-right, h3.reveal-right, h4.reveal-right {
 /* phase-badge on active/highlight phase cards — white on gold fails; dark-navy passes */
 .phase-card.active-phase .phase-badge,
 .phase-card.highlight .phase-badge { color: #0f172a !important; }
+/* nav-chevron opacity:0.7 drops contrast to ~4.1:1 on dark bg — remove opacity */
+.nav-chevron { opacity: 1 !important; }
+/* treatment-card dr-note inline links use gold (#c0a062) on white bg — switch to dark gold */
+.treatment-card .dr-note a { color: var(--accent-dark) !important; }
