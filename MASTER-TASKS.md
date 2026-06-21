@@ -1,5 +1,5 @@
 # Men's Health Long Island — Master Task List
-_Last updated: 2026-05-08 | Add new tasks at the bottom of their priority section_
+_Last updated: 2026-06-21 | Add new tasks at the bottom of their priority section_
 
 ---
 
@@ -31,6 +31,18 @@ _Last updated: 2026-05-08 | Add new tasks at the bottom of their priority sectio
 
 - [x] **A. Twitter/X Card meta tags** — Added to 59 pages (4 skipped — no OG tags: privacy-policy, politica-privacidad, success, success-es).
 - [x] **B. og:image:width + og:image:height tags** — Added 1200×630 to all 59 pages with OG tags.
+- [x] **P2a. /penile-doppler page created** — Full service page: 5 schema blocks (Physician 95-town, MedicalProcedure, BreadcrumbList, WebPage/speakable, FAQPage 10 Q&As), ADA-compliant, mobile drawer, sitemap entry added. **AWAITING USER REVIEW before nav rollout.**
+- [x] **P5. low-testosterone.html FAQ expanded** — 6 → 10 Q&As. Added: Can low T cause ED, Can younger men have low T, Urologist vs. Low T clinic, What happens if I stop TRT. JSON-LD FAQPage schema also updated. **AWAITING USER REVIEW.**
+- [x] **P6. Create /penile-injections page** — New service page for penile injection therapy (Trimix, Bimix, Alprostadil). Same full structure as penile-doppler.html: 5 schemas, FAQ, mobile drawer, ADA-compliant. Spanish equivalent (`/inyecciones-peneanas` or similar) to follow once English is approved. Cross-link from ed.html, penile-doppler.html, penile-implant.html.
+- [ ] **P2b. Nav rollout for /penile-doppler** — Once page is approved: update mega-dropdown on all ~60 HTML pages to add `/penile-doppler` under "Erectile Dysfunction" (between ED Overview and Penile Implants). Also update Spanish pages' mobile drawer sub-panel.
+- [ ] **P2d. Spanish version of /penile-doppler** — Once English page is approved, create `/doppler-peneano` (or confirm preferred slug). Mirror all content, schemas, and FAQ in Spanish. Add hreflang pair to both pages, update EN/ES URL pair table in CLAUDE.md, add ESP↔ENG buttons, add to sitemap.xml, and update nav on all Spanish pages.
+- [ ] **P6b. Spanish version of /penile-injections** — Once English page approved, create `/inyecciones-peneanas` (or confirm preferred slug). Mirror all content, schemas, FAQ in Spanish. Add hreflang pair, ESP↔ENG buttons, nav on all Spanish pages, sitemap entry.
+- [ ] **P5b. Mirror Low T FAQ expansion into testosterona-baja.html** — Once low-testosterone.html FAQ is approved, translate the 4 new Q&As into Spanish and add them to both the HTML faq-list and the JSON-LD FAQPage schema in `testosterona-baja.html`.
+- [ ] **P2c. Cross-links for /penile-doppler** — Once page is approved, add contextual links on:
+  - **ed.html**: In the "treatment options" section, add a link from the "Penile Doppler Ultrasound" treatment card to `/penile-doppler`
+  - **penile-implant.html**: In the pre-surgical evaluation content, add a sentence linking to `/penile-doppler`
+  - **peyronies.html**: In the diagnosis section, mention Doppler is used for Peyronie's evaluation with a link to `/penile-doppler`
+  - **disfuncion-erectil.html** (Spanish ED): Same as ed.html but in Spanish
 - [ ] **C. Patient-tone update on remaining pages** — same framework as hematuria + PSA:
   - ed.html + disfuncion-erectil.html
   - peyronies.html + enfermedad-peyronie.html
@@ -68,6 +80,7 @@ _Last updated: 2026-05-08 | Add new tasks at the bottom of their priority sectio
 
 ## MEDIUM PRIORITY — Claude Does
 
+- [ ] **P9. Update sitemap.xml lastmod dates** — Most pages still show `2026-05-06`. Update to reflect actual last-edit dates for all recently changed pages (penile-doppler, low-testosterone, elevated-psa, hematuria, etc.).
 - [ ] **D. FAQ Schema on remaining pages** — ed.html, low-testosterone.html, peyronies.html + Spanish counterparts (expands rich snippet footprint in search results)
 - [ ] **E. E-E-A-T Schema Improvements** — Board certification, fellowship, residency → Physician JSON-LD; author schema on article pages; research publication structured data
 - [ ] **F. Internal Linking Audit** — Every page links to 2–3 related pages (hematuria ↔ elevated-psa, psa-elevado ↔ prostata-agrandada, etc.)
@@ -99,6 +112,12 @@ _Last updated: 2026-05-08 | Add new tasks at the bottom of their priority sectio
 ---
 
 ## COMPLETED ✅
+
+### June 2026
+
+- [x] **SEO Audit (Priority 1 & 3 — already done)** — Confirmed penile-implant.html already had MedicalProcedure + FAQPage schema; urologist-rockville-centre.html and urologist-carle-place.html already had full MedicalBusiness schema with geo, hasMap, aggregateRating, openingHours, parentOrganization. No changes needed.
+- [x] **/penile-doppler page created** — New service page for penile Doppler ultrasound. ADA-compliant, all schemas, 10-item FAQ, sitemap.xml updated. Pending user review before nav/cross-link rollout.
+- [x] **low-testosterone.html FAQ expanded** — 6 → 10 Q&As (added: low T + ED, younger men, urologist vs. Low T clinic, stopping TRT). Pending user review.
 
 ### May 2026
 
