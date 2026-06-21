@@ -7,7 +7,10 @@
       "Bash(tail -c 5000 \"C:\\\\Users\\\\Admin\\\\.claude\\\\projects\\\\c--Users-Admin-Downloads-dr-kashani-website\\\\4b230db7-2f90-4808-b8be-022c1488781a.jsonl\" 2>/dev/null || echo \"Cannot read file\")",
       "Read(//c/Users/Admin/.claude/projects/c--Users-Admin-Downloads-dr-kashani-website/**)",
       "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" diff --stat)",
-      "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" diff css/style.css index.html)"
+      "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" diff css/style.css index.html)",
+      "Bash(Get-ChildItem -Path . -Filter \"*.html\" -File)",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "Bash(Sort-Object)"
     ]
   }
 }
