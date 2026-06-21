@@ -296,6 +296,7 @@
         /* Strip the hero's own background — we handle it via .hero-kenburns */
         section.hero {
             background-image: none !important;
+            background-color: #0f172a !important;
             align-items: flex-start !important;
             text-align: left !important;
             overflow: hidden;
@@ -360,7 +361,6 @@
         .hero-left p {
             font-size: 1.35rem !important;
             letter-spacing: 0.02em;
-            opacity: 0.85;
             margin-bottom: 36px !important;
         }
         /* Slim down the CTA buttons inside the hero */
@@ -1026,6 +1026,11 @@
         .footer-top { padding: 48px 0 36px; }
         .footer-social { justify-content: flex-start; }
     }
+
+    /* Elfsight Google Reviews widget — ADA contrast fixes */
+    .es-header-rating-reviews-count { color: #555555 !important; }
+    .es-review-info-date { color: #555555 !important; }
+    .es-read-more { color: #1a56db !important; }
     </style>
 </head>
 <body>
