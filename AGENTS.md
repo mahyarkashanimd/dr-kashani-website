@@ -1,4 +1,4 @@
-# Dr. Kashani Website — Claude Instructions
+# Dr. Kashani Website — Codex Instructions
 
 ## Project Overview
 
@@ -277,77 +277,6 @@ The drawer is built entirely by JavaScript injected into the DOM. Do NOT use `<d
 ## Lazy Loading
 
 All `<img>` tags: `loading="lazy"`. Hero uses CSS `background-image`, not `<img>`, so no lazy attribute there.
-
----
-
-## ADA / WCAG 2.1 Compliance Rules (CRITICAL — apply to every new page)
-
-All pages must pass WAVE (wave.webaim.org) with **0 Errors and 0 Contrast Errors**. Only Errors (red X) and Contrast Errors (red C) are required for compliance — Alerts/Features/Structure/ARIA counts do not matter.
-
-### Contrast ratios required
-- Normal text (< 18pt or < 14pt bold): **4.5:1 minimum**
-- Large text (≥ 18pt / 24px, or ≥ 14pt bold / 18.67px): **3:1 minimum**
-
-### Known failing colors — never use these on white/light backgrounds
-| Color | Hex | Ratio on white | Status |
-|-------|-----|----------------|--------|
-| `--accent` gold | `#c0a062` | ~2.5:1 | FAILS |
-| Slate gray | `#94a3b8` | ~2.5:1 | FAILS |
-| Slate gray | `#64748b` | ~4.5:1 | borderline — avoid for small text |
-
-### Safe replacement colors
-| Use case | Color | Ratio on white |
-|----------|-------|----------------|
-| Gold text on white/light bg | `var(--accent-dark)` / `#7d5c1d` | ~6.3:1 ✓ |
-| Secondary gray text | `#475569` | ~5.9:1 ✓ |
-| Muted gray text | `#555555` | ~7.5:1 ✓ |
-| Links on white | `#1a56db` | ~6:1 ✓ |
-
-### Rules by element type
-- **All gold text on white/light backgrounds** → use `var(--accent-dark)` not `var(--accent)`
-- **Article date/author** → `color: #475569` (not `#94a3b8`)
-- **Inline links inside `.dr-note`** → inherit `accent-dark` (sitewide rule in style.css)
-- **`.edu-card-tag`** → `accent-dark` (sitewide rule in style.css)
-- **`.svc-card .card-link-hint`** → `accent-dark` (sitewide rule in style.css)
-- **`.step-label` in treatment steps** → `accent-dark` (sitewide rule in style.css)
-- **`.step-number` watermarks** → `display: none !important` — opacity:0.3 cannot pass 3:1 at any color
-- **Nav chevrons** → `opacity: 1 !important` (removing 0.7 opacity that drops below threshold)
-- **Stats bar** must have a dark background (`#1a1a2e` or `var(--primary)`) applied via the correct CSS class matching the HTML class name
-- **`rgba()` text colors** — alpha blending reduces effective contrast; verify the rendered result passes, or use solid colors
-
-### `opacity` / `rgba` — alpha blending warning
-`opacity` reduces effective contrast by blending toward the background. At `opacity: 0.3` on white, NO color passes even 3:1. Always verify the alpha-blended result:
-- `rgba(255,255,255,0.5)` on `#0f172a` → effective ~`#878b95` → ~4.9:1 (passes, barely)
-- Any gold/accent at opacity < 0.8 on white → likely fails
-
-### `aria-hidden` does NOT suppress WAVE contrast checks
-WAVE checks visually rendered elements regardless of `aria-hidden`. Only `display: none`, `visibility: hidden`, or `opacity: 0` suppresses WAVE contrast evaluation.
-
-### WAVE evaluates at mobile viewport width
-WAVE's iframe is narrow enough to trigger `@media (max-width: 768px)`. Mobile CSS overrides are evaluated. Check that mobile-specific styles (drawer nav, responsive overrides) do not introduce contrast failures.
-
-### Third-party widgets (Elfsight)
-CSS overrides for the Elfsight Google Reviews widget must go in the page `<style>` block (not style.css, since the widget loads after). Current overrides in `index.html`:
-```css
-.es-header-rating-reviews-count { color: #555555 !important; }
-.es-review-info-date { color: #555555 !important; }
-.es-read-more { color: #1a56db !important; }
-.eapps-widget-powered-by-link,
-.eapps-link,
-.es-review-info-platform,
-.es-review-source { color: #555555 !important; }
-```
-
-### Checklist before deploying a new page
-- [ ] No gold (`--accent` / `#c0a062`) text on white or light background
-- [ ] No `#94a3b8` or lighter gray on white for any body text
-- [ ] Article date/author use `#475569`
-- [ ] All `<img>` have `alt` attributes (non-decorative must be descriptive)
-- [ ] All form inputs have associated `<label>` elements
-- [ ] Page has a `<h1>`, headings are in logical order (no skipped levels)
-- [ ] Stats bar CSS class in HTML matches the CSS selector in style.css
-- [ ] Step-number watermarks use `display: none` (not just `aria-hidden`)
-- [ ] Run WAVE and confirm 0 Errors + 0 Contrast Errors before merging
 
 ---
 

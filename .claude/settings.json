@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" status)",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\Admin\\\\.claude\\\\projects\\\\c--Users-Admin-Downloads-dr-kashani-website\\\\4b230db7-2f90-4808-b8be-022c1488781a.jsonl' | Select-String -Pattern 'es-|elfsight|CONTRAST|contrast error' -Context 2 | Select-Object -Last 40\")",
+      "Bash(powershell -Command \"Get-Content 'C:\\\\Users\\\\Admin\\\\.claude\\\\projects\\\\c--Users-Admin-Downloads-dr-kashani-website\\\\4b230db7-2f90-4808-b8be-022c1488781a.jsonl' | Select-String -SimpleMatch 'menshealthlongisland.com\\\\\\\\\\\\\"' | Select-Object -Last 5\")",
+      "Bash(tail -c 5000 \"C:\\\\Users\\\\Admin\\\\.claude\\\\projects\\\\c--Users-Admin-Downloads-dr-kashani-website\\\\4b230db7-2f90-4808-b8be-022c1488781a.jsonl\" 2>/dev/null || echo \"Cannot read file\")",
+      "Read(//c/Users/Admin/.claude/projects/c--Users-Admin-Downloads-dr-kashani-website/**)",
+      "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" diff --stat)",
+      "Bash(git -C \"c:\\\\Users\\\\Admin\\\\Downloads\\\\dr-kashani-website\" diff css/style.css index.html)"
+    ]
+  }
+}
