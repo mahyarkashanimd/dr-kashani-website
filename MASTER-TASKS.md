@@ -24,6 +24,9 @@ _Last updated: 2026-06-21 | Add new tasks at the bottom of their priority sectio
   - Send review link to patients after positive visits
 - [ ] **6. Hospital Directory Links** — Email Sinai Flushing / Northwell / NYU Langone web teams: "Can you add menshealthlongisland.com to my provider directory listing?" (one link from a hospital .org = 50 patient directory links worth of authority)
 - [ ] **11. Microsoft Clarity** — clarity.microsoft.com → New Project → copy the 10-char Project ID → give to Claude → 5-min install on all pages
+- [x] **12. Priapism wording decision** — Resolved 2026-07-12: unified to "beyond 4 hours" on both pages (HTML + FAQ schema).
+- [ ] **13. New-page photos** — penile-doppler + penile-injections currently reuse the ED page's two stock photos (erectile-dysfunction-consultation + mens-sexual-health-specialist). Dr. Kashani reviewing page content first; will select images after.
+- [ ] **14. See [SEO-ROADMAP.md](SEO-ROADMAP.md)** — full #1-ranking strategy added 2026-07-11 (entity schema done; next: Answer Blocks, GBP cadence, content clusters).
 
 ---
 
