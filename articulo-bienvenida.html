@@ -55,6 +55,35 @@
     }
     </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Necesito una remisión médica para hacer una cita?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Puede programar una consulta directamente sin necesidad de una remisión." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atienden pacientes en español?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. El consultorio atiende pacientes tanto en inglés como en español." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué debo esperar en mi primera consulta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una conversación completa sobre su historial y síntomas, sin prisa, para entender su situación específica antes de recomendar cualquier tratamiento." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las ubicaciones del consultorio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rockville Centre y Carle Place, ambas en el condado de Nassau, Long Island." }
+    }
+  ]
+}
+</script>
+
 
 <script type="application/ld+json">
 {
@@ -377,6 +406,37 @@
         }
         .article-back-link:hover {
             color: var(--accent);
+        }
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid #e2e8f0;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: "P";
+            background: var(--accent-dark);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .faq-item p {
+            font-size: 1rem;
+            color: #475569;
+            padding-left: 34px;
         }
         @media (max-width: 768px) {
             .article-title { font-size: 2rem; }
@@ -835,6 +895,19 @@
   "url": "https://www.menshealthlongisland.com",
   "telephone": "516-390-2850",
   "medicalSpecialty": "Urology",
+  "sameAs": [
+    "https://www.instagram.com/mahyarkashanimd/",
+    "https://www.tiktok.com/@mahyarkashani_md",
+    "https://www.youtube.com/@MahyarKashaniMD",
+    "https://www.facebook.com/p/Mahyar-Kashani-MD-61574315884020/",
+    "https://profiles.mountsinai.org/mahyar-kashani",
+    "https://www.southnassau.org/sn/meet-our-team3",
+    "https://www.healthgrades.com/physician/dr-mahyar-kashani-xynv5r6",
+    "https://health.usnews.com/doctors/mahyar-kashani-1335043",
+    "https://npiregistry.cms.hhs.gov/provider-view/1568953925",
+    "https://maps.app.goo.gl/4bgkXSmEgUDSrYxQ6",
+    "https://maps.app.goo.gl/S4WTufNRpxddfiKm7"
+  ],
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Albertson" },
     { "@type": "AdministrativeArea", "name": "Amityville" },
@@ -1090,6 +1163,28 @@
         <p>Vemos pacientes en dos ubicaciones convenientes del condado de Nassau: <strong>Rockville Centre</strong> y <strong>Carle Place</strong>. Ya sea que venga de la costa sur, la costa norte, Queens o cualquier lugar intermedio, estamos aquí.</p>
 
         <p>Si está listo para dar el primer paso — o incluso si solo tiene preguntas — contáctenos. Una consulta con el Dr. Kashani es el mejor lugar para comenzar.</p>
+
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <h3>¿Necesito una remisión médica para hacer una cita?</h3>
+            <p>No. Puede programar una consulta directamente sin necesidad de una remisión.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Atienden pacientes en español?</h3>
+            <p>Sí. El consultorio atiende pacientes tanto en inglés como en español.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Qué debo esperar en mi primera consulta?</h3>
+            <p>Una conversación completa sobre su historial y síntomas, sin prisa, para entender su situación específica antes de recomendar cualquier tratamiento.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Cuáles son las ubicaciones del consultorio?</h3>
+            <p>Rockville Centre y Carle Place, ambas en el condado de Nassau, Long Island.</p>
+        </div>
 
         <div class="article-doctor-bio">
             <img width="800" height="800" loading="lazy" src="/images/dr-mahyar-kashani-urologist.webp" alt="Dr. Mahyar Kashani, ur&oacute;logo y especialista en salud masculina, Long Island Nueva York">

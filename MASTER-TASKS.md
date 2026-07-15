@@ -1,5 +1,5 @@
 # Men's Health Long Island — Master Task List
-_Last updated: 2026-06-21 | Add new tasks at the bottom of their priority section_
+_Last updated: 2026-07-15 | Add new tasks at the bottom of their priority section_
 
 ---
 
@@ -44,13 +44,13 @@ _Last updated: 2026-06-21 | Add new tasks at the bottom of their priority sectio
   - **peyronies.html**: In the diagnosis section, mention Doppler is used for Peyronie's evaluation with a link to `/penile-doppler`
   - **disfuncion-erectil.html** (Spanish ED): Same as ed.html but in Spanish
 - [ ] **C. Patient-tone update on remaining pages** — same framework as hematuria + PSA:
-  - ed.html + disfuncion-erectil.html
-  - peyronies.html + enfermedad-peyronie.html
-  - low-testosterone.html + testosterona-baja.html
-  - bph.html + prostata-agrandada.html
-  - oab.html + vejiga-hiperactiva.html
-  - vasectomy.html + vasectomia.html
-  - premature-ejaculation.html + eyaculacion-precoz.html
+  - [x] ed.html + disfuncion-erectil.html — done 2026-07-15
+  - [ ] peyronies.html + enfermedad-peyronie.html
+  - [ ] low-testosterone.html + testosterona-baja.html
+  - [ ] bph.html + prostata-agrandada.html
+  - [ ] oab.html + vejiga-hiperactiva.html
+  - [ ] vasectomy.html + vasectomia.html
+  - [ ] premature-ejaculation.html + eyaculacion-precoz.html
 
 ---
 
@@ -80,12 +80,12 @@ _Last updated: 2026-06-21 | Add new tasks at the bottom of their priority sectio
 
 ## MEDIUM PRIORITY — Claude Does
 
-- [ ] **P9. Update sitemap.xml lastmod dates** — Most pages still show `2026-05-06`. Update to reflect actual last-edit dates for all recently changed pages (penile-doppler, low-testosterone, elevated-psa, hematuria, etc.).
-- [ ] **D. FAQ Schema on remaining pages** — ed.html, low-testosterone.html, peyronies.html + Spanish counterparts (expands rich snippet footprint in search results)
-- [ ] **E. E-E-A-T Schema Improvements** — Board certification, fellowship, residency → Physician JSON-LD; author schema on article pages; research publication structured data
-- [ ] **F. Internal Linking Audit** — Every page links to 2–3 related pages (hematuria ↔ elevated-psa, psa-elevado ↔ prostata-agrandada, etc.)
-- [ ] **G. Spanish Article FAQ Schema** — No content needed from you, Claude can build anytime
-- [ ] **H. sameAs Links Update** — Once Facebook/Instagram/LinkedIn pages are created, add profile URLs to Physician schema `sameAs` array on all pages
+- [x] **P9. Update sitemap.xml lastmod dates** — Done 2026-07-15. All 59 URLs updated to actual last-edit dates pulled from git history.
+- [x] **D. FAQ Schema on remaining pages** — Verified 2026-07-15: ed.html, low-testosterone.html, peyronies.html + Spanish counterparts already had FAQPage schema matching visible Q&A counts 1:1. No changes needed.
+- [x] **E. E-E-A-T Schema Improvements** — Done 2026-07-15 (bundled with H below): standardized the full sameAs directory-link array across all Physician/MedicalBusiness schema blocks site-wide. Board certification/fellowship/residency structured data (hasCredential, alumniOf) not yet added — could be a future follow-up.
+- [x] **F. Internal Linking Audit** — Done 2026-07-15. Audited all 30 EN/ES condition pages; added `.related-box` cross-links to 19 pages that had fewer than 2 contextual related links (13 had zero).
+- [x] **G. Spanish Article FAQ Schema** — Done 2026-07-15. All 6 articulo-*.html pages now have matching visible FAQ + FAQPage JSON-LD (2 already had visible content needing only schema; 4 got new Q&As written).
+- [x] **H. sameAs Links Update** — Done 2026-07-15. Synced the full 11-link sameAs array (Instagram, TikTok, YouTube, Facebook, Mount Sinai profile, South Nassau, Healthgrades, US News, NPI Registry, Google Maps) across all Physician/MedicalBusiness schema blocks site-wide (52 files touched).
 
 ---
 
@@ -112,6 +112,15 @@ _Last updated: 2026-06-21 | Add new tasks at the bottom of their priority sectio
 ---
 
 ## COMPLETED ✅
+
+### July 2026
+
+- [x] **ed.html + disfuncion-erectil.html patient-tone update** — Softened alarming language ("gold standard," "canary in the coal mine," "can save your life," "seek care promptly") in both EN/ES versions, across JSON-LD FAQ, visible FAQ, warning boxes, and cause cards. Same framework as the earlier hematuria/PSA tone passes.
+- [x] **P9. sitemap.xml lastmod dates refreshed** — All 59 URLs updated to actual last-edit dates pulled from git history (most were stale at 2026-05-06/2026-04-26 despite content having changed more recently).
+- [x] **D. FAQ Schema verification** — Confirmed ed.html, low-testosterone.html, peyronies.html + Spanish counterparts already have FAQPage schema matching visible Q&A counts 1:1. No changes needed.
+- [x] **F. Internal Linking Audit + fixes** — Audited all 30 EN/ES condition pages for contextual (in-body) links to related condition/service pages. Added `.related-box` cross-links to 19 pages with fewer than 2 (13 had zero) — e.g. ED ↔ Low-T ↔ Peyronie's, BPH ↔ OAB ↔ Hematuria, Vasectomy ↔ Circumcision, both languages. Also fixed a WCAG contrast bug (`#c0a062` gold link on white) on vejiga-hiperactiva.html and softened 2 more "workup" phrasings on kidney-stones.html/calculos-renales.html found along the way.
+- [x] **G. Spanish Article FAQ Schema** — All 6 articulo-*.html pages now have a visible FAQ section matching FAQPage JSON-LD. articulo-inyecciones-paso-a-paso.html and articulo-testosterona-baja.html already had visible Q&As needing only schema; articulo-bienvenida.html, articulo-inhibidores-pde5-oral-de.html, articulo-inyeccion-peneana-trimix.html, and articulo-peyronie-xiaflex.html got 4 new Q&As each written from scratch. Also fixed a contrast issue in the FAQ "P" badge CSS (white text on `#c0a062` ≈ 2.6:1) across all 6 article pages.
+- [x] **E/H. E-E-A-T + sameAs schema standardization sitewide** — The Physician/MedicalBusiness `sameAs` array (social profiles + Healthgrades, US News, NPI Registry, Mount Sinai profile, South Nassau — all strong E-E-A-T signals) was inconsistent: rich on index.html/articles, truncated to 4 social links on 16 English service pages, and completely missing on all 14 Spanish service pages plus about.html/research.html. Standardized to the full 11-link array across 52 files, including duplicate Physician blocks on education/quiz/article pages that weren't obvious from a quick scan, and the 4 location pages (MedicalBusiness schema). Verified JSON-LD validity across the changes.
 
 ### June 2026
 
