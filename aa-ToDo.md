@@ -1,4 +1,28 @@
 
+Yes. Save these two sets.
+
+Pull latest changes from GitHub
+
+Use this when you want to update this computer from GitHub and you want to preserve any local edits if possible:
+
+cd "$env:USERPROFILE\Downloads\dr-kashani-website"
+git status -sb
+git pull origin main
+
+If Git says local changes would be overwritten, stop and ask me before doing anything else.
+
+Push your changes to GitHub
+
+Use this when you have made changes on this computer and want to send them to GitHub:
+
+cd "$env:USERPROFILE\Downloads\dr-kashani-website"
+git status -sb
+git add .
+git commit -m "Update website"
+git push origin main
+
+
+
 ******************
 
 SITES:
