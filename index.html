@@ -729,7 +729,7 @@
             }
 
             /* Move ESP to drawer topbar — hide from list */
-            .nav-links > li:has(> a[href="/inicio"]) { display: none !important; }
+            .nav-esp-item, .nav-links > li:has(> a[href="/inicio"]) { display: none !important; }
 
             /* Suppress any existing ::after/::before dropdown arrows */
             .nav-links > li > a::after,
@@ -1107,35 +1107,37 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/services">Services</a>
-                        <ul class="dropdown dropdown-mega">
-                            <li class="mega-col">
-                                <ul>
-                                    <li class="drop-header">Erectile Dysfunction</li>
-                                    <li><a href="/ed">ED Overview &amp; Treatments</a></li>
-                                    <li><a href="/penile-implant">Penile Implants (IPP)</a></li>
-                                    <li class="drop-header">Sexual Health &amp; Low T</li>
-                                    <li><a href="/low-testosterone">Low Testosterone (TRT)</a></li>
-                                    <li><a href="/peyronies">Peyronie's Disease</a></li>
-                                    <li><a href="/premature-ejaculation">Premature Ejaculation</a></li>
-                                    <li><a href="/vasectomy">Vasectomy</a></li>
-                                    <li><a href="/vasectomy-reversal">Vasectomy Reversal</a></li>
-                                </ul>
-                            </li>
-                            <li class="mega-col">
-                                <ul>
-                                    <li class="drop-header">General Urology</li>
-                                    <li><a href="/circumcision">Circumcision</a></li>
-                                    <li><a href="/bph">Enlarged Prostate (BPH)</a></li>
-                                    <li><a href="/oab">Overactive Bladder (OAB)</a></li>
-                                    <li><a href="/hydrocele">Hydrocele</a></li>
-                                    <li><a href="/kidney-stones">Kidney Stones</a></li>
-                                    <li><a href="/elevated-psa">Elevated PSA</a></li>
-                                    <li><a href="/hematuria">Hematuria (Blood in Urine)</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <a href="/services">Services</a>
+                    <ul class="dropdown dropdown-mega">
+                        <li class="mega-col">
+                            <ul>
+                                <li class="drop-header">Erectile Dysfunction</li>
+                                <li><a href="/ed">ED Overview &amp; Treatments</a></li>
+                                <li><a href="/penile-doppler">Penile Doppler Ultrasound</a></li>
+                                <li><a href="/penile-injections">Penile Injection Therapy</a></li>
+                                <li><a href="/penile-implant">Penile Implants (IPP)</a></li>
+                                <li class="drop-header">Sexual Health &amp; Low T</li>
+                                <li><a href="/low-testosterone">Low Testosterone (TRT)</a></li>
+                                <li><a href="/peyronies">Peyronie's Disease</a></li>
+                                <li><a href="/premature-ejaculation">Premature Ejaculation</a></li>
+                                <li><a href="/vasectomy">Vasectomy</a></li>
+                                <li><a href="/vasectomy-reversal">Vasectomy Reversal</a></li>
+                            </ul>
+                        </li>
+                        <li class="mega-col">
+                            <ul>
+                                <li class="drop-header">General Urology</li>
+                                <li><a href="/circumcision">Circumcision</a></li>
+                                <li><a href="/bph">Enlarged Prostate (BPH)</a></li>
+                                <li><a href="/oab">Overactive Bladder (OAB)</a></li>
+                                <li><a href="/hydrocele">Hydrocele</a></li>
+                                <li><a href="/kidney-stones">Kidney Stones</a></li>
+                                <li><a href="/elevated-psa">Elevated PSA</a></li>
+                                <li><a href="/hematuria">Hematuria (Blood in Urine)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                     <li>
                         <a href="/education">Patient Education</a>
                         <ul class="dropdown">
@@ -1145,7 +1147,7 @@
                             <li><a href="/privacy-policy">Privacy Policy</a></li>
                         </ul>
                     </li>
-                    <li><a href="/inicio" style="font-size:0.85rem;color:var(--accent-dark);font-weight:700;letter-spacing:1px;border:1px solid var(--accent-dark);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
+                    <li class="nav-esp-item"><a href="/inicio" style="font-size:0.85rem;color:var(--accent-dark);font-weight:700;letter-spacing:1px;border:1px solid var(--accent-dark);padding:6px 14px;text-decoration:none;" title="Ver en Espa&ntilde;ol">&#127466;&#127480; ESP</a></li>
                     <li><a href="/contact" class="btn-appointment">Book Appointment</a></li>
                 </ul>
             </nav>
@@ -1316,20 +1318,6 @@
                 <div class="rating-box">
                     <span class="stars">★★★★★</span>
                     <span class="rating-text"><strong>5/5 Average Rating</strong> based on 200+ Patient Reviews</span>
-                </div>
-            </div>
-            <div class="featured-reviews">
-                <div class="review-card">
-                    <p>"My experience with Dr. Kashani was amazing. He made me feel extremely comfortable talking about a very sensitive subject and I felt heard and optimistic upon leaving."</p>
-                    <span class="patient-name">— Frank M.</span>
-                </div>
-                <div class="review-card">
-                    <p>"I just had a visit with Dr. Kashani for the first time and he was an AMAZING doctor. Very understanding, actually listened to my problems and had multiple solutions. One of the friendliest Doctors and staff I've ever had in a medical office."</p>
-                    <span class="patient-name">— Jason H.</span>
-                </div>
-                <div class="review-card">
-                    <p>"Dr. Kashani did the surgery for my penile implant last week. His commitment to excellence, detail and perfection are only rivaled by his kindness and compassion. He showed videos, talked about infection and every pitfall that could occur with the procedure and talked about steps he takes to avoid them."</p>
-                    <span class="patient-name">— Adam G.</span>
                 </div>
             </div>
             <div class="widget-wrapper">
