@@ -27,6 +27,7 @@ _Last updated: 2026-07-15 | Add new tasks at the bottom of their priority sectio
 - [x] **12. Priapism wording decision** — Resolved 2026-07-12: unified to "beyond 4 hours" on both pages (HTML + FAQ schema).
 - [ ] **13. New-page photos** — penile-doppler + penile-injections currently reuse the ED page's two stock photos (erectile-dysfunction-consultation + mens-sexual-health-specialist). Dr. Kashani reviewing page content first; will select images after.
 - [ ] **14. See [SEO-ROADMAP.md](SEO-ROADMAP.md)** — full #1-ranking strategy added 2026-07-11 (entity schema done; next: Answer Blocks, GBP cadence, content clusters).
+- [ ] **15. ADA/WAVE review for new service pages** — Check `/penile-doppler`, `/doppler-peneano`, `/penile-injections`, and `/inyecciones-peneanas` in WAVE before launch. Confirm 0 Errors and 0 Contrast Errors at desktop and mobile widths; address only red Errors and red Contrast Errors.
 
 ---
 
