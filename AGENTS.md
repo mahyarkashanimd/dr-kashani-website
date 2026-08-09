@@ -35,7 +35,7 @@
 6. `<meta name="author" content="Dr. Mahyar Kashani">`
 7. `<link rel="canonical" href="https://www.menshealthlongisland.com/[slug]">`
 8. `<link rel="alternate" hreflang="en" href="...">` AND `<link rel="alternate" hreflang="es" href="...">`
-9. `<link rel="icon" type="image/png" href="/images/favicon3.png">`
+9. `<link rel="icon" type="image/png" href="/images/favicon-96x96.png">`
 10. **Google Analytics GA4** async script (ID: G-7XSPQXKJSQ)
 11. OG meta tags: og:title, og:description, og:type="article", og:url, og:image
 12. `<title>`
