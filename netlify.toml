@@ -1,8 +1,21 @@
 [build]
   publish = "."
+  command = "node scripts/seo-audit.mjs"
 
 [build.processing]
   skip_processing = false
 
 [build.processing.html]
   pretty_urls = true
+
+[[redirects]]
+  from = "/penile-injections-step-by-step"
+  to = "/article-injections-step-by-step"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/peyronies-xiaflex"
+  to = "/article-peyronies"
+  status = 301
+  force = true

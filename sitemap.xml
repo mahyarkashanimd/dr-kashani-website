@@ -35,14 +35,14 @@
 
   <!-- Patient Education -->
   <url><loc>https://www.menshealthlongisland.com/education</loc><lastmod>2026-06-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.menshealthlongisland.com/quiz</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/quiz</loc><lastmod>2026-08-09</lastmod><priority>0.5</priority></url>
 
   <!-- Articles -->
   <url><loc>https://www.menshealthlongisland.com/article-welcome</loc><lastmod>2026-06-20</lastmod><priority>0.4</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-oral-PDE5i-inhibitors-ed</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-penile-injection-trimix</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
-  <url><loc>https://www.menshealthlongisland.com/article-injections-step-by-step</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
-  <url><loc>https://www.menshealthlongisland.com/article-peyronies</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/article-injections-step-by-step</loc><lastmod>2026-08-09</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/article-peyronies</loc><lastmod>2026-08-09</lastmod><priority>0.5</priority></url>
   <url><loc>https://www.menshealthlongisland.com/article-low-testosterone</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
 
   <!-- Research & Academic -->
@@ -86,7 +86,7 @@
 
   <!-- Spanish Language Pages — Patient Education -->
   <url><loc>https://www.menshealthlongisland.com/educacion</loc><lastmod>2026-06-20</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.menshealthlongisland.com/cuestionario</loc><lastmod>2026-06-20</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.menshealthlongisland.com/cuestionario</loc><lastmod>2026-08-09</lastmod><priority>0.5</priority></url>
 
   <!-- Spanish Language Pages — Articles -->
   <url><loc>https://www.menshealthlongisland.com/articulo-bienvenida</loc><lastmod>2026-06-20</lastmod><priority>0.4</priority></url>
