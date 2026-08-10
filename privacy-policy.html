@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <style>html{background:#0f172a}body{margin:0;background:#fff}header{background:rgba(255,255,255,.8);position:sticky;top:0;z-index:1000}.nav-links{display:flex;gap:12px;align-items:center}.menu-toggle{display:none}.dropdown{display:none}.page-hero{background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),url(/images/hero-bg.jpg);background-size:cover;background-position:center;padding:120px 0 60px;text-align:center;color:#fff}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy, HIPAA Notice, and Medical Disclaimer for Dr. Mahyar Kashani, MD — Men's Health Long Island. Learn how we protect your personal health information.">
+    <meta name="description" content="Website Privacy Policy and Medical Disclaimer for Dr. Mahyar Kashani, MD — Men's Health Long Island. Learn how appointment requests, analytics data, and website information are handled.">
     <meta name="author" content="Dr. Mahyar Kashani">
     <link rel="canonical" href="https://www.menshealthlongisland.com/privacy-policy">
     <link rel="alternate" hreflang="en" href="https://www.menshealthlongisland.com/privacy-policy">
@@ -20,7 +20,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-7XSPQXKJSQ');
+      gtag('config', 'G-7XSPQXKJSQ', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      });
     </script>
     
     <link rel="stylesheet" href="/css/style.css">
@@ -611,18 +614,10 @@
                 <p>Do not disregard, avoid, or delay seeking professional medical advice from your doctor or other qualified healthcare provider because of something you have read on this website. If you have or suspect that you have a medical problem or condition, please contact a qualified healthcare professional immediately.</p>
                 <p>Dr. Mahyar Kashani, MD and Men's Health Long Island make no representations or warranties regarding the accuracy, completeness, or suitability of any information on this site for any particular purpose.</p>
 
-                <!-- 2. HIPAA Notice -->
-                <h2>HIPAA Notice of Privacy Practices</h2>
-                <p>Dr. Mahyar Kashani, MD is committed to protecting the privacy of your personal health information in accordance with the Health Insurance Portability and Accountability Act (HIPAA). This notice describes how medical information about you may be used and disclosed and how you can get access to this information.</p>
-                <p><strong>We may use or disclose your health information for the following purposes:</strong></p>
-                <ul>
-                    <li><strong>Treatment:</strong> To provide, coordinate, or manage your healthcare and related services.</li>
-                    <li><strong>Payment:</strong> To obtain payment for services rendered, including billing and insurance claims.</li>
-                    <li><strong>Healthcare Operations:</strong> For administrative, quality improvement, and operational purposes.</li>
-                    <li><strong>As Required by Law:</strong> To comply with applicable federal and state laws and regulations.</li>
-                </ul>
-                <p>We will not use or disclose your health information for any other purpose without your written authorization, except as permitted or required by law. You have the right to revoke any authorization you provide at any time.</p>
-                <p>For a full copy of our Notice of Privacy Practices, please contact our office directly.</p>
+            <!-- 2. Health Information and Clinical Privacy -->
+            <h2>Health Information and Clinical Privacy</h2>
+            <p>This personal website is not a patient portal and is not intended for submitting protected health information. Please do not submit sensitive medical information through the appointment request form. The form should be used only for basic contact and scheduling requests.</p>
+            <p>Information submitted through this website is handled as described in the Website Privacy Policy below. Medical information provided through official Mount Sinai Health System platforms or during clinical care is governed by the applicable Mount Sinai Health System Notice of Privacy Practices.</p>
 
                 <!-- 3. Website Privacy Policy -->
                 <h2>Website Privacy Policy</h2>
@@ -642,22 +637,23 @@
                     <li>We do not use your contact information for unsolicited marketing</li>
                 </ul>
 
-                <p><strong>Google Analytics:</strong> This site uses Google Analytics to understand how visitors interact with our website. Google Analytics collects anonymous data such as pages visited and time spent on the site. No personally identifiable information is collected through Google Analytics. You may opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="color: var(--accent-dark); border-bottom: 1px solid var(--accent-dark);">Google Analytics Opt-out Browser Add-on</a>.</p>
+            <p><strong>Google Analytics:</strong> This site uses Google Analytics 4 to understand general website usage. Google Analytics may collect page views, session information, approximate location, browser and device information, and a pseudonymous client identifier stored in a first-party cookie. This website does not send names, email addresses, telephone numbers, appointment-form contents, or other information submitted through the appointment form to Google Analytics. Google Signals and advertising-personalization features are disabled. You may opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: var(--accent-dark); border-bottom: 1px solid var(--accent-dark);">Google Analytics Opt-out Browser Add-on</a>.</p>
 
-                <p><strong>Cookies:</strong> Our website may use cookies to enhance your browsing experience. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+            <p><strong>Cookies:</strong> Google Analytics 4 uses first-party cookies, including the <code>_ga</code> cookie, to distinguish pseudonymous visitors and sessions and measure general website usage. This website does not use these cookies for advertising personalization. You can block or delete cookies through your browser settings.</p>
 
-                <!-- 4. Contact Form -->
-                <h2>Contact Form & Appointment Requests</h2>
-                <p>Information submitted through our website contact or appointment request forms is used solely to respond to your inquiry and schedule consultations. This information is not stored in a patient medical record until you become an active patient of the practice.</p>
-                <p>Please do not submit sensitive personal health information through our website contact form. For medical emergencies, call 911 immediately.</p>
+            <!-- 4. Contact Form -->
+            <h2>Contact Form & Appointment Requests</h2>
+            <p>Information submitted through our website contact or appointment request forms is used solely to respond to your inquiry and schedule consultations.</p>
+            <p>Appointment request submissions are processed and stored by Netlify, a third-party website hosting and form service provider, and are delivered to a designated Mount Sinai Health System email address for scheduling follow-up. Submissions may remain accessible in the site's Netlify Forms dashboard until they are deleted. Netlify's data practices are described in its <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener" style="color: var(--accent-dark); border-bottom: 1px solid var(--accent-dark);">Privacy Statement</a>.</p>
+            <p>Please do not submit sensitive personal health information through our website contact form. For medical emergencies, call 911 immediately.</p>
 
                 <!-- 5. Third Party Links -->
                 <h2>Third-Party Links</h2>
                 <p>This website may contain links to third-party websites, including medical journals and media outlets. These links are provided for your convenience and informational purposes only. We have no control over the content of those sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
 
-                <!-- 6. No Doctor-Patient Relationship -->
-                <h2>No Doctor-Patient Relationship</h2>
-                <p>Use of this website or submission of a contact form does not create a doctor-patient relationship between you and Dr. Mahyar Kashani, MD. A formal doctor-patient relationship is only established upon an in-person consultation and mutual agreement to proceed with care.</p>
+            <!-- 6. No Doctor-Patient Relationship -->
+            <h2>No Doctor-Patient Relationship</h2>
+            <p>Use of this website or submission of a contact form does not create a doctor-patient relationship between you and Dr. Mahyar Kashani, MD. A doctor-patient relationship is established only through an appropriate clinical encounter within the applicable healthcare setting, not through use of this website.</p>
 
                 <!-- 7. Changes -->
                 <h2>Changes to This Policy</h2>
@@ -734,7 +730,7 @@
         <!-- Bottom: disclaimer + copyright -->
         <div class="footer-bottom">
             <div class="container">
-                <p class="footer-disclaimer">This is a personal professional website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. This site is for educational purposes and does not provide medical advice or collect patient data.</p>
+                <p class="footer-disclaimer">This is a personal professional website and is not an official Mount Sinai Health System website. The views expressed here are my own and do not represent those of the Mount Sinai Health System. The content is for general educational purposes only, is not medical advice, and does not create a doctor-patient relationship. The appointment request form collects basic contact and scheduling information as described in the Privacy Policy; please do not submit sensitive medical information through the form.</p>
                 <p class="copyright">&copy; 2026 Mahyar Kashani, MD. All Rights Reserved.</p>
             </div>
         </div>

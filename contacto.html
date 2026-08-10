@@ -30,7 +30,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-7XSPQXKJSQ');
+      gtag('config', 'G-7XSPQXKJSQ', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      });
     </script>
 
     <script type="application/ld+json">
@@ -747,9 +750,9 @@
                     <button type="submit">Enviar Solicitud</button>
                 </form>
 
-                <p style="font-size:0.85rem;color:#64748b;margin-top:16px;line-height:1.6;">
-                    <strong>Aviso de privacidad:</strong> La informaci&oacute;n enviada a trav&eacute;s de este formulario se utiliza &uacute;nicamente para responder a su solicitud y programar consultas. No compartimos su informaci&oacute;n personal con terceros.
-                </p>
+            <p style="font-size:0.85rem;color:#64748b;margin-top:16px;line-height:1.6;">
+                <strong>Aviso de privacidad:</strong> Las solicitudes de cita son procesadas y almacenadas por Netlify y se env&iacute;an a una direcci&oacute;n de correo electr&oacute;nico designada del Mount Sinai Health System para dar seguimiento a la programaci&oacute;n. Consulte nuestra <a href="/politica-privacidad" style="color:var(--accent-dark);">Pol&iacute;tica de Privacidad</a> para obtener m&aacute;s informaci&oacute;n.
+            </p>
             </div>
 
         </div>
@@ -870,7 +873,7 @@
         <!-- Bottom: disclaimer + copyright -->
         <div class="footer-bottom">
             <div class="container">
-                <p class="footer-disclaimer">Este es un sitio web profesional personal. Las opiniones aquí expresadas son propias y no representan al Mount Sinai Health System. Este sitio es solo para fines educativos y no proporciona asesoramiento médico ni recopila datos de pacientes.</p>
+                <p class="footer-disclaimer">Este es un sitio web profesional personal y no es un sitio web oficial del Mount Sinai Health System. Las opiniones aquí expresadas son propias y no representan al Mount Sinai Health System. El contenido es únicamente para fines educativos, no constituye asesoramiento médico y no crea una relación médico-paciente. El formulario de solicitud de cita recopila información básica de contacto y programación según se describe en la Política de Privacidad; no envíe información médica confidencial a través del formulario.</p>
                 <p class="copyright">&copy; 2026 Mahyar Kashani, MD. Todos los Derechos Reservados.</p>
             </div>
         </div>
