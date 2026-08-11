@@ -84,33 +84,89 @@ English and Spanish wording was revised consistently across the implant pages, E
 - `Highest-satisfaction treatment`, `most men wish they had done it sooner`, and similar unsupported comparative language were replaced with a statement that published studies generally report high satisfaction while individual experiences and outcomes vary.
 - The fixed `15+ year average lifespan` and `industry-leading/comprehensive warranty` claims were replaced with a statement that implants are designed for long-term use, longevity varies, revision or replacement may eventually be needed, and warranty coverage is subject to current manufacturer terms.
 
-## Start here next time: three pending implant questions
+### 5. Penile implant absolute/comparative wording approved
 
-These three items were presented but **not yet approved or changed**:
+English and Spanish visible FAQ content, FAQPage schema, and the "Why choose" implant sections were revised consistently:
 
-### A. Absolute sexual-function language
+- Absolute sexual-function language such as `no effect whatsoever`, `same or better`, and `completely eliminated` was replaced with calmer wording that implants are designed to restore rigidity and generally do not directly change orgasm, ejaculation, or sexual sensation, while individual experiences vary.
+- The exact `less than 1%` infection-rate claim was replaced with a qualified statement that infection is uncommon but important, individual risk varies, and risk-reduction measures are discussed before surgery.
+- Comparative experience/outcome language such as `one of the few`, direct outcome claims tied to surgical volume, and `better outcomes and lower complication rates` was replaced with factual fellowship-training and regular-evaluation wording.
 
-Current wording includes `no effect whatsoever`, says postoperative sexual experience is the same or better, and says performance anxiety is `completely eliminated`.
+### 6. ED comparison, implant partner wording, and implant insurance wording approved
+
+English and Spanish visible content and FAQPage schema were revised consistently where applicable:
+
+- `ed.html` no longer says Dr. Kashani has `far more experience` than a typical urologist or treats ED `every single day`. It now uses factual fellowship-training and practice-focus wording.
+- Penile implant partner-discretion wording no longer says a partner `will not be able to tell the difference` / `no notará la diferencia`. It now says the device is internal, intended to look and feel like an erection when inflated, and that Dr. Kashani will show patients what to expect.
+- Penile implant insurance wording no longer says Medicare covers the procedure or that Dr. Kashani's team will verify benefits. It now says coverage depends on the insurance plan, documentation, and authorization requirements, and that the appropriate office team can help review requirements and expected out-of-pocket costs if surgery is being considered.
+
+## Start here next time: next pending clearance questions
+
+These items were presented but **not yet approved or changed**:
+
+### A. Elevated PSA `always warrants evaluation`
+
+Current visible content and JSON-LD in `elevated-psa.html` still say elevated PSA `always warrants evaluation`. Project tone instructions prohibit `always warrants`.
 
 Proposed replacement:
 
-> Penile implants are designed to restore rigidity and generally do not directly change orgasm, ejaculation, or sexual sensation. Individual experiences vary, and Dr. Kashani will review factors relevant to you.
+> An elevated PSA is worth discussing with a urologist in context, because the next step depends on your age, prostate size, symptoms, medications, recent activity, and PSA pattern over time.
 
-### B. Exact infection-rate claim
+### B. Penile implant intro and concealment absolutes
 
-Current wording states infection occurs in `less than 1%` of cases using the No-Touch Technique. This can read as a promised personal complication rate when individual risk varies.
+Current wording in `penile-implant.html` says an implant is the `gold standard next step`, `does not interfere` with orgasm/ejaculation/sensation, and `no one can tell you have it`.
 
 Proposed replacement:
 
-> Infection is an uncommon but important risk of penile implant surgery. Individual risk varies based on health history and surgical factors. Measures such as appropriate preparation, surgical technique, and device coatings are used to reduce risk and will be discussed before surgery.
+> When pills stop working and injections become inconvenient or ineffective, a penile implant may be an appropriate long-term surgical option. It is designed to restore rigidity while remaining entirely inside the body. Dr. Kashani will review how the device works and what to expect.
 
-### C. Comparative experience/outcome claims
+Spanish counterpart in `implante-peneano.html` has similar wording about the device being hidden and partner perception.
 
-Current wording includes `far more experience than a typical urologist`, `one of the few`, and says surgical volume translates directly into better outcomes and lower complication rates.
+### C. Penile implant device-superiority bullet
 
-Proposed factual replacement:
+Current English bullet says Coloplast Titan is the `gold standard device`; Spanish says `dispositivo de referencia`.
 
-> Dr. Kashani completed dedicated fellowship training in Male Sexual Health and Reproductive Medicine at Lenox Hill Hospital, including training in prosthetic urology, and regularly evaluates patients considering penile implant surgery.
+Proposed replacement:
+
+> Uses the Coloplast Titan(R), Dr. Kashani's preferred inflatable penile prosthesis for appropriate patients
+
+Spanish:
+
+> Usa el Coloplast Titan(R), la prótesis peniana inflable que prefiere el Dr. Kashani para pacientes apropiados
+
+### D. BPH `gold standard` / `most durable` TURP wording
+
+Current wording in `bph.html` calls TURP the `gold standard`, says all others are measured by it, and says it produces the `most durable long-term results`.
+
+Proposed replacement:
+
+> TURP is a well-established surgical treatment for BPH with a long track record. A resectoscope is passed through the urethra and a wire loop removes excess prostate tissue, opening the urinary channel without an external incision.
+
+Also change badge text from `Gold Standard` / `Most Durable Results` to calmer factual labels.
+
+### E. Peyronie's outcome percentages and `best` comparisons
+
+Current `peyronies.html` includes surgery success rates of `75 to 96%`, says combination therapy works `significantly better`, and uses several `best` treatment comparisons.
+
+Proposed direction:
+
+> Keep the clinical options, but replace exact unsourced percentage ranges and broad `best` comparisons with qualified wording such as `often effective`, `may improve curvature for appropriate patients`, and `the right option depends on curvature, erectile function, goals, and exam findings`.
+
+### F. Vasectomy effectiveness and insurance absolutes
+
+Current `vasectomy.html` / `vasectomia.html` say vasectomy is over `99.9% effective`, the `most reliable` male birth-control option, `more effective than` tubal ligation, and that most insurance plans cover it / the team will verify benefits.
+
+Proposed direction:
+
+> Keep the reassuring high-effectiveness message, but soften comparisons and insurance workflow language. For insurance, use the same general phrasing as the implant page: coverage depends on plan, documentation, and authorization requirements, and the appropriate office team can help review expected costs.
+
+### G. About-page scarcity claim
+
+Current `about.html` says Dr. Kashani is `one of the few urologists in the region` with advanced fellowship training in prosthetic urology. This is likely accurate but still a scarcity claim.
+
+Proposed replacement:
+
+> He has advanced fellowship training in prosthetic urology, including penile implant surgery, and focuses on comprehensive care for men's sexual health conditions.
 
 ## Remaining review queue after the three questions above
 
