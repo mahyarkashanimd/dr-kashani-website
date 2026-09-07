@@ -34,14 +34,21 @@
 5. `<meta name="keywords" ...>`
 6. `<meta name="author" content="Dr. Mahyar Kashani">`
 7. `<link rel="canonical" href="https://www.menshealthlongisland.com/[slug]">`
-8. `<link rel="alternate" hreflang="en" href="...">` AND `<link rel="alternate" hreflang="es" href="...">`
+8. `<link rel="alternate" hreflang="en" href="...">` AND `<link rel="alternate" hreflang="es" href="...">` AND `<link rel="alternate" hreflang="x-default" href="...">` (x-default always points to the **English** URL)
 9. `<link rel="icon" type="image/png" href="/images/favicon-96x96.png">`
 10. **Google Analytics GA4** async script (ID: G-7XSPQXKJSQ)
 11. OG meta tags: og:title, og:description, og:type="article", og:url, og:image
 12. `<title>`
 13. `<link rel="stylesheet" href="/css/style.css">`
-14. **Google Fonts:** Lato (300,400,700) + Playfair Display (400,700)
-15. **Font Awesome** 6.0.0
+14. **Resource hints** — must come immediately before the Google Fonts link:
+    ```html
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    ```
+15. **Google Fonts:** Lato (300,400,700) + Playfair Display (400,700)
+16. **Font Awesome** 6.0.0
 
 ---
 
