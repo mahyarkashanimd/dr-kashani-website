@@ -2,6 +2,27 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { basename, extname, join } from "node:path";
 
 const root = process.cwd();
+
+// Netlify builds on Linux, where paths are case-sensitive, but this audit is
+// usually run from Windows, where existsSync() matches regardless of case. Walk
+// the tree once and compare against the real spelling so a case mismatch fails
+// here instead of in the deploy.
+function collectAssets(dir, prefix = "") {
+  const found = new Set();
+  for (const entry of readdirSync(join(root, dir), { withFileTypes: true })) {
+    if (entry.name === ".git" || entry.name === "node_modules") continue;
+    const rel = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      for (const nested of collectAssets(join(dir, entry.name), rel)) found.add(nested);
+    } else {
+      found.add(rel);
+    }
+  }
+  return found;
+}
+
+const assetPaths = collectAssets(".");
+const assetPathsLower = new Map([...assetPaths].map((p) => [p.toLowerCase(), p]));
 const origin = "https://www.menshealthlongisland.com";
 const htmlFiles = readdirSync(root)
   .filter((file) => extname(file).toLowerCase() === ".html")
@@ -83,7 +104,15 @@ for (const file of htmlFiles) {
     const path = match[1].replace(/^\/+|\/+$/g, "");
     if (!path) continue;
     if (/^(images|css|js)\//.test(path) || path === "favicon.ico" || path.endsWith(".pdf")) {
-      if (!existsSync(join(root, path))) report(file, `missing local asset /${path}`);
+      if (!assetPaths.has(path)) {
+        const actual = assetPathsLower.get(path.toLowerCase());
+        report(
+          file,
+          actual
+            ? `asset /${path} only differs by case from /${actual} — this resolves on Windows but 404s on Netlify`
+            : `missing local asset /${path}`,
+        );
+      }
       continue;
     }
     const slug = path.endsWith(".html") ? basename(path, ".html") : path;
