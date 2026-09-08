@@ -6,7 +6,7 @@
 **GA4 ID:** G-7XSPQXKJSQ  
 **Phone:** 516-390-2850  
 **Locations:** 2 Lincoln Ave Suite 102, Rockville Centre NY 11570 | 393-401 Old Country Road, Carle Place NY 11514  
-**Hours — RVC:** Tue–Wed 8:30–16:00, Thu 8:30–17:00, Fri 9:00–13:00  
+**Hours — RVC:** Tue–Wed 8:30–16:00  
 **Hours — CP:** Thu 9:00–17:00, Fri 9:00–13:00  
 **Canonical areaServed source:** index.html lines 44–140 (95 towns — always copy from there)
 
