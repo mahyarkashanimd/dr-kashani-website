@@ -214,6 +214,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué condiciones trata el Dr. Kashani?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El Dr. Kashani se especializa en la salud masculina y la medicina sexual, incluyendo disfunción eréctil, testosterona baja, Enfermedad de Peyronie, implantes de pene, cálculos renales y próstata agrandada (HBP). Visite nuestra página de Servicios para ver la lista completa." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde están ubicados sus consultorios?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tenemos dos ubicaciones en Long Island: Rockville Centre y Carle Place, Nueva York." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Aceptan seguro médico?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La cobertura depende de su plan específico y del tratamiento. Nuestro equipo puede ayudarle a verificar sus beneficios antes de su visita." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo programo una cita?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Puede solicitar una cita en línea a través de nuestra página de contacto o llamarnos directamente. Rockville Centre: 516-390-2850. Carle Place: 516-877-0977." }
+    }
+  ]
+}
+</script>
+
     <style>
         /* =============================================
            SERVICE CARDS (4-up grid)
@@ -1038,6 +1067,19 @@
     .es-header-rating-reviews-count { color: #555555 !important; }
     .es-review-info-date { color: #555555 !important; }
     .es-read-more { color: #1a56db !important; }
+
+    /* FAQ */
+    .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
+    .content-section:last-of-type { border-bottom: none; }
+    .content-section.alt-bg { background: #f8fafc; }
+    .content-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
+    .content-section p { font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px; }
+    .faq-list { margin-top: 40px; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+    .faq-item:first-child { border-top: 1px solid #e2e8f0; }
+    .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+    .faq-item h3::before { content: "P"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+    .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -1336,6 +1378,31 @@
             </div>
             <div style="text-align:center;">
                 <a href="/educacion" class="text-link" style="font-size:1rem;">Ver Todos los Artículos &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>¿Qué condiciones trata el Dr. Kashani?</h3>
+                    <p>El Dr. Kashani se especializa en la salud masculina y la medicina sexual, incluyendo disfunción eréctil, testosterona baja, Enfermedad de Peyronie, implantes de pene, cálculos renales y próstata agrandada (HBP). Visite nuestra página de Servicios para ver la lista completa.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Dónde están ubicados sus consultorios?</h3>
+                    <p>Tenemos dos ubicaciones en Long Island: Rockville Centre y Carle Place, Nueva York.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Aceptan seguro médico?</h3>
+                    <p>La cobertura depende de su plan específico y del tratamiento. Nuestro equipo puede ayudarle a verificar sus beneficios antes de su visita.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Cómo programo una cita?</h3>
+                    <p>Puede solicitar una cita en línea a través de nuestra página de contacto o llamarnos directamente. Rockville Centre: <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">516-390-2850</a>. Carle Place: <a href="tel:5168770977" style="color:var(--accent-dark);font-weight:700;">516-877-0977</a>.</p>
+                </div>
             </div>
         </div>
     </section>

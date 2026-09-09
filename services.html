@@ -205,6 +205,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What conditions does Dr. Kashani treat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dr. Kashani specializes in men's health and sexual medicine — including erectile dysfunction, low testosterone, Peyronie's Disease, premature ejaculation, vasectomy and vasectomy reversal, kidney stones, enlarged prostate (BPH), overactive bladder, and more. Explore the full list above or reach out if you're not sure where your concern fits." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my insurance cover my visit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Coverage depends on your specific plan and the treatment involved. Our team can help verify your benefits before your visit — just give us a call and we'll walk you through it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I expect at my first visit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your first visit is a relaxed conversation — Dr. Kashani will listen to your concerns, review your history, and discuss the options that make sense for you. There's no pressure to decide on treatment right away." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I schedule an appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can request an appointment online through our contact page or call us directly at 516-390-2850. We have offices in Rockville Centre and Carle Place." }
+    }
+  ]
+}
+</script>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -782,6 +811,19 @@
             .footer-top { padding: 48px 0 36px; }
             .footer-social { justify-content: flex-start; }
         }
+
+        /* FAQ */
+        .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
+        .content-section:last-of-type { border-bottom: none; }
+        .content-section.alt-bg { background: #f8fafc; }
+        .content-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
+        .content-section p { font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px; }
+        .faq-list { margin-top: 40px; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+        .faq-item:first-child { border-top: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+        .faq-item h3::before { content: "Q"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+        .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -871,7 +913,7 @@
                 </div>
             </div>
             <div class="svc-grid">
-                <a href="/ed" class="svc-card ed">
+                <a href="/penile-doppler" class="svc-card ed">
                     <h3>Penile Doppler Ultrasound</h3>
                     <p>Diagnostic testing to evaluate blood flow and determine the root cause of ED.</p>
                     <span class="card-link-hint">Learn more →</span>
@@ -881,7 +923,7 @@
                     <p>Optimization of PDE5 inhibitors (Viagra, Cialis) and customized dosing protocols.</p>
                     <span class="card-link-hint">Learn more →</span>
                 </a>
-                <a href="/ed" class="svc-card ed">
+                <a href="/penile-injections" class="svc-card ed">
                     <h3>Penile Injection Therapy</h3>
                     <p>Custom-compounded intracavernosal injections (ICI) for reliable, robust erections.</p>
                     <span class="card-link-hint">Learn more →</span>
@@ -1012,6 +1054,30 @@
                 </a>
             </div>
         </div>
+
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What conditions does Dr. Kashani treat?</h3>
+                    <p>Dr. Kashani specializes in men's health and sexual medicine — including erectile dysfunction, low testosterone, Peyronie's Disease, premature ejaculation, vasectomy and vasectomy reversal, kidney stones, enlarged prostate (BPH), overactive bladder, and more. Explore the full list above or reach out if you're not sure where your concern fits.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Will my insurance cover my visit?</h3>
+                    <p>Coverage depends on your specific plan and the treatment involved. Our team can help verify your benefits before your visit — just give us a call and we'll walk you through it.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I expect at my first visit?</h3>
+                    <p>Your first visit is a relaxed conversation — Dr. Kashani will listen to your concerns, review your history, and discuss the options that make sense for you. There's no pressure to decide on treatment right away.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>You can request an appointment online through our contact page or call us directly at <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">516-390-2850</a>. We have offices in Rockville Centre and Carle Place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section style="background: #fff; padding: 80px 0;">
         <div class="container">

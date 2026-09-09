@@ -213,6 +213,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What conditions does Dr. Kashani treat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dr. Kashani specializes in men's health and sexual medicine — including erectile dysfunction, low testosterone, Peyronie's Disease, penile implants, kidney stones, and enlarged prostate (BPH). Visit our Services page for the full list." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are your offices located?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We have two Long Island locations: Rockville Centre and Carle Place, New York." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept insurance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Coverage depends on your specific plan and the treatment involved. Our team can help verify your benefits before your visit." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I schedule an appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can request an appointment online through our contact page or call us directly. Rockville Centre: 516-390-2850. Carle Place: 516-877-0977." }
+    }
+  ]
+}
+</script>
+
     <style>
         /* =============================================
            SERVICE CARDS (4-up grid)
@@ -1095,6 +1124,19 @@
     .eapps-link,
     .es-review-info-platform,
     .es-review-source { color: #555555 !important; }
+
+    /* FAQ */
+    .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
+    .content-section:last-of-type { border-bottom: none; }
+    .content-section.alt-bg { background: #f8fafc; }
+    .content-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
+    .content-section p { font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px; }
+    .faq-list { margin-top: 40px; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+    .faq-item:first-child { border-top: 1px solid #e2e8f0; }
+    .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+    .faq-item h3::before { content: "Q"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+    .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -1393,6 +1435,31 @@
             </div>
             <div style="text-align:center;">
                 <a href="/education" class="text-link" style="font-size:1rem;">View All Articles &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What conditions does Dr. Kashani treat?</h3>
+                    <p>Dr. Kashani specializes in men's health and sexual medicine — including erectile dysfunction, low testosterone, Peyronie's Disease, penile implants, kidney stones, and enlarged prostate (BPH). Visit our Services page for the full list.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where are your offices located?</h3>
+                    <p>We have two Long Island locations: Rockville Centre and Carle Place, New York.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you accept insurance?</h3>
+                    <p>Coverage depends on your specific plan and the treatment involved. Our team can help verify your benefits before your visit.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>You can request an appointment online through our contact page or call us directly. Rockville Centre: <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">516-390-2850</a>. Carle Place: <a href="tel:5168770977" style="color:var(--accent-dark);font-weight:700;">516-877-0977</a>.</p>
+                </div>
             </div>
         </div>
     </section>

@@ -122,6 +122,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I schedule an appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fill out the form on this page or call us directly. Rockville Centre: 516-390-2850. Carle Place: 516-877-0977." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your office hours?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rockville Centre: Tuesday–Wednesday, 8:30am–4pm. Carle Place: Thursday 9am–5pm, Friday 9am–1pm." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are your offices located?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2 Lincoln Ave, Suite 102, Rockville Centre, NY 11570, and 393-401 Old Country Road, Carle Place, NY 11514." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring to my first visit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Please bring a photo ID, your insurance card, and a list of any current medications. If you have relevant prior test results or imaging, feel free to bring those too." }
+    }
+  ]
+}
+</script>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -571,6 +600,19 @@
             .footer-top { padding: 48px 0 36px; }
             .footer-social { justify-content: flex-start; }
         }
+
+        /* FAQ */
+        .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
+        .content-section:last-of-type { border-bottom: none; }
+        .content-section.alt-bg { background: #f8fafc; }
+        .content-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
+        .content-section p { font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px; }
+        .faq-list { margin-top: 40px; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+        .faq-item:first-child { border-top: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+        .faq-item h3::before { content: "Q"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+        .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -826,6 +868,31 @@
                 <span style="background:#fff;border:1px solid #e2e8f0;padding:6px 14px;font-size:0.85rem;color:#334155;border-radius:2px;">Westbury</span>
                 <span style="background:#fff;border:1px solid #e2e8f0;padding:6px 14px;font-size:0.85rem;color:#334155;border-radius:2px;">Woodbury</span>
                 <span style="background:#fff;border:1px solid #e2e8f0;padding:6px 14px;font-size:0.85rem;color:#334155;border-radius:2px;">Woodmere</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>Fill out the form on this page or call us directly. Rockville Centre: <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">516-390-2850</a>. Carle Place: <a href="tel:5168770977" style="color:var(--accent-dark);font-weight:700;">516-877-0977</a>.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your office hours?</h3>
+                    <p>Rockville Centre: Tuesday–Wednesday, 8:30am–4pm. Carle Place: Thursday 9am–5pm, Friday 9am–1pm.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where are your offices located?</h3>
+                    <p>2 Lincoln Ave, Suite 102, Rockville Centre, NY 11570, and 393-401 Old Country Road, Carle Place, NY 11514.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring to my first visit?</h3>
+                    <p>Please bring a photo ID, your insurance card, and a list of any current medications. If you have relevant prior test results or imaging, feel free to bring those too.</p>
+                </div>
             </div>
         </div>
     </section>

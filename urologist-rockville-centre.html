@@ -112,6 +112,35 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is your Rockville Centre office located?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2 Lincoln Ave, Suite 102, Rockville Centre, NY 11570." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Rockville Centre office hours?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tuesday–Wednesday, 8:30am–4pm." }
+    },
+    {
+      "@type": "Question",
+      "name": "What conditions does Dr. Kashani treat at this location?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The full range of men's health and sexual medicine services — erectile dysfunction, low testosterone, Peyronie's Disease, penile implants, kidney stones, enlarged prostate, and more." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I schedule an appointment at the Rockville Centre office?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Call 516-390-2850 or request an appointment online." }
+    }
+  ]
+}
+</script>
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -216,6 +245,19 @@
         .service-loc-card p { margin:0; font-size:.82rem; color:#64748b; line-height:1.5; }
         @media (max-width:768px) { .loc-grid { grid-template-columns:1fr; } .services-loc-grid { grid-template-columns:1fr 1fr; } }
         @media (max-width:480px) { .services-loc-grid { grid-template-columns:1fr; } }
+
+        /* FAQ */
+        .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
+        .content-section:last-of-type { border-bottom: none; }
+        .content-section.alt-bg { background: #f8fafc; }
+        .content-section h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
+        .content-section p { font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 18px; }
+        .faq-list { margin-top: 40px; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+        .faq-item:first-child { border-top: 1px solid #e2e8f0; }
+        .faq-item h3 { font-size: 1.1rem; color: #0f172a; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+        .faq-item h3::before { content: "Q"; background: #c0a062; color: #0f172a; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+        .faq-item p { font-size: 0.98rem; color: #475569; padding-left: 34px; margin-bottom: 0; }
     </style>
 </head>
 <body>
@@ -388,6 +430,31 @@
                 <div class="service-loc-card">
                     <a href="/hydrocele">Hydrocele</a>
                     <p>Evaluation and surgical repair of scrotal fluid collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Where is your Rockville Centre office located?</h3>
+                    <p>2 Lincoln Ave, Suite 102, Rockville Centre, NY 11570.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are the Rockville Centre office hours?</h3>
+                    <p>Tuesday–Wednesday, 8:30am–4pm.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What conditions does Dr. Kashani treat at this location?</h3>
+                    <p>The full range of men's health and sexual medicine services — erectile dysfunction, low testosterone, Peyronie's Disease, penile implants, kidney stones, enlarged prostate, and more.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment at the Rockville Centre office?</h3>
+                    <p>Call <a href="tel:5163902850" style="color:var(--accent-dark);font-weight:700;">516-390-2850</a> or request an appointment online.</p>
                 </div>
             </div>
         </div>
