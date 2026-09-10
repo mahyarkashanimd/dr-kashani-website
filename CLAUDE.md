@@ -33,22 +33,25 @@
 4. `<meta name="description" ...>`
 5. `<meta name="keywords" ...>`
 6. `<meta name="author" content="Dr. Mahyar Kashani">`
-7. `<link rel="canonical" href="https://www.menshealthlongisland.com/[slug]">`
-8. `<link rel="alternate" hreflang="en" href="...">` AND `<link rel="alternate" hreflang="es" href="...">` AND `<link rel="alternate" hreflang="x-default" href="...">` (x-default always points to the **English** URL)
-9. `<link rel="icon" type="image/png" href="/images/favicon-96x96.png">`
-10. **Google Analytics GA4** async script (ID: G-7XSPQXKJSQ)
-11. OG meta tags: og:title, og:description, og:type="article", og:url, og:image
-12. `<title>`
-13. `<link rel="stylesheet" href="/css/style.css">`
-14. **Resource hints** — must come immediately before the Google Fonts link:
+7. `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">`
+   - Enables large image previews in search + Google Discover eligibility. On all 64 indexable pages.
+   - **Exception:** `404.html`, `success.html`, `success-es.html` use `noindex, nofollow` instead — never give these `index, follow`.
+8. `<link rel="canonical" href="https://www.menshealthlongisland.com/[slug]">`
+9. `<link rel="alternate" hreflang="en" href="...">` AND `<link rel="alternate" hreflang="es" href="...">` AND `<link rel="alternate" hreflang="x-default" href="...">` (x-default always points to the **English** URL)
+10. `<link rel="icon" type="image/png" href="/images/favicon-96x96.png">`
+11. **Google Analytics GA4** async script (ID: G-7XSPQXKJSQ)
+12. OG meta tags: og:title, og:description, og:type="article", og:url, og:image
+13. `<title>`
+14. `<link rel="stylesheet" href="/css/style.css">`
+15. **Resource hints** — must come immediately before the Google Fonts link:
     ```html
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     ```
-15. **Google Fonts:** Lato (300,400,700) + Playfair Display (400,700)
-16. **Font Awesome** 6.0.0
+16. **Google Fonts:** Lato (300,400,700) + Playfair Display (400,700)
+17. **Font Awesome** 6.0.0
 
 ---
 
