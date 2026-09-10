@@ -42,11 +42,7 @@ _Last updated: 2026-07-15 | Add new tasks at the bottom of their priority sectio
 - [x] **P2d. Spanish version of /penile-doppler** — Verified 2026-09-08: `doppler-peneano.html` exists, live, and linked in nav on every ES page. Doc was stale.
 - [x] **P6b. Spanish version of /penile-injections** — Verified 2026-09-08: `inyecciones-peneanas.html` exists, live, and linked in nav on every ES page. Doc was stale.
 - [ ] **P5b. Mirror Low T FAQ expansion into testosterona-baja.html** — Once low-testosterone.html FAQ is approved, translate the 4 new Q&As into Spanish and add them to both the HTML faq-list and the JSON-LD FAQPage schema in `testosterona-baja.html`.
-- [ ] **P2c. Cross-links for /penile-doppler** — Once page is approved, add contextual links on:
-  - **ed.html**: In the "treatment options" section, add a link from the "Penile Doppler Ultrasound" treatment card to `/penile-doppler`
-  - **penile-implant.html**: In the pre-surgical evaluation content, add a sentence linking to `/penile-doppler`
-  - **peyronies.html**: In the diagnosis section, mention Doppler is used for Peyronie's evaluation with a link to `/penile-doppler`
-  - **disfuncion-erectil.html** (Spanish ED): Same as ed.html but in Spanish
+- [x] **P2c. Cross-links for /penile-doppler** — Done 2026-09-09. `penile-implant.html` already had its Doppler related-box. Added contextual links to `ed.html` (Doppler treatment card), `peyronies.html` (diagnosis workup step 4), `disfuncion-erectil.html` (Doppler card), `enfermedad-peyronie.html` (workup step 4), and a Doppler related-box on `implante-peneano.html`. Also closed two EN/ES parity gaps found along the way: `disfuncion-erectil.html` was missing the `/inyecciones-peneanas` link its English twin already had, and `implante-peneano.html` was missing the Doppler box.
 - [ ] **C. Patient-tone update on remaining pages** — same framework as hematuria + PSA:
   - [x] ed.html + disfuncion-erectil.html — done 2026-07-15
   - [ ] peyronies.html + enfermedad-peyronie.html
