@@ -240,6 +240,37 @@
         .article-back-link:hover {
             color: var(--accent);
         }
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid #e2e8f0;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            background: var(--accent-dark);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .faq-item p {
+            font-size: 1rem;
+            color: #475569;
+            padding-left: 34px;
+        }
         @media (max-width: 768px) {
             .article-title { font-size: 2rem; }
             .article-pull-quote { font-size: 1.2rem; padding: 25px; }
@@ -845,6 +876,35 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do sildenafil and tadalafil work equally well for every man?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not everyone responds the same way. Many men find good results with one or the other, while others need an adjusted dose, different timing, or another approach." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take these medications if I have high blood pressure?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In most cases yes, but it is important to avoid combining them with nitrates and to review all of your medications with your doctor first." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if sildenafil or tadalafil does not work for me?",
+      "acceptedAnswer": { "@type": "Answer", "text": "That does not mean there are no options. Injection therapy, combination therapy, and other treatments are often effective even when pills alone are not." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to take these medications every day?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Sildenafil is generally used as needed, while tadalafil can be taken daily at a low dose or as needed, depending on what fits you best." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -976,6 +1036,28 @@
         <h2>When to See a Specialist</h2>
         <p>You should consider seeing a urologist or sexual medicine specialist if you have tried sildenafil or tadalafil without good results, if you are having side effects, if you have low libido or symptoms of low testosterone, or if your ED started after surgery, diabetes, or a cardiovascular diagnosis.</p>
         <p>ED is common, but it is also very treatable. Many men do much better once they receive the right medication, the right instructions, and a plan that is actually tailored to them.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Do sildenafil and tadalafil work equally well for every man?</h3>
+            <p>Not everyone responds the same way. Many men find good results with one or the other, while others need an adjusted dose, different timing, or another approach.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I take these medications if I have high blood pressure?</h3>
+            <p>In most cases yes, but it is important to avoid combining them with nitrates and to review all of your medications with your doctor first.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if sildenafil or tadalafil does not work for me?</h3>
+            <p>That does not mean there are no options. Injection therapy, combination therapy, and other treatments are often effective even when pills alone are not.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do I have to take these medications every day?</h3>
+            <p>Not necessarily. Sildenafil is generally used as needed, while tadalafil can be taken daily at a low dose or as needed, depending on what fits you best.</p>
+        </div>
 
         <div class="article-doctor-bio">
             <img width="800" height="800" loading="lazy" src="images/dr-mahyar-kashani-urologist.webp" alt="Dr. Mahyar Kashani, urologist specializing in erectile dysfunction treatment, Long Island New York">

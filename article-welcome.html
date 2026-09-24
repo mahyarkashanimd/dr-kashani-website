@@ -264,6 +264,37 @@
             color: var(--accent);
         }
 
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid #e2e8f0;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            background: var(--accent-dark);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .faq-item p {
+            font-size: 1rem;
+            color: #475569;
+            padding-left: 34px;
+        }
         @media (max-width: 768px) {
             .article-title { font-size: 2rem; }
             .article-pull-quote { font-size: 1.2rem; padding: 25px; }
@@ -857,6 +888,35 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a referral to make an appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. You can schedule a consultation directly without needing a referral." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you see patients in Spanish?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The practice serves patients in both English and Spanish." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I expect at my first visit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A full, unhurried conversation about your history and symptoms, so we understand your specific situation before recommending any treatment." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are the practice locations?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rockville Centre and Carle Place, both in Nassau County, Long Island." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -1002,6 +1062,28 @@
         <p>If you're ready to take the first step — or even just have questions — reach out. A consultation with Dr. Kashani is the best place to start.</p>
 
         <!-- Doctor Bio Box -->
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Do I need a referral to make an appointment?</h3>
+            <p>No. You can schedule a consultation directly without needing a referral.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you see patients in Spanish?</h3>
+            <p>Yes. The practice serves patients in both English and Spanish.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What should I expect at my first visit?</h3>
+            <p>A full, unhurried conversation about your history and symptoms, so we understand your specific situation before recommending any treatment.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Where are the practice locations?</h3>
+            <p>Rockville Centre and Carle Place, both in Nassau County, Long Island.</p>
+        </div>
+
         <div class="article-doctor-bio">
             <img width="800" height="800" loading="lazy" src="images/dr-mahyar-kashani-urologist.webp" alt="Dr. Mahyar Kashani, urologist and men&apos;s health specialist, Long Island New York">
             <div>

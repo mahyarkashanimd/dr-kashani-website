@@ -240,6 +240,37 @@
         .article-back-link:hover {
             color: var(--accent);
         }
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 0;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid #e2e8f0;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: "Q";
+            background: var(--accent-dark);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .faq-item p {
+            font-size: 1rem;
+            color: #475569;
+            padding-left: 34px;
+        }
         @media (max-width: 768px) {
             .article-title { font-size: 2rem; }
             .article-pull-quote { font-size: 1.2rem; padding: 25px; }
@@ -834,6 +865,35 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is TriMix different from ED pills?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It works directly on the erectile tissue and often works even when oral medications do not." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does an erection last with TriMix?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The duration is adjusted with the dose so that it is enough for sexual activity without lasting too long." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the erection lasts too long?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This is uncommon with proper dosing, but if it lasts more than four hours, seek medical care right away." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I have to keep using TriMix forever?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Some men use it as a long-term solution, while others use it as a step toward other options, such as a penile implant." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -966,6 +1026,28 @@
         <h2>Why a Specialist Visit Matters</h2>
         <p>Choosing the right injection, the correct dose, and the right follow-up plan makes all the difference. An experienced urologist can help you avoid complications and get the best possible result with the least amount of medication.</p>
         <p>At Men's Health Long Island, we focus on making treatment private, straightforward, and tailored to your goals.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Is TriMix different from ED pills?</h3>
+            <p>Yes. It works directly on the erectile tissue and often works even when oral medications do not.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long does an erection last with TriMix?</h3>
+            <p>The duration is adjusted with the dose so that it is enough for sexual activity without lasting too long.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What if the erection lasts too long?</h3>
+            <p>This is uncommon with proper dosing, but if it lasts more than four hours, seek medical care right away.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Will I have to keep using TriMix forever?</h3>
+            <p>Not necessarily. Some men use it as a long-term solution, while others use it as a step toward other options, such as a penile implant.</p>
+        </div>
 
         <div class="article-doctor-bio">
             <img width="800" height="800" loading="lazy" src="images/dr-mahyar-kashani-urologist.webp" alt="Dr. Mahyar Kashani, urologist specializing in ED treatment on Long Island, New York">
