@@ -1,6 +1,6 @@
 # Road to #1 — Urology & Men's Health on Long Island
 _Master SEO / AEO / GEO strategy for menshealthlongisland.com_
-_Created: 2026-07-11 · Last full audit: 2026-08-09 · Companion to [MASTER-TASKS.md](MASTER-TASKS.md) (tactical checklist). This file is the strategy; MASTER-TASKS is the queue._
+_Created: 2026-07-11 · Last full audit: 2026-08-09 · Last strategy review: 2026-09-24 · Companion to [MASTER-TASKS.md](MASTER-TASKS.md) (tactical checklist). This file is the strategy; MASTER-TASKS is the queue._
 
 ---
 
@@ -57,10 +57,16 @@ All three reward the same underlying thing: **one unambiguous, verifiable entity
 1. Use GSC query and CTR data to shorten and sharpen priority titles. The audit found 43 titles over 70 characters; this is a click-through/readability opportunity, not a blanket penalty.
 2. Tune priority meta descriptions from GSC evidence. The audit found 52 over 180 characters; Google may truncate or replace them, so do not mechanically rewrite all 52.
 3. Replace the generic social preview image used by 62 pages with relevant 1200×630 images for major services and articles.
-4. Add `max-image-preview:large` to indexable content and provide strong landscape images for social sharing and Google Discover eligibility.
-5. Add visible “written and medically reviewed by Dr. Kashani” information plus `dateModified` and `lastReviewed` to articles when they receive a substantive physician review.
+4. ✅ **DONE — shipped September 2026.** Add `max-image-preview:large` to indexable content and provide strong landscape images for social sharing and Google Discover eligibility.
+5. ✅ **DONE — shipped September 2026.** Add visible “written and medically reviewed by Dr. Kashani” information plus `dateModified` and `lastReviewed` to articles when they receive a substantive physician review.
 6. Use Search Console's Core Web Vitals report and PageSpeed Insights before making performance changes; the code audit alone cannot substitute for field data.
 7. Continue strengthening high-intent clusters—especially penile implant, Peyronie's disease, and erectile dysfunction—rather than publishing generic posts for freshness.
+
+**Also done:**
+- ✅ Sourced stats bars with named journal sources rolled out to 28 EN/ES pages (2026-09-24), replacing unsourced statistics.
+
+**In progress:**
+- Keyword-first title/meta rewrites drafted for 9 money-page pairs (home, ED, low-T, Peyronie's, implant, 2 locations, vasectomy, BPH) — pending implementation.
 
 ---
 
@@ -68,10 +74,11 @@ All three reward the same underlying thing: **one unambiguous, verifiable entity
 
 | # | Item | Status |
 |---|------|--------|
+| **BLOCKER** | **Netlify auto-deploy is deliberately OFF (owner's choice while work stages). Nothing committed goes live until he re-enables it: Netlify dashboard → Site settings → Build & deploy → re-enable auto publishing, or trigger a manual deploy.** Owner: Dr. Kashani. | **Open — top blocker** |
 | 1.1 | Entity unification: one `#physician` @id + sameAs on every page | ✅ Done 2026-07-11 |
 | 1.2 | Credentials in schema (NPI, alumniOf, fellowship) on about pages | ✅ Done 2026-07-11 |
 | 1.3 | Location pages in sitemap + GBP sameAs | ✅ Done 2026-07-11 |
-| 1.4 | Approve the 2 new pages → nav rollout on all ~60 pages (P2b) | Pending your review |
+| 1.4 | Approve the 2 new pages → nav rollout on all ~60 pages (P2b) | ✅ Done |
 | 1.5 | Resolve priapism wording (4h) | ✅ Done 2026-07-12 |
 | 1.6 | Canonical/redirect repair for the two article aliases | ✅ Done locally 2026-08-09 |
 | 1.7 | Quiz H1 repair + honest sitemap dates | ✅ Done locally 2026-08-09 |
@@ -83,7 +90,7 @@ All three reward the same underlying thing: **one unambiguous, verifiable entity
 AI engines don't read pages — they extract. Each priority service page gets an **Answer Block** directly under the H1/hero:
 
 - 2–3 sentence direct answer to the page's core question ("What is the best treatment for ED that doesn't respond to pills?"), naming **Dr. Kashani, the service, and the locations** in extractable plain text
-- A compact fact table (procedure time, anesthesia, recovery, insurance, locations) — tables are the single most-extracted format
+- Extractable fact blocks using existing approved components only (sourced stats bars, FAQ schema, existing content sections) — no new visual components without a one-page visual pilot and approval. _(The original fact-table layout was rejected by Dr. Kashani for design reasons.)_
 - Keep existing FAQPage schema in sync with visible FAQ text (already true — maintain it)
 
 Rollout order (highest-intent money pages first):
@@ -99,6 +106,7 @@ Rule: every fact in an Answer Block must be specific and verifiable (numbers, na
 
 The location pages + GBP listings are what win "near me" and "best urologist in ___" queries.
 
+- **Verify GBP primary category is "Urologist" on both listings** — the single strongest controllable local signal.
 - **GBP is 70% of local.** Weekly: post an update, answer Q&A, request reviews with the direct link. Keep services list synced to the site's service pages (add "Penile Doppler Ultrasound" and "Penile Injection Therapy" as GBP services once pages go live in nav).
 - **NAP discipline:** RVC = 2 Lincoln Ave Suite 102 / 516-390-2850 · CP = 393-401 Old Country Rd / 516-877-0977 — letter-for-letter identical on GBP, Bing Places, Apple Maps, Healthgrades, Vitals, Zocdoc, WebMD, CastleConnolly.
 - **Location pages get Answer Blocks too:** "Looking for a urologist in Rockville Centre?" → direct 3-sentence answer + parking/train directions (LIRR stops are hyper-local gold: "2 blocks from the Rockville Centre LIRR station").
@@ -118,11 +126,14 @@ Two clusters prove topical authority for the money keywords:
 - Add: "IPP surgery: what recovery actually looks like week by week" (Experience signal — this is what E-E-A-T's first E means), "Malleable vs. inflatable implants," "Penile implant satisfaction rates: what studies show," IPP patient-journey FAQ
 - Author byline block on every article: photo, "Fellowship-trained, Lenox Hill Hospital," link to /about — plus `author` → `#physician` @id in Article schema (already the pattern)
 
+**Comparison content:** "X vs. Y" pages/sections — the vasectomy-reversal FAQ now covers reversal vs. IVF/ICSI as the template; next candidates: TRT injections vs. gels, Xiaflex vs. surgery, vasectomy vs. tubal ligation.
+
 **YMYL trust page:** an editorial-policy blurb on /about ("All content written and medically reviewed by Dr. Mahyar Kashani, MD") + `lastReviewed` dates on articles.
 
 ## Phase 5 — The Social Flywheel & Authority (Dr. Kashani; ongoing)
 
-- Record 60-second answers to exact patient questions already answered on the site (for example, “Does a penile Doppler hurt?”). Embed each video on its matching service page with a transcript and VideoObject schema added by Codex.
+- Record 60-second answers to exact patient questions already answered on the site (for example, “Does a penile Doppler hurt?”). Embed each video on its matching service page with a transcript and VideoObject schema added by Claude Code.
+- **Why video matters for GEO:** YouTube is heavily cited by ChatGPT and AI Overviews, so one video per money page (embedded + transcript + VideoObject schema) is a GEO asset, not just marketing.
 - TikTok/IG clips of the same content; all profiles link to the site (already in sameAs — the loop is closed).
 - **Backlink targets that actually move medical rankings:** Mount Sinai profile → site link (done), hospital directory pages (MASTER-TASKS #6), local press ("Long Island Herald men's health Q&A"), Nassau County Medical Society, podcast guesting (already did Road to Resilience — get the site linked in show notes).
 - Request genuine reviews for both GBP listings without incentives or suggested wording; respond professionally without disclosing patient information.
@@ -146,7 +157,7 @@ One medically reviewed topic should produce a coordinated package instead of unr
 
 ## Division of Labor
 
-| Codex handles in the repository | Dr. Kashani / staff handles externally |
+| Claude Code handles in the repository | Dr. Kashani / staff handles externally |
 |---|---|
 | Technical audits, redirects, schema, sitemap, canonical and hreflang maintenance | Medical review and final approval of all patient-facing clinical content |
 | Internal linking, Answer Blocks, metadata, and content-cluster architecture | Google Business Profile information, services, posts, Q&A, and privacy-safe review replies |
@@ -166,28 +177,28 @@ SEO is an operating process, not a one-time build. Use the cadence below to keep
 
 | Task | Cadence | Who | Automatable? |
 |---|---|---|---|
-| GBP/social content pack draft | Weekly | Codex drafts; Dr. Kashani approves/publishes | Drafting: yes; publishing: no |
+| GBP/social content pack draft | Weekly | Claude Code drafts; Dr. Kashani approves/publishes | Drafting: yes; publishing: no |
 | Respond to new GBP reviews | Weekly | Dr. Kashani | No — patient-facing, needs a real reply |
 | Send review-request link to recent patients | Weekly | Dr. Kashani / staff | No — requires patient contact information and human oversight |
 | GBP Q&A monitoring (answer new questions) | Weekly | Dr. Kashani | No |
 | Canonical, hreflang, JSON-LD, H1, link, asset, and sitemap audit | Every Netlify build | `scripts/seo-audit.mjs` | **Yes — active locally as of 2026-08-09** |
 | NAP consistency spot-check (GBP, Bing, Apple Maps, directories match site) | Monthly | Dr. Kashani / staff | No unless account access is connected |
-| GSC query/impression and GA4 conversion exports | Monthly | Dr. Kashani exports; Codex analyzes | Partially |
-| AI-answer visibility spot-check | Monthly | Codex | Yes, but treat as directional rather than precise rank tracking |
-| New review count/rating check against visible site claims and schema | Monthly | Dr. Kashani reports; Codex updates | Partially |
+| GSC query/impression and GA4 conversion exports | Monthly | Dr. Kashani exports; Claude Code analyzes | Partially |
+| AI-answer visibility spot-check | Monthly | Claude Code | Yes, but treat as directional rather than precise rank tracking |
+| New review count/rating check against visible site claims and schema | Monthly | Dr. Kashani reports; Claude Code updates | Partially |
 | Backlink outreach (hospital directories, press, podcasts) | Quarterly | Dr. Kashani | No |
-| One content-cluster article plus social package | Monthly | Codex drafts; Dr. Kashani medically reviews | Drafting: yes; medical sign-off/publishing: no |
-| Refresh one existing article/service page from GSC evidence | Monthly | Codex + Dr. Kashani | Partially |
-| Full technical, content, competitor, and conversion audit | Quarterly | Codex + Dr. Kashani | Partially |
-| Medical accuracy review and `lastReviewed` update | Twice yearly or after material guidance changes | Dr. Kashani + Codex | Medical decision: no |
+| One content-cluster article plus social package | Monthly | Claude Code drafts; Dr. Kashani medically reviews | Drafting: yes; medical sign-off/publishing: no |
+| Refresh one existing article/service page from GSC evidence | Monthly | Claude Code + Dr. Kashani | Partially |
+| Full technical, content, competitor, and conversion audit | Quarterly | Claude Code + Dr. Kashani | Partially |
+| Medical accuracy review and `lastReviewed` update | Twice yearly or after material guidance changes | Dr. Kashani + Claude Code | Medical decision: no |
 
-### Recommended Codex scheduled tasks
+### Recommended Claude Code scheduled tasks
 
 1. **Monthly technical health report — first of each month, 9:00 AM ET.** Run the repository audit, inspect new link/canonical/schema problems, and report findings without publishing or pushing changes.
 2. **Monthly editorial opportunity report — first Friday, 9:00 AM ET.** Analyze available GSC/GA4 exports, choose one high-value topic, and prepare an article/social brief.
 3. **Quarterly full review — January, April, July, and October.** Review technical health, content decay, competitive coverage, Core Web Vitals data, local-profile consistency, and conversion paths.
 
-The previously documented Claude routine cannot be confirmed from this repository and Dr. Kashani does not recall managing it. Treat it as **status unknown / not relied upon**. Do not assume it is protecting the site. The Netlify build audit is deterministic and active once the 2026-08-09 changes are pushed. A Codex scheduled task can be created separately after the desired cadence is confirmed.
+The previously documented Claude routine cannot be confirmed from this repository and Dr. Kashani does not recall managing it. Treat it as **status unknown / not relied upon**. Do not assume it is protecting the site. The Netlify build audit is deterministic and active once the 2026-08-09 changes are pushed. A Claude Code scheduled task can be created separately after the desired cadence is confirmed.
 
 **Automation boundary:** repository audits, briefs, drafts, metadata, schema, and code changes can be automated. Medical approval, patient communication, review requests, external-account publishing, and privacy-sensitive replies remain human-controlled.
 
@@ -216,5 +227,6 @@ The previously documented Claude routine cannot be confirmed from this repositor
 - **Core Web Vitals monthly:** affected URL groups and mobile/desktop status from Search Console; target good LCP, INP, and CLS rather than relying on a single lab test.
 - **Content monthly:** new pages indexed, pages gaining/losing impressions, internal-link coverage, and article-assisted conversions.
 - **Social monthly:** qualified profile visits, video retention, saves/shares, and website clicks—not follower count alone.
+- **AI-visibility baseline (this week):** Run the first baseline (defined query set across ChatGPT, Perplexity, Google AI Overviews) BEFORE the stats bars and title/meta changes ship, so there is a before/after.
 - **AI visibility monthly:** run a small, consistent set of prompts and log whether the practice and a supporting page are cited; treat this as directional evidence, not a guaranteed ranking.
 - **Quarterly:** compare results with the previous quarter and change the roadmap based on evidence rather than adding more pages by default.

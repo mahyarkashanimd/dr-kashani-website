@@ -1,5 +1,5 @@
 # Men's Health Long Island — Master Task List
-_Last updated: 2026-07-15 | Add new tasks at the bottom of their priority section_
+_Last updated: 2026-09-24 | Add new tasks at the bottom of their priority section_
 
 ---
 
@@ -85,6 +85,7 @@ _Last updated: 2026-07-15 | Add new tasks at the bottom of their priority sectio
 - [x] **E. E-E-A-T Schema Improvements** — Done 2026-07-15 (bundled with H below): standardized the full sameAs directory-link array across all Physician/MedicalBusiness schema blocks site-wide. Board certification/fellowship/residency structured data (hasCredential, alumniOf) not yet added — could be a future follow-up.
 - [x] **F. Internal Linking Audit** — Done 2026-07-15. Audited all 30 EN/ES condition pages; added `.related-box` cross-links to 19 pages that had fewer than 2 contextual related links (13 had zero).
 - [x] **G. Spanish Article FAQ Schema** — Done 2026-07-15. All 6 articulo-*.html pages now have matching visible FAQ + FAQPage JSON-LD (2 already had visible content needing only schema; 4 got new Q&As written).
+- [ ] **M. Link stats-source lines to their sources** — Link the `.stats-sources` lines to their PubMed/DOI/guideline pages as outbound links — citing authoritative sources raises AI confidence in the page.
 - [x] **H. sameAs Links Update** — Done 2026-07-15. Synced the full 11-link sameAs array (Instagram, TikTok, YouTube, Facebook, Mount Sinai profile, South Nassau, Healthgrades, US News, NPI Registry, Google Maps) across all Physician/MedicalBusiness schema blocks site-wide (52 files touched).
 
 ---
@@ -143,7 +144,7 @@ _Last updated: 2026-07-15 | Add new tasks at the bottom of their priority sectio
 - [x] **urologist-rockville-centre.html / urologist-carle-place.html** — Real Google Maps pin, geo coords, community strip, mobile drawer nav fully wired
 - [x] **urologo-rockville-centre.html / urologo-carle-place.html** — Same in Spanish; ENG button correct in drawer and desktop nav
 - [x] **All 34 pages** — Full 95-town areaServed canonical list standardized (index.html lines 44–140 is canonical source)
-- [x] **GitHub → Netlify** — Auto-deploy pipeline active
+- [ ] **GitHub → Netlify** — BLOCKER: Netlify auto-deploy is deliberately OFF (owner's choice while work stages). Nothing committed goes live until he re-enables it: Netlify dashboard → Site settings → Build & deploy → re-enable auto publishing, or trigger a manual deploy. Owner: Dr. Kashani. See [SEO-ROADMAP.md](SEO-ROADMAP.md) Phase 1.
 - [x] **Google Search Console** — Sitemap first submitted
 - [x] **netlify.toml** — Clean URLs (no .html extensions in browser)
 - [x] **Nav & Footer links** — Fixed (no .html, Home → `/`)
