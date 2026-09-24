@@ -285,9 +285,12 @@
     <style>
         .stats-bar { background: #1a1a2e; padding: 20px 0; }
         .stats-bar .stats-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-        .stat-item { text-align: center; color: white; }
+        .stat-item { text-align: center; color: white; flex: 1 1 200px; max-width: 250px; }
+        @media (max-width: 900px) { .stat-item { flex-basis: calc(50% - 24px); } }
+        @media (max-width: 480px) { .stat-item { flex-basis: 100%; } }
         .stat-number { font-size: 2rem; font-weight: 700; color: #c9a96e; display: block; font-family: 'Playfair Display', serif; }
         .stat-label { font-size: 0.8rem; color: #aaa; letter-spacing: 0.05em; }
+        .stats-sources { font-size: 0.75rem; color: #555555; text-align: center; max-width: 900px; margin: 0 auto; padding: 12px 20px; }
 
         .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
         .content-section:last-of-type { border-bottom: none; }
@@ -910,24 +913,25 @@
         <div class="container">
             <div class="stats-inner">
                 <div class="stat-item">
-                    <span class="stat-number">30%</span>
-                    <span class="stat-label">Of men over 40 have OAB symptoms</span>
+                    <span class="stat-number">Up to 27%</span>
+                    <span class="stat-label">of men experience overactive bladder</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">8+</span>
-                    <span class="stat-label">Bathroom trips/day is considered abnormal</span>
+                    <span class="stat-label">bathroom trips a day is worth getting checked</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">6–12</span>
-                    <span class="stat-label">Months of relief from bladder Botox</span>
+                    <span class="stat-number">6–12 months</span>
+                    <span class="stat-label">of relief from Botox, when needed</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">95%</span>
-                    <span class="stat-label">Of OAB cases are highly treatable</span>
+                    <span class="stat-number">Most</span>
+                    <span class="stat-label">improve with first-line therapy</span>
                 </div>
             </div>
         </div>
     </div>
+    <p class="stats-sources">Sources: Mohamud et al., Neurourol Urodyn 2025; Wei et al., JAMA 2025.</p>
 
     <!-- WHAT IS OAB -->
     <section class="content-section alt-bg">

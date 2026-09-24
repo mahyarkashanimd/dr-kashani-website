@@ -227,9 +227,12 @@
     <style>
         .stats-bar { background: #1a1a2e; padding: 20px 0; }
         .stats-bar .stats-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-        .stat-item { text-align: center; color: white; }
+        .stat-item { text-align: center; color: white; flex: 1 1 200px; max-width: 250px; }
+        @media (max-width: 900px) { .stat-item { flex-basis: calc(50% - 24px); } }
+        @media (max-width: 480px) { .stat-item { flex-basis: 100%; } }
         .stat-number { font-size: 2rem; font-weight: 700; color: #c9a96e; display: block; font-family: 'Playfair Display', serif; }
         .stat-label { font-size: 0.8rem; color: #aaa; letter-spacing: 0.05em; }
+        .stats-sources { font-size: 0.75rem; color: #555555; text-align: center; max-width: 900px; margin: 0 auto; padding: 12px 20px; }
 
         .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
         .content-section:last-of-type { border-bottom: none; }
@@ -733,8 +736,8 @@
         <div class="container">
             <div class="stats-inner">
                 <div class="stat-item">
-                    <span class="stat-number">~85%</span>
-                    <span class="stat-label">Hombres logran erecciones satisfactorias</span>
+                    <span class="stat-number">~90%</span>
+                    <span class="stat-label">tasa de éxito con Trimix</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">5&ndash;15 min</span>
@@ -745,12 +748,13 @@
                     <span class="stat-label">Capacitación en ambas ubicaciones</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">Según Necesidad</span>
+                    <span class="stat-number">A demanda</span>
                     <span class="stat-label">Úselo cuando lo necesite</span>
                 </div>
             </div>
         </div>
     </div>
+    <p class="stats-sources">Fuentes: Shamloul y Ghanem, Lancet 2013; Burnett et al., guía AUA 2018.</p>
 
     <!-- WHO BENEFITS -->
     <section class="content-section alt-bg">

@@ -275,9 +275,12 @@
     <style>
         .stats-bar { background: #1a1a2e; padding: 20px 0; }
         .stats-bar .stats-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
-        .stat-item { text-align: center; color: white; }
+        .stat-item { text-align: center; color: white; flex: 1 1 200px; max-width: 250px; }
+        @media (max-width: 900px) { .stat-item { flex-basis: calc(50% - 24px); } }
+        @media (max-width: 480px) { .stat-item { flex-basis: 100%; } }
         .stat-number { font-size: 2rem; font-weight: 700; color: #c9a96e; display: block; font-family: 'Playfair Display', serif; }
         .stat-label { font-size: 0.8rem; color: #aaa; letter-spacing: 0.05em; }
+        .stats-sources { font-size: 0.75rem; color: #555555; text-align: center; max-width: 900px; margin: 0 auto; padding: 12px 20px; }
         .content-section { padding: 70px 0; border-bottom: 1px solid #e2e8f0; }
         .content-section:last-of-type { border-bottom: none; }
         .content-section.alt-bg { background: #f8fafc; }
@@ -867,24 +870,25 @@
         <div class="container">
             <div class="stats-inner">
                 <div class="stat-item">
-                    <span class="stat-number">1 in 10</span>
-                    <span class="stat-label">Americans will have a kidney stone</span>
+                    <span class="stat-number">1 in 8</span>
+                    <span class="stat-label">men will have a kidney stone in their lifetime</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">Recurrence rate without prevention</span>
+                    <span class="stat-number">Up to 50%</span>
+                    <span class="stat-label">recur within 5–10 years without prevention</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">3x</span>
-                    <span class="stat-label">More common in men than women</span>
+                    <span class="stat-number">Nearly 2x</span>
+                    <span class="stat-label">more common in men than women</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">80%</span>
-                    <span class="stat-label">Of stones are calcium-based</span>
+                    <span class="stat-number">Preventable</span>
+                    <span class="stat-label">the right habits sharply cut recurrence risk</span>
                 </div>
             </div>
         </div>
     </div>
+    <p class="stats-sources">Sources: Scales et al., Eur Urol 2012; Qaseem et al., Ann Intern Med 2014; Thongprayoon et al., Nat Rev Nephrol 2020.</p>
 
     <!-- TREATMENT -->
     <section class="content-section">

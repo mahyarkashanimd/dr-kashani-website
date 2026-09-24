@@ -744,6 +744,18 @@
         .footer-social { justify-content: flex-start; }
     }
 
+        .stats-bar { background: #1a1a2e; padding: 20px 0; }
+        .stats-bar .stats-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+        .stat-item { text-align: center; color: white; flex: 1 1 200px; max-width: 250px; }
+        @media (max-width: 900px) { .stat-item { flex-basis: calc(50% - 24px); } }
+        @media (max-width: 480px) { .stat-item { flex-basis: 100%; } }
+        .stat-number { font-size: 2rem; font-weight: 700; color: #c9a96e; display: block; font-family: 'Playfair Display', serif; }
+        .stat-label { font-size: 0.8rem; color: #aaa; letter-spacing: 0.05em; }
+        .stats-sources { font-size: 0.75rem; color: #555555; text-align: center; max-width: 900px; margin: 0 auto; padding: 12px 20px; }
+        @media (max-width: 768px) {
+            .stats-bar .stats-inner { gap: 24px; }
+            .stat-number { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -838,6 +850,30 @@
             </div>
         </div>
     </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <span class="stat-number">~5%</span>
+                    <span class="stat-label">de los hombres tienen eyaculación precoz significativa</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Hasta 1 de 3</span>
+                    <span class="stat-label">reportan preocupación alguna vez</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Cualquier edad</span>
+                    <span class="stat-label">a diferencia de la DE, no aumenta con la edad</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Tratable</span>
+                    <span class="stat-label">las opciones conductuales y médicas son efectivas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="stats-sources">Fuentes: Sathianathen et al., Cochrane 2021; Gul et al., Nat Rev Urol 2022.</p>
 
     <!-- CAUSAS -->
     <section class="content-section alt-bg">
