@@ -201,7 +201,7 @@ When creating new article pages, use this checklist:
 | `article-injections-step-by-step.html` | EN injections guide | `articulo-inyecciones-paso-a-paso.html` |
 | `article-peyronies.html` | EN Peyronie's article | `articulo-peyronie-xiaflex.html` |
 | `article-penile-injection-trimix.html` | EN Trimix article | `articulo-inyeccion-peneana-trimix.html` |
-| `article-oral-PDE5i-inhibitors-ed.html` | EN PDE5i article | `articulo-inhibidores-pde5-oral-de.html` |
+| `article-oral-pde5i-inhibitors-ed.html` | EN PDE5i article | `articulo-inhibidores-pde5-oral-de.html` |
 | `article-welcome.html` | EN welcome article | `articulo-bienvenida.html` |
 | `education.html` | EN article index | `educacion.html` |
 | `sitemap.xml` | All URLs + lastmod | — |
