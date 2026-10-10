@@ -36,6 +36,65 @@ function report(file, message) {
   errors.push(`${file}: ${message}`);
 }
 
+// JSON.parse silently keeps the last of two identical keys, so duplicates in
+// JSON-LD (e.g. two "sameAs" arrays on one Physician) only show up by scanning
+// the raw text. Returns the paths of keys repeated within the same object.
+function findDuplicateKeys(text) {
+  const duplicates = [];
+  const stack = []; // one entry per open container: { keys: Set|null, path }
+  let i = 0;
+  let pendingKey = null;
+  const skipWs = () => {
+    while (i < text.length && /\s/.test(text[i])) i++;
+  };
+  const readString = () => {
+    let out = "";
+    i++; // opening quote
+    while (i < text.length && text[i] !== '"') {
+      if (text[i] === "\\") {
+        out += text.slice(i, i + 2);
+        i += 2;
+      } else {
+        out += text[i++];
+      }
+    }
+    i++; // closing quote
+    return out;
+  };
+  while (i < text.length) {
+    skipWs();
+    const ch = text[i];
+    if (ch === "{" || ch === "[") {
+      const top = stack[stack.length - 1];
+      const path = top ? `${top.path}.${pendingKey ?? top.index++}` : "$";
+      stack.push({ keys: ch === "{" ? new Set() : null, path, index: 0 });
+      pendingKey = null;
+      i++;
+    } else if (ch === "}" || ch === "]") {
+      stack.pop();
+      pendingKey = null;
+      i++;
+    } else if (ch === '"') {
+      const value = readString();
+      skipWs();
+      const top = stack[stack.length - 1];
+      if (text[i] === ":" && top?.keys) {
+        if (top.keys.has(value)) duplicates.push(`${top.path}.${value}`);
+        top.keys.add(value);
+        pendingKey = value;
+        i++;
+      } else {
+        pendingKey = null;
+        if (top && !top.keys) top.index++;
+      }
+    } else {
+      if (ch === "," || ch === ":") pendingKey = ch === ":" ? pendingKey : null;
+      i++;
+    }
+  }
+  return duplicates;
+}
+
 function firstMatch(html, pattern) {
   return html.match(pattern)?.[1]?.trim() ?? "";
 }
@@ -80,6 +139,17 @@ for (const file of htmlFiles) {
     report(file, `expected exactly one <h1>, found ${h1Count}`);
   }
 
+  if (indexable) {
+    let previousLevel = 0;
+    for (const match of html.matchAll(/<h([1-6])/gi)) {
+      const level = Number(match[1]);
+      if (previousLevel && level > previousLevel + 1) {
+        report(file, `skipped heading level (<h${previousLevel}> followed by <h${level}>)`);
+      }
+      previousLevel = level;
+    }
+  }
+
   const hreflangs = new Map();
   for (const match of html.matchAll(
     /<link\s+[^>]*rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["'][^>]*>/gi,
@@ -95,6 +165,9 @@ for (const file of htmlFiles) {
   )) {
     try {
       JSON.parse(match[1]);
+      for (const path of findDuplicateKeys(match[1])) {
+        report(file, `duplicate JSON-LD key ${path}`);
+      }
     } catch (error) {
       report(file, `invalid JSON-LD (${error.message})`);
     }
