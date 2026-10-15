@@ -251,6 +251,10 @@
 </script>
 
     <style>
+        .bio-heading-link { display: inline-block; color: inherit; text-decoration: none; }
+        .bio-heading-link:hover h2, .bio-heading-link:focus-visible h2 { color: var(--accent-dark); }
+        .bio-heading-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+
         /* =============================================
            SERVICE CARDS (4-up grid)
            ============================================= */
@@ -1264,8 +1268,10 @@
         <div class="container">
             <div class="split-layout">
                 <div class="bio-text">
-                    <h2>Mahyar Kashani, MD</h2>
-                    <h3 class="director-title">Director of Male Sexual Health</h3>
+                    <a href="/" class="bio-heading-link" aria-label="Men's Health Long Island homepage">
+                        <h2>Mahyar Kashani, MD</h2>
+                        <h3 class="director-title">Director of Male Sexual Health</h3>
+                    </a>
                     <p>Dr. Mahyar Kashani is a board-certified, fellowship-trained urologist and Director of Male Sexual Health at Men's Health Long Island, serving patients across Long Island and New York. He focuses on the diagnosis and treatment of <strong>Erectile Dysfunction</strong>, <strong>Low Testosterone</strong>, <strong>Peyronie's Disease</strong>, and <strong>Male Performance Concerns</strong>.</p>
                     <p>Dr. Kashani provides comprehensive, physician-led care—offering everything from medical therapy to advanced procedural treatments, including penile injections and implants. His approach is discreet, evidence-based, and tailored to each patient's goals.</p>
                     <div class="quote-box-featured">"We're here to help you get back to feeling like yourself again—strong, confident, and in control."</div>
