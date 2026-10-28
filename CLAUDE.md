@@ -66,11 +66,13 @@ Never use a short town list. Always copy the full canonical list from `index.htm
 |-----------|----------------------------------|
 | Service pages | 1. Physician (95-town) · 2. MedicalCondition or MedicalProcedure · 3. BreadcrumbList · 4. WebPage with speakable · 5. FAQPage |
 | Article pages | 1. Article or HowTo (with HowToStep) · 2. Physician (95-town) |
-| Home pages | Physician (full: areaServed + aggregateRating + sameAs + memberOf + openingHours) · WebPage with speakable |
-| Location pages | MedicalBusiness @type (not Physician) · geo · hasMap · openingHours · aggregateRating · parentOrganization (Mount Sinai) |
+| Home pages | Physician (full: areaServed + aggregateRating + sameAs + openingHours) · WebPage with speakable |
+| Location pages | MedicalBusiness @type (not Physician) · geo · hasMap · openingHours · aggregateRating |
 | Education/Research/Quiz | CollectionPage/ProfilePage/MedicalWebPage + standalone Physician block |
 | contact.html / contacto.html | MedicalClinic (NOT Physician) |
 | privacy-policy, success pages | No schema needed |
+
+**No Mount Sinai organization schema anywhere:** never add `parentOrganization` or `memberOf` (Mount Sinai) to any page. The only Mount Sinai reference in structured data is the `sameAs` link to Dr. Kashani's own profile (`https://profiles.mountsinai.org/mahyar-kashani`).
 
 **Canonical schema sources:**
 - Full 95-town areaServed: `index.html` lines 44–140

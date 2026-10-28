@@ -81,7 +81,7 @@ header {
 .nav-links a:hover, .nav-links .active { color: var(--accent-dark); }
 
 .btn-appointment { background: var(--primary); color: white !important; padding: 12px 16px; border-radius: 2px; }
-.btn-appointment:hover { background: var(--accent); color: white !important; }
+.btn-appointment:hover { background: var(--accent); color: #0F172A !important; }
 
 .menu-toggle { display: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; width: 30px; text-align: center; }
 
